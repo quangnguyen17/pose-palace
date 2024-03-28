@@ -1,93 +1,49 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import type { FC } from 'react'
 
-export default function Home() {
+const App: FC = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <div className="form">
+      <h3 className="heading">Pose Palace</h3>
+      <p>Schedule appointment:</p>
+      <div className="button-group">
+        <button className="button-default">Pose Room</button>
+        <button className="button-default">Recording Room</button>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="form-row">
+        <label htmlFor="date">Select a date:</label>
+        <input id="date" type="date" placeholder="Select a date" />
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>Instantly deploy your Next.js site to a shareable URL with Vercel.</p>
-        </a>
+      <div className="form-row">
+        <label htmlFor="name">Select an available time:</label>
+        <select name="time">
+          <option value="7:00">7:00 AM</option>
+          <option value="8:00">8:00 AM</option>
+          <option value="9:00">9:00 AM</option>
+          <option value="10:00">10:00 AM</option>
+          <option value="11:00">11:00 AM</option>
+        </select>
       </div>
-    </main>
+      <input type="text" placeholder="First Name" />
+      <input type="text" placeholder="Last Name" />
+      <input type="email" placeholder="Email" />
+      <div className="form-row">
+        <span>Amount Due:</span>
+        <span>$100</span>
+      </div>
+      <div className="divider" />
+      <p>Select a payment method</p>
+      <div className="button-group">
+        <button className="button-default">Credit Card</button>
+        <button className="button-default">Apple Pay</button>
+        <button className="button-default">Google Pay</button>
+      </div>
+      <div className="form-terms">
+        <input type="checkbox" id="terms" name="terms" value="terms" />
+        <label htmlFor="terms"> Agree to our terms and service agreements</label>
+      </div>
+      <button className="button-primary">Schedule</button>
+    </div>
   )
 }
+
+export default App
