@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { NavBar } from '@/components/NavBar'
 import './global.css'
 
 export const metadata: Metadata = {
@@ -11,10 +10,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>
-        <NavBar />
-        {children}
-      </body>
+      <body>{children}</body>
+      <footer>Crystal Lighthouse LLC</footer>
     </html>
   )
 }

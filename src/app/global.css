@@ -21,6 +21,26 @@
   font-style: normal;
 }
 
+html {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+body {
+  flex: 1;
+}
+
+footer {
+  padding: var(--spacing-default);
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgb(87, 87, 87);
+}
+
 .form {
   padding: var(--spacing-default);
   gap: var(--spacing-default);

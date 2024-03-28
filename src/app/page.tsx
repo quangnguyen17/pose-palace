@@ -15,7 +15,7 @@ const App: FC = () => {
           textAlign: 'center',
         }}
       >
-        Make an appointment
+        Make an appointment @ Pose Palace
       </Link>
     </div>
   )
