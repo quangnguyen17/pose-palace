@@ -7,9 +7,8 @@
   --spacing-xxSmall: 0.25rem;
   --font-size-default: 1rem;
   --border-width-default: 1px;
-  --border-radius-default: 8px;
   --border-color: rgb(210, 210, 210);
-  --background-default: rgb(235, 235, 235);
+  --background-default: rgb(240, 240, 240);
 }
 
 * {
@@ -35,7 +34,6 @@ select {
   border-style: solid;
   border-color: var(--border-color);
   border-width: var(--border-width-default);
-  border-radius: var(--border-radius-default);
 }
 
 .form-row {
@@ -48,16 +46,28 @@ select {
   color: black;
   background-color: var(--background-default);
   padding: var(--spacing-small);
-  border-radius: var(--border-radius-default);
   cursor: pointer;
   border: none;
+}
+
+.button-outlined {
+  color: black;
+  background-color: white;
+  padding: var(--spacing-small);
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.5s linear;
+}
+
+.button-outlined:hover {
+  color: white;
+  background-color: black;
 }
 
 .button-primary {
   color: white;
   background-color: black;
   padding: var(--spacing-small);
-  border-radius: var(--border-radius-default);
   cursor: pointer;
   border: none;
 }

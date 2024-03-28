@@ -1,47 +1,22 @@
 import type { FC } from 'react'
+import Link from 'next/link'
 
 const App: FC = () => {
   return (
-    <div className="form">
-      <h3 className="heading">Pose Palace</h3>
-      <p>Schedule appointment:</p>
-      <div className="button-group">
-        <button className="button-default">Pose Room</button>
-        <button className="button-default">Recording Room</button>
-      </div>
-      <div className="form-row">
-        <label htmlFor="date">Select a date:</label>
-        <input id="date" type="date" placeholder="Select a date" />
-      </div>
-      <div className="form-row">
-        <label htmlFor="name">Select an available time:</label>
-        <select name="time">
-          <option value="7:00">7:00 AM</option>
-          <option value="8:00">8:00 AM</option>
-          <option value="9:00">9:00 AM</option>
-          <option value="10:00">10:00 AM</option>
-          <option value="11:00">11:00 AM</option>
-        </select>
-      </div>
-      <input type="text" placeholder="First Name" />
-      <input type="text" placeholder="Last Name" />
-      <input type="email" placeholder="Email" />
-      <div className="form-row">
-        <span>Amount Due:</span>
-        <span>$100</span>
-      </div>
-      <div className="divider" />
-      <p>Select a payment method</p>
-      <div className="button-group">
-        <button className="button-default">Credit Card</button>
-        <button className="button-default">Apple Pay</button>
-        <button className="button-default">Google Pay</button>
-      </div>
-      <div className="form-terms">
-        <input type="checkbox" id="terms" name="terms" value="terms" />
-        <label htmlFor="terms"> Agree to our terms and service agreements</label>
-      </div>
-      <button className="button-primary">Schedule</button>
+    <div style={{ display: 'flex', padding: '1rem' }}>
+      <Link
+        href="/schedule"
+        className="button-outlined"
+        style={{
+          flex: 1,
+          width: '100%',
+          height: '100%',
+          textDecoration: 'none',
+          textAlign: 'center',
+        }}
+      >
+        Make an appointment
+      </Link>
     </div>
   )
 }
