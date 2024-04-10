@@ -1,3 +1,5 @@
+import { redirect } from 'next/navigation'
+
 export default function App() {
-  return <iframe src="https://calendly.com/posepalace/15min"></iframe>
+  return redirect('https://calendly.com/posepalace/15min')
 }
