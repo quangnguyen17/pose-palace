@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Pose Palace',
+  title: 'Pose Palace Studio',
   creator: 'Pose Palace Studio',
   keywords: ['Pose Palace', 'Pose Palace Studio', 'self photo', 'self portrait', 'photo taking'],
   description:
