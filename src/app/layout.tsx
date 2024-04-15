@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import './global.css'
 
 const description: string =
   'Step into our self-serve photo studio and unlock a world of creativity! From candid moments to professional portraits, our space is your canvas. Capture memories, express yourself, and bring your vision to life with ease. With a user-friendly environment designed for seamless shooting, every photo session is a masterpiece in the making. Discover the freedom to capture your moments your way. Your memories, your style – all in one place!'

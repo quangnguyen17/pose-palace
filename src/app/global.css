@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 177.77%; /* 9:16 aspect ratio */
+}
+
+.grid-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1300px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.button-appointment {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #050505;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  -webkit-box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 16px 4px rgba(0, 0, 0, 0.1);
+}
