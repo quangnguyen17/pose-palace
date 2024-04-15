@@ -1,15 +1,19 @@
-const images = [
-  'https://posepalace.com/q1.jpg',
-  'https://posepalace.com/q2.jpg',
-  'https://posepalace.com/q3.jpg',
-  'https://posepalace.com/q4.jpg',
-  'https://posepalace.com/c1.jpg',
-  'https://posepalace.com/c2.jpg',
-  'https://posepalace.com/c3.jpg',
-  'https://posepalace.com/c4.jpg',
-]
+'use client'
 
-export default async function App() {
+import { FC, useEffect, useState } from 'react'
+
+const HOST_URL: string =
+  process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://www.posepalace.com'
+
+const App: FC = () => {
+  const [images, setImages] = useState<string[]>([])
+
+  useEffect(() => {
+    fetch(`${HOST_URL}/catalog.json`)
+      .then((res) => res.json())
+      .then((data) => setImages(data))
+  }, [])
+
   return (
     <div className="App">
       <div className="grid-container">
@@ -29,3 +33,5 @@ export default async function App() {
     </div>
   )
 }
+
+export default App
