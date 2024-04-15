@@ -24,7 +24,7 @@ export default async function App() {
         href="https://calendly.com/posepalace/15min"
         target="_blank"
       >
-        Schedule your appointment today!
+        🗓️ Schedule your appointment today at Pose Palace Studio
       </a>
     </div>
   )
