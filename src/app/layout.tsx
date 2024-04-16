@@ -43,17 +43,7 @@ export const metadata: Metadata = {
     title: 'Pose Palace Studio',
     description,
     siteName: 'Pose Palace Studio',
-    images: [
-      { url: 'https://posepalace.com/logo.jpg', username: '@posepalacestudio' },
-      { url: 'https://posepalace.com/q1.jpg', username: '@quang_dng20' },
-      { url: 'https://posepalace.com/q2.jpg', username: '@quang_dng20' },
-      { url: 'https://posepalace.com/q3.jpg', username: '@quang_dng20' },
-      { url: 'https://posepalace.com/q4.jpg', username: '@quang_dng20' },
-      { url: 'https://posepalace.com/c1.jpg', username: '@crystalnguyennnn' },
-      { url: 'https://posepalace.com/c2.jpg', username: '@crystalnguyennnn' },
-      { url: 'https://posepalace.com/c3.jpg', username: '@crystalnguyennnn' },
-      { url: 'https://posepalace.com/c4.jpg', username: '@crystalnguyennnn' },
-    ],
+    images: [{ url: 'https://posepalace.com/logo.jpg', username: '@posepalacestudio' }],
   },
   applicationName: 'Pose Palace Studio',
   appleWebApp: {

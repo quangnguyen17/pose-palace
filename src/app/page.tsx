@@ -19,7 +19,7 @@ const App: FC = () => {
       <div className="grid-container">
         {images.map((url, idx) => (
           <div className="grid-item" key={idx}>
-            <img src={url} alt={url} />
+            <img src={url} loading="lazy" alt={url} />
           </div>
         ))}
       </div>
@@ -28,7 +28,7 @@ const App: FC = () => {
         href="https://calendly.com/posepalace/15min"
         target="_blank"
       >
-        🗓️ Schedule your appointment today at Pose Palace Studio
+        🌉 Schedule your self photo session today at Pose Palace Studio
       </a>
     </div>
   )
