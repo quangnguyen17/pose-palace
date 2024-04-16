@@ -45,7 +45,7 @@ const App: FC = () => {
       </div>
       <footer>
         <a href="https://calendly.com/posepalace/15min" target="_blank">
-          🏞️ Click here to schedule your self photo session today at Pose Palace Studio!
+          🗓️ Click here to schedule your self photo session today at Pose Palace Studio!
         </a>
       </footer>
     </div>
