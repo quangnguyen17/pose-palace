@@ -27,7 +27,7 @@ const App: FC = () => {
       <div className="grid-container">
         {images.map((url, idx) => (
           <div className="grid-item" key={idx}>
-            <img src={url} alt={url} loading="lazy" />
+            <img src={url} alt="pose palace studio collection" loading="lazy" />
           </div>
         ))}
       </div>
