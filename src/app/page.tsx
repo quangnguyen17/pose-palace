@@ -5,13 +5,18 @@ import { FC, useEffect, useState } from 'react'
 const HOST_URL: string =
   process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://www.posepalace.com'
 
+type Collection = {
+  title: string
+  images: string[]
+}
+
 const App: FC = () => {
-  const [images, setImages] = useState<string[]>([])
+  const [collections, setCollections] = useState<Collection[]>([])
 
   useEffect(() => {
-    fetch(`${HOST_URL}/catalog.json`)
+    fetch(`${HOST_URL}/collections.json`)
       .then((res) => res.json())
-      .then((data) => setImages(data))
+      .then((data) => setCollections(data.collections))
   }, [])
 
   return (
@@ -25,9 +30,16 @@ const App: FC = () => {
         </a>
       </header>
       <div className="grid-container">
-        {images.map((url, idx) => (
-          <div className="grid-item" key={idx}>
-            <img src={url} alt="pose palace studio collection" loading="lazy" />
+        {collections.map((collection, collectionIndex) => (
+          <div key={collectionIndex} className="collection">
+            <p className="collection-title">{collection.title.toUpperCase()}</p>
+            <div className="collection-images">
+              {collection.images.map((url, idx) => (
+                <div className="grid-item" key={idx}>
+                  <img src={url} alt="pose palace studio collection" loading="lazy" />
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
