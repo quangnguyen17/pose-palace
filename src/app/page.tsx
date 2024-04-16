@@ -32,7 +32,7 @@ const App: FC = () => {
       <div className="grid-container">
         {collections.map((collection, collectionIndex) => (
           <div key={collectionIndex} className="collection">
-            <p className="collection-title">{collection.title.toUpperCase()}</p>
+            <p className="collection-title">{collection.title}</p>
             <div className="collection-images">
               {collection.images.map((url, idx) => (
                 <div className="grid-item" key={idx}>

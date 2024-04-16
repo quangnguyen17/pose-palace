@@ -41,10 +41,9 @@ body {
 
 .collection-title {
   font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 0.8rem;
+  font-style: italic;
+  font-size: 1rem;
   padding: 1rem;
-  color: gray;
 }
 
 .collection-images {
@@ -95,7 +94,7 @@ header {
   align-content: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0.9rem;
+  gap: 1rem;
   padding: 1rem;
   background-color: var(--main-bg-color);
   color: var(--main-txt-color);
@@ -119,6 +118,7 @@ footer {
 
 footer > a {
   font-size: 1rem;
+  line-height: 1.6rem;
   color: var(--main-txt-color);
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
