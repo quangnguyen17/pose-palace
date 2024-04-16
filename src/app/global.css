@@ -58,9 +58,7 @@
   cursor: pointer;
   text-align: left;
   text-decoration: none;
-  line-height: 1.6rem;
   font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
 }
 
 .header {
@@ -74,7 +72,7 @@
 }
 
 .header > a {
-  text-decoration: none;
   color: #080808;
+  text-decoration: none;
   font-family: 'Roboto', sans-serif;
 }
