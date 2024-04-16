@@ -16,10 +16,18 @@ const App: FC = () => {
 
   return (
     <div className="App">
+      <div className="header">
+        <a href="https://www.instagram.com/posepalacestudio/" target="_blank">
+          @posepalacestudio
+        </a>
+        <a href="https://www.instagram.com/explore/tags/posepalacestudio" target="_blank">
+          #posepalacestudio
+        </a>
+      </div>
       <div className="grid-container">
         {images.map((url, idx) => (
           <div className="grid-item" key={idx}>
-            <img src={url} loading="lazy" alt={url} />
+            <img src={url} alt={url} loading="lazy" />
           </div>
         ))}
       </div>

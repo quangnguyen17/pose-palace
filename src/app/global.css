@@ -54,12 +54,27 @@
   padding: 1rem;
   background-color: #080808;
   color: white;
-  font-size: 1rem;
   border: none;
   cursor: pointer;
   text-align: left;
   text-decoration: none;
+  line-height: 1.6rem;
   font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-style: normal;
+  font-size: 1rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 1rem;
+}
+
+.header > a {
+  text-decoration: none;
+  color: #080808;
+  font-family: 'Roboto', sans-serif;
 }
