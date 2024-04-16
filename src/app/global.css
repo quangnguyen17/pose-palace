@@ -78,8 +78,8 @@ header {
   align-content: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0.9rem;
+  gap: 0.9rem;
+  padding: 1rem;
   background-color: var(--main-bg-color);
   color: var(--main-txt-color);
   border-bottom: solid 0.5px var(--main-border-color);
@@ -87,7 +87,7 @@ header {
 
 header > a {
   font-style: italic;
-  font-size: 0.9rem;
+  font-size: 1rem;
   background-color: var(--main-bg-color);
   color: var(--main-txt-color);
   text-decoration: none;
@@ -96,12 +96,12 @@ header > a {
 
 footer {
   background-color: var(--main-bg-color);
-  padding: 0.9rem;
+  padding: 1rem;
   border-top: solid 0.5px var(--main-border-color);
 }
 
 footer > a {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--main-txt-color);
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
