@@ -3,6 +3,7 @@
 :root {
   --main-bg-color: white;
   --main-txt-color: black;
+  --main-border-color: rgb(241, 241, 241);
 }
 
 * {
@@ -81,9 +82,11 @@ header {
   padding: 0.9rem;
   background-color: var(--main-bg-color);
   color: var(--main-txt-color);
+  border-bottom: solid 0.5px var(--main-border-color);
 }
 
 header > a {
+  font-style: italic;
   font-size: 0.9rem;
   background-color: var(--main-bg-color);
   color: var(--main-txt-color);
@@ -94,6 +97,7 @@ header > a {
 footer {
   background-color: var(--main-bg-color);
   padding: 0.9rem;
+  border-top: solid 0.5px var(--main-border-color);
 }
 
 footer > a {
