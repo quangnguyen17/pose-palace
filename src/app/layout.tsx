@@ -28,14 +28,14 @@ export const metadata: Metadata = {
     },
   ],
   icons: {
-    icon: 'https://posepalace.com/logo.jpg',
-    apple: 'https://posepalace.com/logo.jpg',
+    icon: 'https://posepalace.com/icon.jpg',
+    apple: 'https://posepalace.com/icon.jpg',
   },
   twitter: {
     card: 'summary_large_image',
     site: 'https://posepalace.com/',
     creator: '@posepalacestudio',
-    images: 'https://posepalace.com/logo.jpg',
+    images: 'https://posepalace.com/icon.jpg',
   },
   openGraph: {
     type: 'website',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: 'Pose Palace Studio',
     description,
     siteName: 'Pose Palace Studio',
-    images: [{ url: 'https://posepalace.com/logo.jpg', username: '@posepalacestudio' }],
+    images: [{ url: 'https://posepalace.com/icon.jpg', username: '@posepalacestudio' }],
   },
   applicationName: 'Pose Palace Studio',
   appleWebApp: {

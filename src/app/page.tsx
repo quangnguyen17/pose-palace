@@ -1,45 +1,54 @@
-'use client'
+const photos: string[] = [
+  'c1.jpg',
+  'c10.jpg',
+  'c2.jpg',
+  'c3.jpg',
+  'c4.jpg',
+  'c5.jpg',
+  'c6.jpg',
+  'c7.jpg',
+  'c8.jpg',
+  'c9.jpg',
+  'd1.jpg',
+  'd2.jpg',
+  'q12.jpg',
+  'q13.jpg',
+  'q14.jpg',
+  'q15.jpg',
+  'q2.jpg',
+  'q7.jpg',
+  'q8.jpg',
+  'q9.jpg',
+]
 
-import { FC, useEffect, useState } from 'react'
+const hashtags: string[] = ['posepalacestudio', 'full-body', 'portraits', 'goofy']
 
-const HOST_URL: string =
-  process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://www.posepalace.com'
-
-type Collection = {
-  title: string
-  images: string[]
-}
-
-const App: FC = () => {
-  const [collections, setCollections] = useState<Collection[]>([])
-
-  useEffect(() => {
-    fetch(`${HOST_URL}/collections.json`)
-      .then((res) => res.json())
-      .then((data) => setCollections(data.collections))
-  }, [])
-
+export default function App() {
   return (
     <div className="App">
       <header>
-        <a href="https://www.instagram.com/posepalacestudio/" target="_blank">
-          @posepalacestudio
-        </a>
-        <a href="https://www.instagram.com/explore/tags/posepalacestudio" target="_blank">
-          #posepalacestudio
-        </a>
+        <p>
+          Follow us on Instagram{' '}
+          <a
+            className="instagram"
+            href="https://www.instagram.com/posepalacestudio/"
+            target="_blank"
+          >
+            @posepalacestudio
+          </a>
+        </p>
+        <div className="hashtags">
+          {hashtags.map((hashtag, idx) => (
+            <a key={idx} href={`https://www.instagram.com/explore/tags/${hashtag}`} target="_blank">
+              #{hashtag}
+            </a>
+          ))}
+        </div>
       </header>
       <div className="grid-container">
-        {collections.map((collection, collectionIndex) => (
-          <div key={collectionIndex} className="collection">
-            <p className="collection-title">{collection.title}</p>
-            <div className="collection-images">
-              {collection.images.map((url, idx) => (
-                <div className="grid-item" key={idx}>
-                  <img src={url} alt="pose palace studio collection" loading="lazy" />
-                </div>
-              ))}
-            </div>
+        {photos.map((imagePath, idx) => (
+          <div className="grid-item" key={idx}>
+            <img src={`/photos/${imagePath}`} alt="pose palace studio collection" loading="lazy" />
           </div>
         ))}
       </div>
@@ -51,5 +60,3 @@ const App: FC = () => {
     </div>
   )
 }
-
-export default App
