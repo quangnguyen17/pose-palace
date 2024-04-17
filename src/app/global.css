@@ -107,6 +107,8 @@ footer {
   padding: 1rem;
   color: var(--main-bg-color);
   background-color: var(--main-ig-color);
+  white-space: nowrap;
+  overflow: auto;
 }
 
 footer > a {
