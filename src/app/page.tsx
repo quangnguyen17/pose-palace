@@ -27,20 +27,14 @@ export default function App() {
   return (
     <div className="App">
       <header>
-        <div className="row-text text-start">
-          <a
-            className="instagram"
-            href="https://www.instagram.com/posepalacestudio/"
-            target="_blank"
-          >
-            @posepalacestudio
+        <a className="instagram" href="https://www.instagram.com/posepalacestudio/" target="_blank">
+          @posepalacestudio
+        </a>
+        {hashtags.map((hashtag, idx) => (
+          <a key={idx} href={`https://www.instagram.com/explore/tags/${hashtag}`} target="_blank">
+            #{hashtag}
           </a>
-          {hashtags.map((hashtag, idx) => (
-            <a key={idx} href={`https://www.instagram.com/explore/tags/${hashtag}`} target="_blank">
-              #{hashtag}
-            </a>
-          ))}
-        </div>
+        ))}
       </header>
       <div className="grid-container">
         {photos.map((imagePath, idx) => (
