@@ -27,8 +27,7 @@ export default function App() {
   return (
     <div className="App">
       <header>
-        <p>
-          Follow us on Instagram{' '}
+        <div className="row-text text-start">
           <a
             className="instagram"
             href="https://www.instagram.com/posepalacestudio/"
@@ -36,8 +35,6 @@ export default function App() {
           >
             @posepalacestudio
           </a>
-        </p>
-        <div className="hashtags">
           {hashtags.map((hashtag, idx) => (
             <a key={idx} href={`https://www.instagram.com/explore/tags/${hashtag}`} target="_blank">
               #{hashtag}

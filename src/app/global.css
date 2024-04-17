@@ -91,16 +91,17 @@ header {
   border-bottom: solid 0.5px var(--main-border-color);
 }
 
-.hashtags {
+.row-text {
   display: flex;
   flex-direction: row;
   align-content: center;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 1rem;
 }
 
 a,
-p {
+span {
   font-style: italic;
   font-size: 1rem;
   background-color: var(--main-bg-color);
