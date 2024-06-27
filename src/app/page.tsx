@@ -1,14 +1,15 @@
-import './index.css'
+'use client'
+
+import { useRouter } from 'next/navigation'
 
 const App = () => {
+  const router = useRouter()
+
   return (
-    <div className="App">
-      <img className="poster" src="./opening-soon.jpg" />
-      <p>STAY TUNED!</p>
-      <a href="https://www.instagram.com/posepalacestudio/">
-        <img className="logo" src="./logo.jpg" />
-      </a>
-    </div>
+    <div
+      className="App"
+      onClick={() => router.push('https://www.instagram.com/posepalacestudio/')}
+    ></div>
   )
 }
 
