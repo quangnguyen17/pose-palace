@@ -1,5 +1,16 @@
-'use server'
+import './index.css'
 
-import { redirect } from 'next/navigation'
+const App = () => {
+  return (
+    <div className="App">
+      <p className="roboto-regular">COMING SOON</p>
+      <img className="poster" src="./opening-soon.jpg" />
+      <p className="roboto-regular">
+        Stay tuned and follow us on{' '}
+        <a href="https://www.instagram.com/posepalacestudio/">Instagram</a>
+      </p>
+    </div>
+  )
+}
 
-export default async () => redirect('https://calendly.com/posepalace/15min')
+export default App
