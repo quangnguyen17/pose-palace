@@ -1,36 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-.roboto-regular {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-medium {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.roboto-bold {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 html,
 body {
   background-color: black;
+  display: grid;
+  align-content: center;
 }
 
 .App {
+  margin: auto;
+  max-width: 1000px;
   width: 100vw;
   height: 100vh;
   padding: 1rem;
@@ -46,7 +35,7 @@ body {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: contain;
-  animation: blink 0.2s linear infinite;
+  animation: blink 0.15s linear infinite;
 }
 
 p {
@@ -54,13 +43,13 @@ p {
 }
 
 @keyframes blink {
-  20% {
-    opacity: 0.2;
+  10% {
+    opacity: 0.1;
   }
   50% {
     opacity: 0;
   }
-  80% {
-    opacity: 0.8;
+  90% {
+    opacity: 0.9;
   }
 }
