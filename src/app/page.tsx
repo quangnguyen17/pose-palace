@@ -3,12 +3,11 @@ import './index.css'
 const App = () => {
   return (
     <div className="App">
-      <p className="roboto-regular">COMING SOON</p>
       <img className="poster" src="./opening-soon.jpg" />
-      <p className="roboto-regular">
-        Stay tuned and follow us on{' '}
-        <a href="https://www.instagram.com/posepalacestudio/">Instagram</a>
-      </p>
+      <p>STAY TUNED!</p>
+      <a href="https://www.instagram.com/posepalacestudio/">
+        <img className="logo" src="./logo.jpg" />
+      </a>
     </div>
   )
 }

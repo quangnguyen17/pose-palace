@@ -28,14 +28,20 @@ body {
   justify-content: center;
   align-content: center;
   text-align: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .poster {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: contain;
-  animation: blink 0.15s linear infinite;
+  animation: blink 0.13s linear infinite;
+}
+
+.logo {
+  margin: 0 auto;
+  width: 200px;
+  object-fit: contain;
 }
 
 p {
