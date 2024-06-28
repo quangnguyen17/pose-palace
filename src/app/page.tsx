@@ -1,16 +1,12 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
-
-const App = () => {
-  const router = useRouter()
-
+const Page = () => {
   return (
     <div
       className="App"
-      onClick={() => router.push('https://www.instagram.com/posepalacestudio/')}
+      onClick={() => window.open('https://www.instagram.com/posepalacestudio/')}
     ></div>
   )
 }
 
-export default App
+export default Page
