@@ -2,7 +2,7 @@
 
 const Page = () => {
   return (
-    <div className="App align-items-center tracking-in-expand-fwd">
+    <div className="App">
       <a className="poster" href="https://www.instagram.com/posepalacestudio/" target="_blank">
         <img src="opening-soon.jpg" alt="opening-soon.jpg" />
       </a>
