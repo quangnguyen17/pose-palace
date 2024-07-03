@@ -22,13 +22,14 @@ body,
 }
 
 .poster img {
+  max-width: 900px;
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
 .logo {
-  width: 8rem;
+  width: 10rem;
   -webkit-filter: invert(100%);
   filter: invert(100%);
 }
@@ -37,7 +38,7 @@ body,
   background: none;
   padding: 2rem;
   border-radius: 0.7rem;
-  border: 0.5rem solid;
+  border: 0.4rem solid;
   box-shadow: 0 0 15px 5px rgba(17, 65, 98, 0.7); /* Initial shadow */
   animation: rainbow-border 1s infinite, flicker 0.1s infinite;
 }
