@@ -18,57 +18,73 @@ const Home = () => {
           }}
         />
       </header>
-      <h2>Book your first session with us today 📸</h2>
-      <div className="pricing-card bg-yellow">
-        <p className="pricing-headline">5-minute session</p>
-        <p className="pricing-label">$27</p>
-        <ul className="pricing-whats-included">
-          <li>For 2 people (each additional: $5)</li>
-          <li>Instantly available digital photos (available for 7 days)</li>
-          <li>
-            2 selected complimentary digital edits (delivered within 24 hours) and $5/edit after
-          </li>
-          <li>All props included</li>
-          <li>
-            <p>Printings:</p>
-            <ul>
-              <li>
-                <b>1</b> <u>4x6</u> in (1, 3, 4 photo layouts)
-              </li>
-              <li>
-                OR <b>2</b> <u>2x2</u> in passport photos
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <button className="pricing-book-now">Book now</button>
+      <h3>Book your first session with us today 📸</h3>
+      <div className="grid">
+        <div className="pricing-card bg-yellow">
+          <p className="pricing-headline">5-minute session</p>
+          <p className="pricing-label">$27</p>
+          <ul className="pricing-whats-included">
+            <li>For 2 people (each additional: $5)</li>
+            <li>Instantly available digital photos (available for 7 days)</li>
+            <li>
+              2 selected complimentary digital edits (delivered within 24 hours) and $5/edit after
+            </li>
+            <li>All props included</li>
+            <li>
+              <p>Printings:</p>
+              <ul>
+                <li>
+                  <b>1</b> <u>4x6</u> in (1, 3, 4 photo layouts)
+                </li>
+                <li>
+                  OR <b>2</b> <u>2x2</u> in passport photos
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <button
+            className="pricing-book-now"
+            onClick={() => {
+              window.open('https://calendly.com/posepalace/5-minute-session')
+            }}
+          >
+            Book now
+          </button>
+        </div>
+        <div className="pricing-card bg-light-blue">
+          <p className="pricing-headline">15-minute session</p>
+          <p className="pricing-label">$67</p>
+          <ul className="pricing-whats-included">
+            <li>For 2 people (each additional: $5)</li>
+            <li>Instantly available digital photos (available for 7 days)</li>
+            <li>
+              3 selected complimentary digital edits (delivered within 24 hours) and $5/edit after
+            </li>
+            <li>All props included</li>
+            <li>
+              <p>Printings:</p>
+              <ul>
+                <li>
+                  <b>3</b> <u>4x6</u> in (1, 3, 4 photo layouts)
+                </li>
+                <li>
+                  AND/OR <b>2</b> <u>2x2</u> in passport photos
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <button
+            className="pricing-book-now"
+            onClick={() => {
+              window.open('https://calendly.com/posepalace/15-minute-session')
+            }}
+          >
+            Book now
+          </button>
+        </div>
       </div>
-      <div className="pricing-card bg-light-blue">
-        <p className="pricing-headline">15-minute session</p>
-        <p className="pricing-label">$67</p>
-        <ul className="pricing-whats-included">
-          <li>For 2 people (each additional: $5)</li>
-          <li>Instantly available digital photos (available for 7 days)</li>
-          <li>
-            3 selected complimentary digital edits (delivered within 24 hours) and $5/edit after
-          </li>
-          <li>All props included</li>
-          <li>
-            <p>Printings:</p>
-            <ul>
-              <li>
-                <b>3</b> <u>4x6</u> in (1, 3, 4 photo layouts)
-              </li>
-              <li>
-                AND/OR <b>2</b> <u>2x2</u> in passport photos
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <button className="pricing-book-now">Book now</button>
-      </div>
-      <h2>How it works</h2>
-      <div className="card">
+      <h3>How it works</h3>
+      <div className="card bg-gray">
         <p>
           {`Our studio consists of two rooms: one features a cyclorama white wall, ideal for wide,
             full-body shots, while the other offers multiple color backdrops, perfect for more
@@ -93,8 +109,8 @@ const Home = () => {
           <li>Party props like glasses, headbands, hats, etc.</li>
         </ul>
       </div>
-      <h2>{`Promotions we're currently offering`}</h2>
-      <div className="card">
+      <h3>{`Promotions we're currently offering`}</h3>
+      <div className="card bg-gray">
         <p>
           <b>10% off</b> for the following events in a given month:
         </p>
@@ -110,7 +126,7 @@ const Home = () => {
           <b>10% off</b> automatic discount for military personnel and healthcare workers.
         </p>
       </div>
-      <h2>About us</h2>
+      <h3>About us</h3>
       <div className="card">
         <p>
           {`We are a proud Vietnamese-American-owned self-portrait photo studio conveniently located
