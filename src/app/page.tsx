@@ -24,7 +24,7 @@ const Home = () => {
             preserve these moments than by capturing them yourself, with your own authentic
             expressions and feelings?
           </p>
-          <h3>How does it work?</h3>
+          <h3>How it works</h3>
           <p>
             Our studio consists of two rooms: one features a cyclorama white wall, ideal for wide,
             full-body shots, while the other offers multiple color backdrops, perfect for more
@@ -33,21 +33,32 @@ const Home = () => {
             taking your first shot to familiarize you with the equipment, and finally, start the
             timer for your booked session.
           </p>
-          <h4>Photography equipments (included in rental price):</h4>
-          <ul>
-            <li>1 Sony Full-Frame camera</li>
-            <li>1 32-inch monitor displaying the camera's live view/feed</li>
-            <li>1 27-inch monitor displaying the last photo taken</li>
-            <li>1-2 photography strobe lights depending on the room.</li>
-          </ul>
-          <h4>Props available for use (included in rental price):</h4>
-          <ul>
-            <li>Benches</li>
-            <li>Cubes</li>
-            <li>Chairs</li>
-            <li>Stools</li>
-            <li>Party props like glasses, headbands, hats, etc.</li>
-          </ul>
+          <table>
+            <tr>
+              <th>Photography equipments (included in rental price)</th>
+              <th>Props available for use (included in rental price)</th>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>1 Sony Full-Frame camera</li>
+                  <li>1 32-inch monitor displaying the camera's live view/feed</li>
+                  <li>1 27-inch monitor displaying the last photo taken</li>
+                  <li>1-2 photography strobe lights depending on the room.</li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>Benches</li>
+                  <li>Cubes</li>
+                  <li>Chairs</li>
+                  <li>Stools</li>
+                  <li>Party props like glasses, headbands, hats, etc.</li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+
           <h3>Pricing</h3>
           <table>
             <tr>

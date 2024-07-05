@@ -21,10 +21,31 @@ main {
   overflow: auto;
 }
 
+h3 {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+p,
+button,
+li,
+td {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+th {
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
 footer {
   text-align: center;
   color: white;
   background-color: black;
+  font-size: 1rem;
+  font-weight: bold;
   padding: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
