@@ -1,62 +1,9 @@
-'use server'
-
-import { FC } from 'react'
-import Image from 'next/image'
+import { Fragment } from 'react'
 import Link from 'next/link'
 
-const Header = () => {
+const App = () => {
   return (
-    <header>
-      <Image src="/logo.png" alt="Pose Palace Logo" width={163} height={70} />
-      <Link href="https://www.instagram.com/posepalacestudio/" target="_blank">
-        <Image
-          className="instagram"
-          src="/instagram.png"
-          alt="Pose Palace Instagram"
-          width={34}
-          height={34}
-        />
-      </Link>
-    </header>
-  )
-}
-
-const Footer = () => {
-  return (
-    <footer>
-      <p>© 2024 Crystal Lighthouse LLC. All Rights Reserved.</p>
-    </footer>
-  )
-}
-
-const SampleBanner: FC<{
-  title: string
-  photos: string[]
-}> = ({ title, photos }) => {
-  return (
-    <div className="cell">
-      <h3>{title}</h3>
-      <div className="base bg-gray">
-        {photos.map((photo) => (
-          <Image
-            key={photo}
-            src={`/${photo}`}
-            alt={`sample photo ${photo}`}
-            width={200}
-            height={400}
-            quality={100}
-            style={{ flex: 1, width: '100%', height: 'auto', objectFit: 'cover' }}
-          />
-        ))}
-      </div>
-    </div>
-  )
-}
-
-const App = async () => {
-  return (
-    <div className="App">
-      <Header />
+    <Fragment>
       <h3>Book your first session with us today 📸</h3>
       <div className="grid">
         <div className="cell pricing-card bg-yellow">
@@ -123,10 +70,6 @@ const App = async () => {
         </div>
       </div>
       <div className="grid">
-        <SampleBanner
-          title="Waist-up color room 🌈"
-          photos={['sample-1.jpg', 'sample-2.jpg', 'sample-3.jpg', 'sample-4.jpg', 'sample-5.jpg']}
-        />
         <div className="cell">
           <h3>How it works</h3>
           <div className="card bg-gray">
@@ -155,10 +98,6 @@ const App = async () => {
             </ul>
           </div>
         </div>
-        <SampleBanner
-          title="Full-body white room ⬜️"
-          photos={['sample-6.jpg', 'sample-7.jpg', 'sample-10.jpg', 'sample-8.jpg', 'sample-9.jpg']}
-        />
         <div className="cell">
           <h3>Promotions</h3>
           <div className="card bg-gray">
@@ -195,8 +134,7 @@ const App = async () => {
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
+    </Fragment>
   )
 }
 
