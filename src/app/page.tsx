@@ -109,7 +109,7 @@ const Home = () => {
           <li>Party props like glasses, headbands, hats, etc.</li>
         </ul>
       </div>
-      <h3>{`Promotions we're currently offering`}</h3>
+      <h3>Promotions</h3>
       <div className="card bg-gray">
         <p>
           <b>10% off</b> for the following events in a given month:
@@ -117,7 +117,7 @@ const Home = () => {
         <ul>
           <li>Birthday</li>
           <li>
-            {`Wedding/Couple Anniversary (provide an image of last year's anniversary to verify)`}
+            {`Wedding/Couple Anniversary (must provide an image of last year's anniversary to verify)`}
           </li>
           <li>Graduation</li>
           <li>Quinceañera</li>
