@@ -1,8 +1,8 @@
 'use server'
 
+import { FC } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FC } from 'react'
 
 const Header = () => {
   return (
@@ -29,28 +29,14 @@ const Footer = () => {
   )
 }
 
-type SampleBannerProps = {
+const SampleBanner: FC<{
   title: string
   photos: string[]
-}
-
-const SampleBanner: FC<SampleBannerProps> = ({ title, photos }) => {
+}> = ({ title, photos }) => {
   return (
     <div className="cell">
       <h3>{title}</h3>
-      <div
-        className="base"
-        style={{
-          width: '100%',
-          minHeight: '400px',
-          borderRadius: '16px',
-          overflow: 'auto',
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'stretch',
-          alignItems: 'stretch',
-        }}
-      >
+      <div className="base bg-gray">
         {photos.map((photo) => (
           <Image
             key={photo}
@@ -138,7 +124,7 @@ const App = async () => {
       </div>
       <div className="grid">
         <SampleBanner
-          title="Waist-up color room"
+          title="Waist-up color room 🌈"
           photos={['sample-1.jpg', 'sample-2.jpg', 'sample-3.jpg', 'sample-4.jpg', 'sample-5.jpg']}
         />
         <div className="cell">
@@ -170,7 +156,7 @@ const App = async () => {
           </div>
         </div>
         <SampleBanner
-          title="Full-body white room"
+          title="Full-body white room ⬜️"
           photos={['sample-6.jpg', 'sample-7.jpg', 'sample-10.jpg', 'sample-8.jpg', 'sample-9.jpg']}
         />
         <div className="cell">
