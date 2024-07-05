@@ -59,7 +59,7 @@ header img {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 19px;
   line-height: 26px;
 }
 
@@ -165,4 +165,13 @@ ul {
 li {
   font-size: 15px;
   line-height: 23px;
+}
+
+footer {
+  width: 100%;
+  color: rgb(161, 161, 161);
+}
+
+footer p {
+  font-size: 13px;
 }

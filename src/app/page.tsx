@@ -31,13 +31,15 @@ const Home = () => {
             </li>
             <li>All props included</li>
             <li>
-              <p>Printings:</p>
+              <p>
+                Prints (you can choose <b>one</b> of the followings):
+              </p>
               <ul>
                 <li>
                   <b>1</b> <u>4x6</u> in (1, 3, 4 photo layouts)
                 </li>
                 <li>
-                  OR <b>2</b> <u>2x2</u> in passport photos
+                  <b>2</b> <u>2x2</u> in passport photos
                 </li>
               </ul>
             </li>
@@ -62,13 +64,13 @@ const Home = () => {
             </li>
             <li>All props included</li>
             <li>
-              <p>Printings:</p>
+              <p>Prints (you can choose any of the followings):</p>
               <ul>
                 <li>
                   <b>3</b> <u>4x6</u> in (1, 3, 4 photo layouts)
                 </li>
                 <li>
-                  AND/OR <b>2</b> <u>2x2</u> in passport photos
+                  <b>2</b> <u>2x2</u> in passport photos
                 </li>
               </ul>
             </li>
@@ -140,6 +142,9 @@ const Home = () => {
             expressions and feelings?`}
         </p>
       </div>
+      <footer>
+        <p>© 2024 Crystal Lighthouse LLC. All Rights Reserved.</p>
+      </footer>
     </div>
   )
 }
