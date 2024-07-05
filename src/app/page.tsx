@@ -51,7 +51,7 @@ const Home = () => {
             Book now
           </button>
         </div>
-        <div className="pricing-card bg-light-blue">
+        <div className="pricing-card bg-purple">
           <p className="pricing-headline">15-minute session</p>
           <p className="pricing-label">$67</p>
           <ul className="pricing-whats-included">
@@ -127,7 +127,7 @@ const Home = () => {
         </p>
       </div>
       <h3>About us</h3>
-      <div className="card">
+      <div className="card bg-gray">
         <p>
           {`We are a proud Vietnamese-American-owned self-portrait photo studio conveniently located
             in Koreatown, Garden Grove. Our mission is to provide professional photos at affordable
