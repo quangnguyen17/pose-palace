@@ -1,20 +1,24 @@
 'use client'
 
+import Image from 'next/image'
+
 const Home = () => {
   return (
     <div className="App">
       <main>
         <div className="section">
-          <img
-            className="logo"
-            src="logo.png"
-            alt="logo.png"
+          <Image
+            src="/logo.png"
+            alt="/logo.png"
+            width={200}
+            height={100}
+            style={{ objectFit: 'contain' }}
             onClick={() => {
               window.open('https://www.instagram.com/posepalacestudio/')
             }}
           />
           <p>
-            We are a proud Vietnamese-American-owned self-portrait photo studio conveniently located
+            {`We are a proud Vietnamese-American-owned self-portrait photo studio conveniently located
             in Koreatown, Garden Grove. Our mission is to provide professional photos at affordable
             prices. You might wonder what a self-portrait studio is. Essentially, it's a photography
             studio where customers take photos of themselves, rather than being photographed by a
@@ -22,16 +26,16 @@ const Home = () => {
             see yourself exactly as you appear in the camera, much like looking into a mirror. We
             firmly believe that capturing memorable moments is invaluable. What better way to
             preserve these moments than by capturing them yourself, with your own authentic
-            expressions and feelings?
+            expressions and feelings?`}
           </p>
           <h3>How it works</h3>
           <p>
-            Our studio consists of two rooms: one features a cyclorama white wall, ideal for wide,
+            {`Our studio consists of two rooms: one features a cyclorama white wall, ideal for wide,
             full-body shots, while the other offers multiple color backdrops, perfect for more
             personal waist-up to headshot portraits. An on-site attendant will guide you into either
             room, provide you with a remote clicker to trigger the camera shutter, assist you in
             taking your first shot to familiarize you with the equipment, and finally, start the
-            timer for your booked session.
+            timer for your booked session.`}
           </p>
           <table>
             <tr>
@@ -42,7 +46,7 @@ const Home = () => {
               <td>
                 <ul>
                   <li>1 Sony Full-Frame camera</li>
-                  <li>1 32-inch monitor displaying the camera's live view/feed</li>
+                  <li>{`1 32-inch monitor displaying the camera's live view/feed`}</li>
                   <li>1 27-inch monitor displaying the last photo taken</li>
                   <li>1-2 photography strobe lights depending on the room.</li>
                 </ul>
@@ -58,7 +62,6 @@ const Home = () => {
               </td>
             </tr>
           </table>
-
           <h3>Pricing</h3>
           <table>
             <tr>
@@ -90,7 +93,7 @@ const Home = () => {
             <ul>
               <li>Birthday</li>
               <li>
-                Wedding/Couple Anniversary (provide an image of last year's anniversary to verify)
+                {`Wedding/Couple Anniversary (provide an image of last year's anniversary to verify)`}
               </li>
               <li>Graduation</li>
               <li>Quinceañera</li>
