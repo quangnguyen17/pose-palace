@@ -15,6 +15,10 @@ export const metadata: Metadata = {
     'self portrait studio',
     'photo taking',
     'photo taking studio',
+    'garden grove photo studio',
+    'garden grove photo',
+    'garden grove portrait',
+    'garden grove portraits',
   ],
 }
 
