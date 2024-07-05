@@ -5,16 +5,19 @@ import Image from 'next/image'
 const Home = () => {
   return (
     <div className="App">
-      <Image
-        src="/logo.png"
-        alt="/logo.png"
-        width={200}
-        height={100}
-        style={{ objectFit: 'contain', cursor: 'pointer' }}
-        onClick={() => {
-          window.open('https://www.instagram.com/posepalacestudio/')
-        }}
-      />
+      <header>
+        <Image src="/logo.png" alt="/logo.png" width={163} height={70} />
+        <Image
+          className="instagram"
+          src="/instagram.png"
+          alt="/instagram.png"
+          width={34}
+          height={34}
+          onClick={() => {
+            window.open('https://www.instagram.com/posepalacestudio/')
+          }}
+        />
+      </header>
       <h2>Book your first session with us today 📸</h2>
       <div className="pricing-card bg-yellow">
         <p className="pricing-headline">5-minute session</p>
