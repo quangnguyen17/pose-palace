@@ -10,7 +10,7 @@ const Home = () => {
         alt="/logo.png"
         width={200}
         height={100}
-        style={{ objectFit: 'contain' }}
+        style={{ objectFit: 'contain', cursor: 'pointer' }}
         onClick={() => {
           window.open('https://www.instagram.com/posepalacestudio/')
         }}
@@ -27,16 +27,13 @@ const Home = () => {
           </li>
           <li>All props included</li>
           <li>
-            <p>Print (you can choose one of the followings):</p>
+            <p>Printings:</p>
             <ul>
               <li>
-                <b>1</b> <u>4x6</u> in (up to 2 photos)
+                <b>1</b> <u>4x6</u> in (1, 3, 4 photo layouts)
               </li>
               <li>
-                <b>2</b> <u>2x6</u> in strip (up to 3 images per strip)
-              </li>
-              <li>
-                <b>2</b> <u>2x2</u> in passport photos
+                OR <b>2</b> <u>2x2</u> in passport photos
               </li>
             </ul>
           </li>
@@ -44,7 +41,7 @@ const Home = () => {
         <button className="pricing-book-now">Book now</button>
       </div>
       <div className="pricing-card bg-light-blue">
-        <p className="pricing-headline">25-minute session</p>
+        <p className="pricing-headline">15-minute session</p>
         <p className="pricing-label">$67</p>
         <ul className="pricing-whats-included">
           <li>For 2 people (each additional: $5)</li>
@@ -54,16 +51,13 @@ const Home = () => {
           </li>
           <li>All props included</li>
           <li>
-            <p>Print (you can choose any of the followings):</p>
+            <p>Printings:</p>
             <ul>
               <li>
-                <b>3</b> <u>4x6</u> in (up to 2 photos)
+                <b>3</b> <u>4x6</u> in (1, 3, 4 photo layouts)
               </li>
               <li>
-                <b>2</b> <u>2x6</u> in strip (up to 3 images per strip)
-              </li>
-              <li>
-                <b>2</b> <u>2x2</u> in passport photos
+                AND/OR <b>2</b> <u>2x2</u> in passport photos
               </li>
             </ul>
           </li>
