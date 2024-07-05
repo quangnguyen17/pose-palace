@@ -7,16 +7,19 @@ const Home = () => {
     <div className="App">
       <main>
         <div className="section">
-          <Image
-            src="/logo.png"
-            alt="/logo.png"
-            width={200}
-            height={100}
-            style={{ objectFit: 'contain' }}
-            onClick={() => {
-              window.open('https://www.instagram.com/posepalacestudio/')
-            }}
-          />
+          <div style={{ width: '100%', textAlign: 'center' }}>
+            <Image
+              src="/logo.png"
+              alt="/logo.png"
+              width={200}
+              height={100}
+              style={{ objectFit: 'contain', cursor: 'pointer' }}
+              onClick={() => {
+                window.open('https://www.instagram.com/posepalacestudio/')
+              }}
+            />
+          </div>
+
           <p>
             {`We are a proud Vietnamese-American-owned self-portrait photo studio conveniently located
             in Koreatown, Garden Grove. Our mission is to provide professional photos at affordable
@@ -65,16 +68,36 @@ const Home = () => {
           <h3>Pricing</h3>
           <table>
             <tr>
-              <th>Duration</th>
               <th>Price</th>
+              <th>Duration</th>
+              <th>What's included</th>
             </tr>
             <tr>
-              <td>5 minutes</td>
               <td>$26.99</td>
+              <td>5 minutes</td>
+              <td>
+                <ul>
+                  <li>Instantly available digital photos (available for 7 days)</li>
+                  <li>
+                    2 selected complimentary digital edits (delivered within 24 hours) and $5/edit
+                    after
+                  </li>
+                  <li>All props in either room</li>
+                  <li>
+                    <p>Print (you can choose one of the followings):</p>
+                    <ul>
+                      <li>1 4x6 in (up to 2 photos)</li>
+                      <li>2 2x6 in strip (up to 3 images per strip)</li>
+                      <li> 2 2x2 in passport photos</li>
+                    </ul>
+                  </li>
+                </ul>
+              </td>
             </tr>
             <tr>
-              <td>25 minutes</td>
               <td>$66.99</td>
+              <td>25 minutes</td>
+              <td></td>
             </tr>
           </table>
           <h3>Promotions</h3>
@@ -109,7 +132,7 @@ const Home = () => {
           window.open('https://calendly.com/posepalace/15min')
         }}
       >
-        BOOK NOW
+        📆 Book your first session with us today!
       </footer>
     </div>
   )
