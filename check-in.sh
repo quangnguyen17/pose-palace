@@ -1,9 +1,3 @@
 #!/bin/bash
 
-# test build first
-yarn build
-
-# push
-git add .
-git commit -m "$1"
-git push
+./build.sh && git add . && git commit -m "$1" && git push
