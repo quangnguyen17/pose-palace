@@ -1,8 +1,8 @@
 'use server'
 
-import { Fragment } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { FC } from 'react'
 
 const Header = () => {
   return (
@@ -26,6 +26,44 @@ const Footer = () => {
     <footer>
       <p>© 2024 Crystal Lighthouse LLC. All Rights Reserved.</p>
     </footer>
+  )
+}
+
+type SampleBannerProps = {
+  title: string
+  photos: string[]
+}
+
+const SampleBanner: FC<SampleBannerProps> = ({ title, photos }) => {
+  return (
+    <div className="cell">
+      <h3>{title}</h3>
+      <div
+        className="base"
+        style={{
+          width: '100%',
+          minHeight: '400px',
+          borderRadius: '16px',
+          overflow: 'auto',
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'stretch',
+          alignItems: 'stretch',
+        }}
+      >
+        {photos.map((photo) => (
+          <Image
+            key={photo}
+            src={`/${photo}`}
+            alt={`sample photo ${photo}`}
+            width={200}
+            height={400}
+            quality={100}
+            style={{ flex: 1, width: '100%', height: 'auto', objectFit: 'cover' }}
+          />
+        ))}
+      </div>
+    </div>
   )
 }
 
@@ -99,6 +137,10 @@ const App = async () => {
         </div>
       </div>
       <div className="grid">
+        <SampleBanner
+          title="Waist-up color room"
+          photos={['sample-1.jpg', 'sample-2.jpg', 'sample-3.jpg', 'sample-4.jpg', 'sample-5.jpg']}
+        />
         <div className="cell">
           <h3>How it works</h3>
           <div className="card bg-gray">
@@ -127,6 +169,10 @@ const App = async () => {
             </ul>
           </div>
         </div>
+        <SampleBanner
+          title="Full-body white room"
+          photos={['sample-6.jpg', 'sample-7.jpg', 'sample-10.jpg', 'sample-8.jpg', 'sample-9.jpg']}
+        />
         <div className="cell">
           <h3>Promotions</h3>
           <div className="card bg-gray">
