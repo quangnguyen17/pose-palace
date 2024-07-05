@@ -70,7 +70,7 @@ const Home = () => {
             <tr>
               <th>Price</th>
               <th>Duration</th>
-              <th>What's included</th>
+              <th>{`What's included`}</th>
             </tr>
             <tr>
               <td>$26.99</td>
