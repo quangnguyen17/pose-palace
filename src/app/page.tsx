@@ -96,7 +96,7 @@ const Home = () => {
           <li>Party props like glasses, headbands, hats, etc.</li>
         </ul>
       </div>
-      <h2>Promotions we're currently offering</h2>
+      <h2>{`Promotions we're currently offering`}</h2>
       <div className="card">
         <p>
           <b>10% off</b> for the following events in a given month:
