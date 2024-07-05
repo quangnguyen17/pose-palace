@@ -1,22 +1,22 @@
-'use client'
+'use server'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
-const Home = () => {
+const Home = async () => {
   return (
     <div className="App">
       <header>
         <Image src="/logo.png" alt="/logo.png" width={163} height={70} />
-        <Image
-          className="instagram"
-          src="/instagram.png"
-          alt="/instagram.png"
-          width={34}
-          height={34}
-          onClick={() => {
-            window.open('https://www.instagram.com/posepalacestudio/')
-          }}
-        />
+        <Link href="https://www.instagram.com/posepalacestudio/" target="_blank">
+          <Image
+            className="instagram"
+            src="/instagram.png"
+            alt="/instagram.png"
+            width={34}
+            height={34}
+          />
+        </Link>
       </header>
       <h3>Book your first session with us today 📸</h3>
       <div className="grid">
@@ -44,14 +44,13 @@ const Home = () => {
               </ul>
             </li>
           </ul>
-          <button
+          <Link
             className="pricing-book-now"
-            onClick={() => {
-              window.open('https://calendly.com/posepalace/5-minute-session')
-            }}
+            href="https://calendly.com/posepalace/5-minute-session"
+            target="_blank"
           >
             Book now
-          </button>
+          </Link>
         </div>
         <div className="pricing-card bg-purple">
           <p className="pricing-headline">15-minute session</p>
@@ -75,14 +74,13 @@ const Home = () => {
               </ul>
             </li>
           </ul>
-          <button
+          <Link
             className="pricing-book-now"
-            onClick={() => {
-              window.open('https://calendly.com/posepalace/15-minute-session')
-            }}
+            href="https://calendly.com/posepalace/15-minute-session"
+            target="_blank"
           >
             Book now
-          </button>
+          </Link>
         </div>
       </div>
       <h3>How it works</h3>
