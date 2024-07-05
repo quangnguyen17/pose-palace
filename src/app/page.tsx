@@ -1,16 +1,18 @@
+'use server'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="App">
       <header>
-        <Image src="/logo.png" alt="/logo.png" width={163} height={70} />
+        <Image src="/logo.png" alt="Pose Palace Logo" width={163} height={70} />
         <Link href="https://www.instagram.com/posepalacestudio/" target="_blank">
           <Image
             className="instagram"
             src="/instagram.png"
-            alt="/instagram.png"
+            alt="Pose Palace Instagram"
             width={34}
             height={34}
           />
