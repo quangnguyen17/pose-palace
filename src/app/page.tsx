@@ -1,9 +1,7 @@
-'use server'
-
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Home = async () => {
+export default function Home() {
   return (
     <div className="App">
       <header>
@@ -146,5 +144,3 @@ const Home = async () => {
     </div>
   )
 }
-
-export default Home
