@@ -15,7 +15,7 @@ export const Footer = () => {
         alignItems: 'center',
       }}
     >
-      <p style={{ fontSize: '14px' }}>© 2024 POSE PALACE Self-Portrait Studio</p>
+      <p style={{ fontSize: '14px' }}>© 2024 POSE PALACE self-portrait studio</p>
       <div
         style={{
           gap: '8px',
