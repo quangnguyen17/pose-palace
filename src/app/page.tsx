@@ -29,6 +29,10 @@ const App = () => {
                 </li>
               </ul>
             </li>
+            <li>
+              A $20 deposit is required upon booking (refundable if canceled more than 24 hours in
+              advance).
+            </li>
           </ul>
           <Link
             className="pricing-book-now"
@@ -58,6 +62,10 @@ const App = () => {
                   <b>2</b> <u>2x2</u> in passport photos
                 </li>
               </ul>
+            </li>
+            <li>
+              A $20 deposit is required upon booking (refundable if canceled more than 24 hours in
+              advance).
             </li>
           </ul>
           <Link
@@ -115,6 +123,9 @@ const App = () => {
             <p>
               <span className="badge">10% OFF</span> automatic discount for military personnel and
               healthcare workers.
+            </p>
+            <p style={{ fontStyle: 'italic', color: 'rgb(100, 100, 100)' }}>
+              Only 2 discounts/coupons can be applied to one session (max discount: 20% per session)
             </p>
           </div>
         </div>
