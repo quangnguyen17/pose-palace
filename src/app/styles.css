@@ -162,16 +162,12 @@ li {
   line-height: 23px;
 }
 
-.scrolling-container {
-  animation: scroll 60s linear infinite; /* Adjust timing as needed */
-}
-
-/* Keyframes for scrolling effect */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.badge {
+  background-color: rgb(102, 81, 120);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 30px;
 }

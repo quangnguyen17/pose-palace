@@ -102,7 +102,7 @@ const App = () => {
           <h3>Promotions</h3>
           <div className="card bg-gray">
             <p>
-              <b>10% off</b> for the following events in a given month:
+              <span className="badge">10% OFF</span> for the following events in a given month:
             </p>
             <ul>
               <li>Birthday</li>
@@ -113,7 +113,8 @@ const App = () => {
               <li>Quinceañera</li>
             </ul>
             <p>
-              <b>10% off</b> automatic discount for military personnel and healthcare workers.
+              <span className="badge">10% OFF</span> automatic discount for military personnel and
+              healthcare workers.
             </p>
           </div>
         </div>
