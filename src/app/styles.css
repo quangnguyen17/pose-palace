@@ -161,3 +161,17 @@ li {
   font-size: 15px;
   line-height: 23px;
 }
+
+.scrolling-container {
+  animation: scroll 60s linear infinite; /* Adjust timing as needed */
+}
+
+/* Keyframes for scrolling effect */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
