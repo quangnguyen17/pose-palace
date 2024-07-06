@@ -18,9 +18,7 @@ export const Footer = () => {
       }}
     >
       <p style={{ color: 'black' }}>
-        <span style={{ fontStyle: 'italic' }}>
-          (We are located inside the AR Galleria, on the left-hand side of Tous Les Jours)
-        </span>
+        <span style={{ fontStyle: 'italic' }}>(We are located inside the AR Galleria)</span>
         <Link
           href="http://maps.google.com/maps?q=9618+Garden+Grove+Blvd%2C+Garden+Grove%2C+CA+92844"
           target="_blank"
