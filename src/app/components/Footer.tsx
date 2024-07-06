@@ -1,49 +1,27 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 export const Footer = () => {
   return (
     <footer
       style={{
         width: '100%',
-        color: 'rgb(160, 160, 160)',
         borderTop: '1px solid rgb(230, 230, 230)',
-        padding: '0.8rem 1rem',
+        padding: '1rem',
+        gap: '1rem',
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
+        flexWrap: 'wrap',
+        fontSize: '15px',
+        lineHeight: '20px',
       }}
     >
-      <p style={{ fontSize: '14px' }}>© 2024 POSE PALACE self-portrait studio</p>
-      <div
-        style={{
-          gap: '8px',
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Link href="/gallery">
-          <Image
-            src="/gallery.png"
-            alt="Pose Palace Gallery"
-            width={25}
-            height={25}
-            style={{ objectFit: 'contain' }}
-          />
-        </Link>
-        <Link href="https://www.instagram.com/posepalacestudio/" target="_blank">
-          <Image
-            src="/instagram.png"
-            alt="Pose Palace Instagram"
-            width={25}
-            height={25}
-            style={{ objectFit: 'contain' }}
-          />
-        </Link>
-      </div>
+      <p>© 2024 POSE PALACE self-portrait studio</p>
+      <Link href="/gallery">explore our work</Link>
+      <Link href="https://www.instagram.com/posepalacestudio/" target="_blank">
+        @posepalacestudio
+      </Link>
     </footer>
   )
 }

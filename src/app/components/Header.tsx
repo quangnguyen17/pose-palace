@@ -25,7 +25,7 @@ export const Header = () => {
           style={{ objectFit: 'contain' }}
         />
       </Link>
-      <p style={{ textAlign: 'right', fontSize: '13px', lineHeight: '19px' }}>
+      <p style={{ textAlign: 'right', fontSize: '14px', lineHeight: '20px' }}>
         <Link
           href="http://maps.google.com/maps?q=9618+Garden+Grove+Blvd%2C+Garden+Grove%2C+CA+92844"
           target="_blank"
