@@ -7,6 +7,7 @@ export const Header = () => {
       style={{
         width: '100%',
         padding: '1rem',
+        gap: '1rem',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -17,16 +18,34 @@ export const Header = () => {
       <Link href="/">
         <Image src="/logo.png" alt="Pose Palace Logo" width={163} height={70} />
       </Link>
-      <Link href="https://www.instagram.com/posepalacestudio/" target="_blank">
-        <Image
-          className="instagram"
-          src="/instagram.png"
-          alt="Pose Palace Instagram"
-          width={34}
-          height={34}
-          style={{ cursor: 'pointer' }}
-        />
-      </Link>
+      <div
+        style={{
+          gap: '8px',
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Link href="/gallery">
+          <Image
+            src="/gallery.png"
+            alt="Pose Palace Gallery"
+            width={43}
+            height={43}
+            style={{ objectFit: 'contain' }}
+          />
+        </Link>
+        <Link href="https://www.instagram.com/posepalacestudio/" target="_blank">
+          <Image
+            src="/instagram.png"
+            alt="Pose Palace Instagram"
+            width={40}
+            height={40}
+            style={{ objectFit: 'contain' }}
+          />
+        </Link>
+      </div>
     </header>
   )
 }
