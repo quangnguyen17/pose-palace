@@ -4,8 +4,8 @@ import { Footer } from './components/Footer'
 import './styles.css'
 
 export const metadata: Metadata = {
-  title: 'Pose Palace',
-  creator: 'Pose Palace',
+  title: 'POSE PALACE self-portrait studio',
+  creator: 'Pose Palace self-portrait studio',
   keywords: [
     'Pose Palace',
     'Pose Palace Studio',
@@ -21,6 +21,14 @@ export const metadata: Metadata = {
     'garden grove photo',
     'garden grove portrait',
     'garden grove portraits',
+  ],
+  openGraph: {
+    title: 'POSE PALACE self-portrait studio',
+    description: 'Pose Palace self-portrait studio',
+  },
+  icons: [
+    { rel: 'icon', url: '/app-icon.jpg' },
+    { rel: 'apple-touch-icon', url: '/app-icon.jpg' },
   ],
 }
 
