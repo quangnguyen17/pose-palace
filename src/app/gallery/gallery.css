@@ -10,9 +10,9 @@
 .image {
   flex: 1;
   width: 100%;
-  min-width: 300px;
-  max-width: 400px;
-  height: 600px;
+  min-width: 325px;
+  max-width: 500px;
+  height: 650px;
   object-fit: cover;
   border-radius: 16px;
 }
