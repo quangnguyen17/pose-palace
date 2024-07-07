@@ -8,23 +8,72 @@ export const Header = () => {
         width: '100%',
         padding: '1rem',
         display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         alignItems: 'center',
         flexWrap: 'wrap',
         borderBottom: '1px solid rgb(230, 230, 230)',
       }}
     >
-      <Link href="/" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Link
+        href="/"
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
         <Image
-          src="/logo.png"
+          src="/logo-short.png"
           alt="Pose Palace Logo"
           width={200}
-          height={100}
-          unoptimized
-          style={{ objectFit: 'contain' }}
+          height={50}
+          style={{ objectFit: 'contain', width: 'auto' }}
         />
       </Link>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '8px',
+        }}
+      >
+        <Link
+          href="/gallery"
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Image
+            src="/gallery.png"
+            alt="Pose Palage Gallery"
+            width={37}
+            height={37}
+            style={{ objectFit: 'contain' }}
+          />
+        </Link>
+        <Link
+          href="https://www.instagram.com/posepalacestudio/"
+          target="_blank"
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Image
+            src="/instagram.png"
+            alt="Pose Palace Instagram"
+            width={34}
+            height={34}
+            style={{ objectFit: 'contain' }}
+          />
+        </Link>
+      </div>
     </header>
   )
 }

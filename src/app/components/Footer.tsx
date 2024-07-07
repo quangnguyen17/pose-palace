@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const Footer = () => {
   return (
@@ -32,20 +33,14 @@ export const Footer = () => {
           (714) 467-7036
         </Link>
       </p>
-      <p>
-        <Link href="/gallery" style={{ textAlign: 'left' }}>
-          explore our work
-        </Link>
-        <Link
-          href="https://www.instagram.com/posepalacestudio/"
-          target="_blank"
-          style={{ textAlign: 'left' }}
-        >
-          @posepalacestudio
-        </Link>
-        <span></span>
-      </p>
-      <p style={{ color: 'rgb(100, 100, 100)' }}>© 2024 POSE PALACE self-portrait studio</p>
+      <Image
+        src="/logo-long.png"
+        alt="Pose Palace Full Logo"
+        width={200}
+        height={75}
+        style={{ objectFit: 'contain', width: 'auto' }}
+      />
+      <p style={{ color: 'rgb(35, 35, 35)' }}>© 2024 Crystal Lighthouse LLC</p>
     </footer>
   )
 }
