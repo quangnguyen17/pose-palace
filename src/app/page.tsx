@@ -17,9 +17,6 @@ const App = () => {
         <ul>
           <li>For 2 people (each additional: $5)</li>
           <li>Instantly available digital photos (available for 7 days)</li>
-          <li>
-            2 selected complimentary digital edits (delivered within 24 hours) and $5/edit after
-          </li>
           <li>All props included</li>
           <li>
             <p>
@@ -53,9 +50,6 @@ const App = () => {
         <ul className="pricing-whats-included">
           <li>For 2 people (each additional: $5)</li>
           <li>Instantly available digital photos (available for 7 days)</li>
-          <li>
-            3 selected complimentary digital edits (delivered within 24 hours) and $5/edit after
-          </li>
           <li>All props included</li>
           <li>
             <p>Prints (you can choose any of the followings):</p>
