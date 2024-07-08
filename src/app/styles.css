@@ -116,13 +116,3 @@ a {
   border: none;
   cursor: pointer;
 }
-
-.badge {
-  background-color: rgb(50, 50, 50);
-  color: white;
-  padding: 3px 6px;
-  border-radius: 6px;
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 30px;
-}
