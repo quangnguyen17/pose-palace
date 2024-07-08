@@ -9,16 +9,19 @@ export const Footer = () => {
         borderTop: '1px solid rgb(230, 230, 230)',
         padding: '1rem',
         gap: '1rem',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        alignItems: 'flex-start',
-        flexWrap: 'wrap',
         fontSize: '15px',
-        lineHeight: '24px',
+        lineHeight: '25px',
       }}
     >
       <p style={{ color: 'black' }}>
+        <Image
+          src="/logo-long.png"
+          alt="Pose Palace Full Logo"
+          width={200}
+          height={75}
+          style={{ objectFit: 'contain', width: 'auto' }}
+        />
+        <br />
         <span style={{ fontStyle: 'italic' }}>(We are located inside the AR Galleria)</span>
         <Link
           href="http://maps.google.com/maps?q=9618+Garden+Grove+Blvd%2C+Garden+Grove%2C+CA+92844"
@@ -32,15 +35,8 @@ export const Footer = () => {
         <Link href="tel:714-467-7036" style={{ textAlign: 'left', color: 'black' }}>
           (714) 467-7036
         </Link>
+        <span>© 2024 Crystal Lighthouse LLC</span>
       </p>
-      <Image
-        src="/logo-long.png"
-        alt="Pose Palace Full Logo"
-        width={200}
-        height={75}
-        style={{ objectFit: 'contain', width: 'auto' }}
-      />
-      <p style={{ color: 'rgb(35, 35, 35)' }}>© 2024 Crystal Lighthouse LLC</p>
     </footer>
   )
 }

@@ -51,8 +51,8 @@ export const Header = () => {
           <Image
             src="/gallery.png"
             alt="Pose Palage Gallery"
-            width={38}
-            height={38}
+            width={36}
+            height={36}
             style={{ objectFit: 'contain' }}
           />
         </Link>
@@ -68,8 +68,8 @@ export const Header = () => {
           <Image
             src="/instagram.png"
             alt="Pose Palace Instagram"
-            width={34}
-            height={34}
+            width={32}
+            height={32}
             style={{ objectFit: 'contain' }}
           />
         </Link>
