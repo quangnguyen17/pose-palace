@@ -51,7 +51,9 @@ const App = () => (
         <li>Instantly available digital photos (available for 7 days)</li>
         <li>All props included</li>
         <li>
-          <p>Prints (you can choose any of the followings):</p>
+          <p>
+            Prints (you can choose <b>one</b> of the followings):
+          </p>
           <ul>
             <li>
               <b>3</b> <u>4x6</u> in (1, 3, 4 photo layouts)
