@@ -6,13 +6,13 @@ export const Header = () => {
     <header
       style={{
         width: '100%',
-        padding: '1rem',
+        padding: '1rem 1rem 0 1rem',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         flexWrap: 'wrap',
-        borderBottom: '1px solid rgb(230, 230, 230)',
+        gap: '1rem',
       }}
     >
       <Link
@@ -27,7 +27,7 @@ export const Header = () => {
           src="/logo-short.png"
           alt="Pose Palace Logo"
           width={200}
-          height={50}
+          height={40}
           style={{ objectFit: 'contain', width: 'auto' }}
         />
       </Link>
@@ -51,8 +51,8 @@ export const Header = () => {
           <Image
             src="/gallery.png"
             alt="Pose Palage Gallery"
-            width={36}
-            height={36}
+            width={34}
+            height={34}
             style={{ objectFit: 'contain' }}
           />
         </Link>
@@ -68,8 +68,8 @@ export const Header = () => {
           <Image
             src="/instagram.png"
             alt="Pose Palace Instagram"
-            width={32}
-            height={32}
+            width={30}
+            height={30}
             style={{ objectFit: 'contain' }}
           />
         </Link>

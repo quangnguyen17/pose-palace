@@ -128,14 +128,18 @@ const App = () => (
             taking your first shot to familiarize you with the equipment, and finally, start the
             timer for your booked session.`}
       </p>
-      <h4>Photography equipments:</h4>
+      <p>
+        <b>Photography equipments:</b>
+      </p>
       <ul>
         <li>1 Sony Full-Frame camera</li>
         <li>{`1 32-inch monitor displaying the camera's live view/feed`}</li>
         <li>1 27-inch monitor displaying the last photo taken</li>
         <li>1-2 photography strobe lights depending on the room.</li>
       </ul>
-      <h4>Props available for use:</h4>
+      <p>
+        <b>Props available for use:</b>
+      </p>
       <ul>
         <li>Benches</li>
         <li>Cubes</li>
