@@ -27,7 +27,7 @@ export const Header = () => {
           src="/logo-short.png"
           alt="Pose Palace Logo"
           width={200}
-          height={40}
+          height={50}
           style={{ objectFit: 'contain', width: 'auto' }}
         />
       </Link>
