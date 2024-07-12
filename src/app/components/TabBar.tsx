@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export const Header = () => {
+export const TabBar = () => {
   return (
-    <header
+    <div
+      className="tabbar"
       style={{
+        flex: 1,
         width: '100%',
         padding: '1rem 1rem 0 1rem',
         display: 'flex',
@@ -34,6 +36,9 @@ export const Header = () => {
       <Link href="/gallery" style={{ color: 'rgb(0, 0, 0)' }}>
         our gallery
       </Link>
+      <Link href="/about" style={{ color: 'rgb(0, 0, 0)' }}>
+        about us
+      </Link>
       <Link
         target="_blank"
         href="https://www.instagram.com/posepalacestudio/"
@@ -41,6 +46,6 @@ export const Header = () => {
       >
         @posepalacestudio
       </Link>
-    </header>
+    </div>
   )
 }
