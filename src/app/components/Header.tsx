@@ -31,13 +31,13 @@ export const Header = () => {
           style={{ objectFit: 'contain', width: 'auto' }}
         />
       </Link>
-      <Link href="/gallery" style={{ color: 'rgb(50, 50, 50)' }}>
+      <Link href="/gallery" style={{ color: 'rgb(0, 0, 0)' }}>
         our gallery
       </Link>
       <Link
-        href="https://www.instagram.com/posepalacestudio/"
         target="_blank"
-        style={{ color: 'rgb(50, 50, 50)' }}
+        href="https://www.instagram.com/posepalacestudio/"
+        style={{ color: 'rgb(0, 0, 0)' }}
       >
         @posepalacestudio
       </Link>
