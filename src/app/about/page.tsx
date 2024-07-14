@@ -42,7 +42,6 @@ const More = () => {
         <li>Stools</li>
         <li>Party props like glasses, headbands, hats, etc.</li>
       </ul>
-      <hr />
       <Image
         src="/logo-long.png"
         alt="Pose Palace Full Logo"
