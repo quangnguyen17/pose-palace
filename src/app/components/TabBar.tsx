@@ -8,13 +8,13 @@ export const TabBar = () => {
       style={{
         flex: 1,
         width: '100%',
-        padding: '1rem 1rem 0 1rem',
+        padding: '16px 16px 0 16px',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'flex-start',
         alignItems: 'center',
         flexWrap: 'wrap',
-        gap: '1rem',
+        gap: '12px',
       }}
     >
       <Link
