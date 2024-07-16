@@ -15,20 +15,20 @@ main {
 }
 
 .grid {
+  gap: 1rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 1rem;
 }
 
 .cell {
   flex: 1;
   width: 100%;
-  min-width: 300px;
-  max-width: 900px;
+  min-width: 400px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -36,6 +36,19 @@ main {
   border-radius: 1rem;
   padding: 1rem;
   gap: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .grid {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .cell {
+    width: 100%;
+    min-width: auto;
+    max-width: 100%;
+  }
 }
 
 .cell .text,
@@ -46,7 +59,7 @@ li {
 
 h3 {
   font-size: 18px;
-  line-height: 26px;
+  line-height: 25px;
   font-weight: 500;
 }
 

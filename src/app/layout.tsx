@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
-import { Header } from './components/Header'
-import { Footer } from './components/Footer'
+import { TabBar } from './components/TabBar'
 import './styles.css'
 
 export const metadata: Metadata = {
@@ -36,9 +35,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
-        <Header />
+        <TabBar />
         <main>{children}</main>
-        <Footer />
       </body>
     </html>
   )

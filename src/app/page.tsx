@@ -1,15 +1,13 @@
 import { FC, PropsWithChildren } from 'react'
 import Link from 'next/link'
 
-const Grid: FC<PropsWithChildren> = ({ children }) => <div className="grid">{children}</div>
-
 const Cell: FC<PropsWithChildren<{ className?: string | undefined }>> = ({
   className,
   children,
 }) => <div className={`cell ${className}`}>{children}</div>
 
 const App = () => (
-  <Grid>
+  <div className="grid">
     <Cell className="bg-yellow">
       <h3>5-minute session</h3>
       <p className="pricing-label">$27</p>
@@ -51,7 +49,9 @@ const App = () => (
         <li>Instantly available digital photos (available for 7 days)</li>
         <li>All props included</li>
         <li>
-          <p>Prints (you can choose any of the followings):</p>
+          <p>
+            Prints (you can choose <b>one</b> of the followings):
+          </p>
           <ul>
             <li>
               <b>3</b> <u>4x6</u> in (1, 3, 4 photo layouts)
@@ -118,47 +118,7 @@ const App = () => (
           of gratitude for your service and dedication.`}
       </p>
     </Cell>
-    <Cell className="bg-gray">
-      <h3>How it works</h3>
-      <p className="text">
-        {`Our studio consists of two rooms: one features a cyclorama white wall, ideal for wide,
-            full-body shots, while the other offers multiple color backdrops, perfect for more
-            personal waist-up to headshot portraits. An on-site attendant will guide you into either
-            room, provide you with a remote clicker to trigger the camera shutter, assist you in
-            taking your first shot to familiarize you with the equipment, and finally, start the
-            timer for your booked session.`}
-      </p>
-      <h4>Photography equipments:</h4>
-      <ul>
-        <li>1 Sony Full-Frame camera</li>
-        <li>{`1 32-inch monitor displaying the camera's live view/feed`}</li>
-        <li>1 27-inch monitor displaying the last photo taken</li>
-        <li>1-2 photography strobe lights depending on the room.</li>
-      </ul>
-      <h4>Props available for use:</h4>
-      <ul>
-        <li>Benches</li>
-        <li>Cubes</li>
-        <li>Chairs</li>
-        <li>Stools</li>
-        <li>Party props like glasses, headbands, hats, etc.</li>
-      </ul>
-    </Cell>
-    <Cell className="bg-gray">
-      <h3>About us</h3>
-      <p className="text">
-        {`We are a proud Vietnamese-American-owned self-portrait photo studio conveniently located
-            in Koreatown, Garden Grove. Our mission is to provide professional photos at affordable
-            prices. You might wonder what a self-portrait studio is. Essentially, it's a photography
-            studio where customers take photos of themselves, rather than being photographed by a
-            professional. Equipped with a 32-inch monitor displaying the camera's live feed, you can
-            see yourself exactly as you appear in the camera, much like looking into a mirror. We
-            firmly believe that capturing memorable moments is invaluable. What better way to
-            preserve these moments than by capturing them yourself, with your own authentic
-            expressions and feelings?`}
-      </p>
-    </Cell>
-  </Grid>
+  </div>
 )
 
 export default App
