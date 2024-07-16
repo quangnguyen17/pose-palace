@@ -1,17 +1,15 @@
 
 "use client";
+import React, { useState } from 'react';
+import { Button } from 'semantic-ui-react';
 import axios from 'axios';
 import './waitlist.css';
-import { Button } from 'semantic-ui-react';
-import React, { useState } from 'react';
 import { Modal } from 'antd';
-
-
 
   
   const JoinWaitList = () => {
-    const[fname, setFName] = useState("");
-    const[lname, setLName] = useState("");
+    const[firstName, setFirstName] = useState("");
+    const[lastName, setLastName] = useState("");
     const[email, setEmail] = useState("");
     const[phone, setPhone] = useState("");
     const[sms, setSMS] = useState(false);
@@ -19,11 +17,11 @@ import { Modal } from 'antd';
     
     
 
-   const handleFNameChange = event => {
-    setFName(event.target.value)
+   const handleFirstNameChange = event => {
+    setFirstName(event.target.value)
   };
-    const handleLNameChange = event => {
-    setLName(event.target.value)
+    const handleLastNameChange = event => {
+    setLastName(event.target.value)
   };
     const handleEmailChange = event => {
     setEmail(event.target.value)
@@ -46,28 +44,19 @@ import { Modal } from 'antd';
     
 
     const handleSubmit = event => {
-      //const formEle = (document.querySelector('form-container')!);
       event.preventDefault();
       
 
-      const objt = {fname, lname, email, phone, sms };
+      const objt = {firstName, lastName, email, phone, sms };
 
       console.log(
         `\n
-        First Name: ${fname} \n
-        Last Name: ${lname} \n
+        First Name: ${firstName} \n
+        Last Name: ${lastName} \n
         Email Address: ${email} \n
         Phone Number: ${phone} \n
         SMS Promotions: ${sms}
         `)
-        /*
-        const formData = new FormData(formEle)
-        fetch("http://script.google.com/macros/s/AKfycbwoljFgnOmvB8sVjqpq6XAJSSzuyIKCWwPU3rbLnvUFRCwMvImS0Q2cvcMcJyLjqGg5HA/exec", {
-          method: 'POST',
-          body: formData,
-          mode: "no-cors"
-        });
-        */
         
         axios.post('https://sheetdb.io/api/v1/4ndhqe9ipguow', 
           objt
@@ -76,8 +65,8 @@ import { Modal } from 'antd';
         .then(response => {
           console.log(response);
           
-          setFName('');
-          setLName('');
+          setFirstName('');
+          setLastName('');
           setEmail('');
           setPhone('');
           setSMS(false);
@@ -96,11 +85,11 @@ import { Modal } from 'antd';
         <label>
           First Name:
         </label><br></br>
-          <input className ="textBox" type="text" name="Fname" placeholder="Enter your first name" value={fname} onChange={handleFNameChange}/><br></br><br></br>
+          <input className ="textBox" type="text" name="FirstName" placeholder="Enter your first name" value={firstName} onChange={handleFirstNameChange}/><br></br><br></br>
         <label>
           Last Name:
         </label><br></br>
-          <input className ="textBox" type="text" name="Lname" placeholder="Enter your last name" value={lname} onChange={handleLNameChange}/><br></br><br></br>
+          <input className ="textBox" type="text" name="Lname" placeholder="Enter your last name" value={lastName} onChange={handleLastNameChange}/><br></br><br></br>
         <label>
           Email Address:
         </label><br></br>
@@ -112,7 +101,10 @@ import { Modal } from 'antd';
       <div>
         <label>
           <input className="checkbox-wrapper" type="checkbox" name="SMS" checked={sms} onChange={handleSMSChange}/>
-          SMS Promotions
+          Allow SMS promotions, 
+          receive our latest offers and 
+          promotions and stay up to date 
+          with our latest stuff
         </label>
         <br></br><br></br>
       </div>
