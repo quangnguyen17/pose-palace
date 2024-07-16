@@ -39,9 +39,8 @@ export const TabBar = () => {
         borderTop: '1px solid rgb(235, 235, 235)',
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
-        flexWrap: 'wrap',
         gap: '16px',
       }}
     >
