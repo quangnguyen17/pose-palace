@@ -36,6 +36,7 @@ export const TabBar = () => {
       style={{
         width: '100%',
         padding: '16px',
+        borderTop: '1px solid rgb(235, 235, 235)',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
@@ -49,7 +50,7 @@ export const TabBar = () => {
           key={item.key}
           href={item.href}
           target={item.target}
-          style={{ color: pathname === item.href ? 'rgb(0, 0, 0)' : 'rgb(130, 130, 130)' }}
+          style={{ color: pathname === item.href ? 'rgb(0, 0, 0)' : 'rgb(135, 135, 135)' }}
         >
           {item.label}
         </Link>
