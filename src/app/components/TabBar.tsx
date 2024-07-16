@@ -34,7 +34,6 @@ export const TabBar = () => {
     <div
       className="tabbar"
       style={{
-        flex: 1,
         width: '100%',
         padding: '16px',
         display: 'flex',

@@ -5,7 +5,6 @@ export const StickyBanner: FC = () => {
   return (
     <Link
       style={{
-        flex: 1,
         backgroundColor: 'rgb(0, 0, 0)',
         color: 'white',
         padding: '16px',
