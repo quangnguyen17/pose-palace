@@ -35,7 +35,7 @@ const App = () => (
       </ul>
       <Link
         className="pricing-book-now"
-        href="https://calendly.com/posepalace/5-minute-session"
+        href="https://calendly.com/posepalacestudio/5-minute-session"
         target="_blank"
       >
         Book now
@@ -68,7 +68,7 @@ const App = () => (
       </ul>
       <Link
         className="pricing-book-now"
-        href="https://calendly.com/posepalace/15-minute-session"
+        href="https://calendly.com/posepalacestudio/15-minute-session"
         target="_blank"
       >
         Book now
