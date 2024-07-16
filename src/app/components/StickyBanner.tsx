@@ -8,15 +8,15 @@ export const StickyBanner: FC = () => {
         backgroundColor: 'rgb(0, 0, 0)',
         color: 'white',
         padding: '16px',
-        fontSize: '15px',
         fontWeight: 500,
-        lineHeight: '19px',
+        fontSize: '15px',
+        lineHeight: '20px',
         textAlign: 'center',
       }}
       href="https://calendly.com/posepalacestudio"
       target="_blank"
     >
-      {`Book your first self-portrait session today 📸`}
+      {`👉 Book your first self-portrait session today 📸`}
     </Link>
   )
 }

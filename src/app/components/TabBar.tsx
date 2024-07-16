@@ -42,7 +42,7 @@ export const TabBar = () => {
         justifyContent: 'center',
         alignItems: 'center',
         flexWrap: 'wrap',
-        gap: '12px',
+        gap: '16px',
       }}
     >
       {tabBarItems.map((item) => (
@@ -50,7 +50,11 @@ export const TabBar = () => {
           key={item.key}
           href={item.href}
           target={item.target}
-          style={{ color: pathname === item.href ? 'rgb(0, 0, 0)' : 'rgb(135, 135, 135)' }}
+          style={{
+            color: pathname === item.href ? 'rgb(0, 0, 0)' : 'rgb(135, 135, 135)',
+            fontSize: '15px',
+            lineHeight: '20px',
+          }}
         >
           {item.label}
         </Link>
