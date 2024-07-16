@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { StickyBanner } from './components/StickyBanner'
 import { TabBar } from './components/TabBar'
 import './styles.css'
 
@@ -35,8 +36,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
-        <TabBar />
-        <main>{children}</main>
+        <div className="App">
+          <StickyBanner />
+          <main>{children}</main>
+          <TabBar />
+        </div>
       </body>
     </html>
   )

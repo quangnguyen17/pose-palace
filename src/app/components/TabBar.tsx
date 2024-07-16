@@ -1,51 +1,60 @@
-import Image from 'next/image'
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+const tabBarItems = [
+  {
+    key: 'home',
+    label: 'home',
+    href: '/',
+  },
+  {
+    key: 'gallery',
+    label: 'gallery',
+    href: '/gallery',
+  },
+  {
+    key: 'about',
+    label: 'about',
+    href: '/about',
+  },
+  {
+    key: 'instagram',
+    label: 'instagram',
+    href: 'https://www.instagram.com/posepalacestudio/',
+    target: '_blank',
+  },
+]
 
 export const TabBar = () => {
+  const pathname = usePathname()
+
   return (
     <div
       className="tabbar"
       style={{
         flex: 1,
         width: '100%',
-        padding: '16px 16px 0 16px',
+        padding: '16px',
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
         alignItems: 'center',
         flexWrap: 'wrap',
         gap: '12px',
       }}
     >
-      <Link
-        href="/"
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Image
-          src="/logo-short.png"
-          alt="Pose Palace Logo"
-          width={200}
-          height={40}
-          style={{ objectFit: 'contain', width: 'auto' }}
-        />
-      </Link>
-      <Link href="/gallery" style={{ color: 'rgb(0, 0, 0)' }}>
-        our gallery
-      </Link>
-      <Link href="/about" style={{ color: 'rgb(0, 0, 0)' }}>
-        about us
-      </Link>
-      <Link
-        target="_blank"
-        href="https://www.instagram.com/posepalacestudio/"
-        style={{ color: 'rgb(0, 0, 0)' }}
-      >
-        @posepalacestudio
-      </Link>
+      {tabBarItems.map((item) => (
+        <Link
+          key={item.key}
+          href={item.href}
+          target={item.target}
+          style={{ color: pathname === item.href ? 'rgb(0, 0, 0)' : 'rgb(130, 130, 130)' }}
+        >
+          {item.label}
+        </Link>
+      ))}
     </div>
   )
 }

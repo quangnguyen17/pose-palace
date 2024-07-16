@@ -6,7 +6,13 @@ import Image from 'next/image'
 const More = () => {
   return (
     <div className="container">
-      <h2>About us</h2>
+      <Image
+        src="/logo-long.png"
+        alt="Pose Palace Full Logo"
+        width={200}
+        height={100}
+        style={{ objectFit: 'contain', width: 'auto' }}
+      />
       <p>
         {`We are a proud Vietnamese-American-owned self-portrait photo studio conveniently located
             in Koreatown, Garden Grove. Our mission is to provide professional photos at affordable
@@ -18,7 +24,7 @@ const More = () => {
             preserve these moments than by capturing them yourself, with your own authentic
             expressions and feelings?`}
       </p>
-      <h2>How it works</h2>
+      <h3>How it works</h3>
       <p className="text">
         {`Our studio consists of two rooms: one features a cyclorama white wall, ideal for wide,
             full-body shots, while the other offers multiple color backdrops, perfect for more
@@ -27,14 +33,14 @@ const More = () => {
             taking your first shot to familiarize you with the equipment, and finally, start the
             timer for your booked session.`}
       </p>
-      <h3>Photography equipments:</h3>
+      <h4>Photography equipments:</h4>
       <ul>
         <li>1 Sony Full-Frame camera</li>
         <li>{`1 32-inch monitor displaying the camera's live view/feed`}</li>
         <li>1 27-inch monitor displaying the last photo taken</li>
         <li>1-2 photography strobe lights depending on the room.</li>
       </ul>
-      <h3>Props available for use:</h3>
+      <h4>Props available for use:</h4>
       <ul>
         <li>Benches</li>
         <li>Cubes</li>
@@ -42,13 +48,7 @@ const More = () => {
         <li>Stools</li>
         <li>Party props like glasses, headbands, hats, etc.</li>
       </ul>
-      <Image
-        src="/logo-long.png"
-        alt="Pose Palace Full Logo"
-        width={200}
-        height={100}
-        style={{ objectFit: 'contain', width: 'auto' }}
-      />
+
       <p>
         <span>(We are located inside the AR Galleria)</span>
         <Link
