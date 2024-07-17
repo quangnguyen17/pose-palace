@@ -1,10 +1,11 @@
 'use client'
 
-import React, { useState } from 'react'
+import { useState } from 'react'
+import Image from 'next/image'
 import { Button } from 'semantic-ui-react'
-import './checkin.css'
 import axios from 'axios'
 import { Modal } from 'antd'
+import '../form.css'
 
 const CheckIn = () => {
   const [firstName, setFirstName] = useState('')
@@ -74,76 +75,57 @@ const CheckIn = () => {
   }
 
   return (
-    <form className="form-container">
-      <h1 className="heading">Check In</h1>
-      <br></br>
+    <form>
+      <Image
+        src="/logo-short.png"
+        alt="Pose Palace Short Logo"
+        width={200}
+        height={40}
+        style={{ objectFit: 'contain', width: 'auto' }}
+      />
+      <h3>Check in</h3>
       <label>First Name:</label>
-      <br></br>
       <input
-        className="textBox"
         type="text"
         name="firstName"
         placeholder="Enter your first name"
         value={firstName}
         onChange={handleFirstNameChange}
       />
-      <br></br>
-      <br></br>
       <label>Last Name:</label>
-      <br></br>
       <input
-        className="textBox"
         type="text"
         name="lastName"
         placeholder="Enter your last name"
         value={lastName}
         onChange={handleLastNameChange}
       />
-      <br></br>
-      <br></br>
       <label>Email Address:</label>
-      <br></br>
       <input
-        className="textBox"
         type="text"
         name="Email"
         placeholder="Enter your email address"
         value={email}
         onChange={handleEmailChange}
       />
-      <br></br>
-      <br></br>
       <label>Phone Number:</label>
-      <br></br>
       <input
-        className="textBox"
         type="text"
         name="Phone"
         placeholder="Enter your phone number"
         value={phone}
         onChange={handlePhoneChange}
       />
-      <br></br>
-      <br></br>
-      <div>
+      <div className="row">
+        <input type="checkbox" name="sms" checked={sms} onChange={handleSMSChange} />
         <label>
-          <input
-            className="checkbox-wrapper"
-            type="checkbox"
-            name="sms"
-            checked={sms}
-            onChange={handleSMSChange}
-          />
           Allow SMS promotions, receive our latest offers and promotions and stay up to date with
           our latest stuff
         </label>
-        <br></br>
-        <br></br>
       </div>
-      <Button type="submit" className="submitBtn" onClick={handleSubmit}>
+      <Button type="submit" onClick={handleSubmit}>
         Submit
       </Button>
-
       <Modal
         title="You're on the waitlist!"
         open={isModalOpen}
