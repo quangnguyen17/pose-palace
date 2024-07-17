@@ -32,16 +32,13 @@ export const TabBar = () => {
 
   return (
     <div
-      className="tabbar"
       style={{
         width: '100%',
-        padding: '16px',
-        borderTop: '1px solid rgb(235, 235, 235)',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         alignItems: 'center',
-        gap: '16px',
+        padding: '16px',
       }}
     >
       {tabBarItems.map((item) => (
@@ -51,6 +48,7 @@ export const TabBar = () => {
           target={item.target}
           style={{
             color: pathname === item.href ? 'rgb(0, 0, 0)' : 'rgb(135, 135, 135)',
+            fontWeight: pathname === item.href ? 500 : 400,
             fontSize: '15px',
             lineHeight: '20px',
           }}
