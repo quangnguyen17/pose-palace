@@ -34,6 +34,7 @@ export const TabBar = () => {
     <div
       style={{
         width: '100%',
+        borderTop: '1px solid rgb(240, 240, 240)',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-evenly',
@@ -41,21 +42,25 @@ export const TabBar = () => {
         padding: '16px',
       }}
     >
-      {tabBarItems.map((item) => (
-        <Link
-          key={item.key}
-          href={item.href}
-          target={item.target}
-          style={{
-            color: pathname === item.href ? 'rgb(0, 0, 0)' : 'rgb(135, 135, 135)',
-            fontWeight: pathname === item.href ? 500 : 400,
-            fontSize: '15px',
-            lineHeight: '20px',
-          }}
-        >
-          {item.label}
-        </Link>
-      ))}
+      {tabBarItems.map((item) => {
+        const isSelected = pathname === item.href
+
+        return (
+          <Link
+            key={item.key}
+            href={item.href}
+            target={item.target}
+            style={{
+              color: isSelected ? 'rgb(0, 0, 0)' : 'rgb(140, 140, 140)',
+              fontWeight: isSelected ? 500 : 400,
+              fontSize: '15px',
+              lineHeight: '20px',
+            }}
+          >
+            {item.label}
+          </Link>
+        )
+      })}
     </div>
   )
 }

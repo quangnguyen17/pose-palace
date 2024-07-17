@@ -17,15 +17,19 @@ const CheckIn = () => {
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value)
   }
+
   const handleLastNameChange = (event) => {
     setLastName(event.target.value)
   }
+
   const handleEmailChange = (event) => {
     setEmail(event.target.value)
   }
+
   const handlePhoneChange = (event) => {
     setPhone(event.target.value)
   }
+
   const handleSMSChange = (event) => {
     setSMS(event.target.checked)
   }
@@ -130,10 +134,8 @@ const CheckIn = () => {
             checked={sms}
             onChange={handleSMSChange}
           />
-          Allow SMS promotions, 
-          receive our latest offers and 
-          promotions and stay up to date 
-          with our latest stuff
+          Allow SMS promotions, receive our latest offers and promotions and stay up to date with
+          our latest stuff
         </label>
         <br></br>
         <br></br>
