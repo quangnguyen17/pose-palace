@@ -12,7 +12,7 @@ const JoinWaitList = () => {
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
-  const [sms, setSMS] = useState(false)
+  const [sms, setSMS] = useState(true)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const handleFirstNameChange = (event) => {
