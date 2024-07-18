@@ -9,7 +9,7 @@ const Gallery = () => {
   const photos = getPhotos()
 
   return (
-    <div className="container">
+    <div className="gallery">
       {photos.map((photo) => (
         <Image
           key={photo}
@@ -18,6 +18,8 @@ const Gallery = () => {
           quality={100}
           width={100}
           height={100}
+          unoptimized
+          className="photo"
         />
       ))}
     </div>

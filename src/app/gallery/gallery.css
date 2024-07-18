@@ -1,4 +1,4 @@
-.container {
+.gallery {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -7,7 +7,7 @@
   gap: 16px;
 }
 
-img {
+.photo {
   width: 400px;
   height: calc(400px * 6 / 4);
   object-fit: cover;
@@ -15,7 +15,7 @@ img {
 }
 
 @media only screen and (max-width: 432px) {
-  img {
+  .photo {
     width: 100%;
     height: calc(100vw * 6 / 4);
   }
