@@ -31,17 +31,7 @@ export const TabBar = () => {
   const pathname = usePathname()
 
   return (
-    <div
-      style={{
-        width: '100%',
-        borderTop: '1px solid rgb(240, 240, 240)',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        alignItems: 'center',
-        padding: '16px',
-      }}
-    >
+    <div className="TabBar">
       {tabBarItems.map((item) => {
         const isSelected = pathname === item.href
 

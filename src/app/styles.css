@@ -26,9 +26,9 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
+  overflow: auto;
   padding: 1rem;
   gap: 1rem;
-  overflow: auto;
 }
 
 .grid {
@@ -36,16 +36,14 @@ main {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .cell {
-  flex: 1;
-  width: 100%;
   min-width: 400px;
-  max-width: 600px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -55,14 +53,20 @@ main {
   gap: 1rem;
 }
 
-@media only screen and (max-width: 900px) {
-  .grid {
-    flex-wrap: nowrap;
-    flex-direction: column;
-  }
+.TabBar {
+  margin: 0 auto;
+  width: 100%;
+  border-top: 1px solid rgb(240, 240, 240);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 2rem;
+}
 
+@media only screen and (max-width: 500px) {
   .cell {
-    width: 100%;
     min-width: auto;
     max-width: 100%;
   }
