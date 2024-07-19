@@ -48,3 +48,9 @@ input[type='checkbox'] {
   accent-color: rgb(0, 0, 0);
   margin-bottom: auto;
 }
+
+.errorMessage {
+  color: red;
+  margin-left: 10px;
+  font-size: 1em;
+}

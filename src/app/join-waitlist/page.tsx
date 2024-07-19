@@ -8,27 +8,46 @@ import { Modal } from 'antd'
 import '../form.css'
 
 const JoinWaitList = () => {
+
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
+
+  const [firstNameError, setFirstNameError] = useState('')
+  const [lastNameError, setLastNameError] = useState('')
+  const [emailError, setEmailError] = useState('')
+  const [phoneError, setPhoneError] = useState('')
+
   const [sms, setSMS] = useState(true)
   const [isModalOpen, setIsModalOpen] = useState(false)
-
+  
   const handleFirstNameChange = (event) => {
-    setFirstName(event.target.value)
+    const value = event.target.value
+
+    if (/^[a-zA-Z]*$/.test(value) || value === '') { 
+      setFirstName(value); setFirstNameError(''); 
+    } else { 
+      setFirstNameError('First name should only contain letters!'); }
   }
 
   const handleLastNameChange = (event) => {
-    setLastName(event.target.value)
+    const value = event.target.value
+
+    if (/^[a-zA-Z]*$/.test(value) || value === '') { 
+      setLastName(value); setLastNameError(''); 
+    } else { 
+      setLastNameError('Last name should only contain letters!'); }
   }
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value)
+    setEmailError('')
   }
 
   const handlePhoneChange = (event) => {
     setPhone(event.target.value)
+    setPhoneError('')
   }
 
   const handleSMSChange = (event) => {
@@ -43,9 +62,52 @@ const JoinWaitList = () => {
     setIsModalOpen(false)
   }
 
+  const validateForm = () => {
+    let valid = true;
+
+    //First Name validation
+    if (firstName.trim() === ''){
+      setFirstNameError('First Name is required!')
+      valid = false
+    } else if (!/^[a-zA-Z]*$/.test(firstName)) {
+      setFirstNameError('First name should only contain letters!')
+      valid = false
+    }
+
+    //Last Name validation
+    if (lastName.trim() === ''){
+      setLastNameError('Last Name is required!')
+      valid = false
+    } else if (!/^[a-zA-Z]*$/.test(firstName)) {
+      setLastNameError('Last name should only contain letters!')
+      valid = false
+    }
+
+    //Email validation
+    if (email.trim() === '') {
+      setEmailError('Email address is required!')
+      valid = false
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setEmailError('Email address is invalid!')
+      valid = false
+    }
+
+    //Phone number validation (assuming 10 digits)
+    if (phone.trim() === '') {
+      setPhoneError('Phone number is required!')
+    } else if (!/^\d{10}$/.test(phone)) {
+      setPhoneError('Phone number is invalid!')
+      valid = false;
+    }
+
+    return valid;
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault()
+  const isValid = validateForm();
 
+    if (isValid) {
     const objt = { firstName, lastName, email, phone, sms }
 
     console.log(
@@ -57,7 +119,7 @@ const JoinWaitList = () => {
         SMS Promotions: ${sms}
         `,
     )
-
+  
     axios
       .post('https://sheetdb.io/api/v1/4ndhqe9ipguow', objt)
 
@@ -74,7 +136,10 @@ const JoinWaitList = () => {
       .catch((error) => {
         console.error(error)
       })
+  } else {
+    console.log('Form has errors.')
   }
+}
 
   return (
     <form>
@@ -86,38 +151,48 @@ const JoinWaitList = () => {
         style={{ objectFit: 'contain', width: 'auto' }}
       />
       <h3 className="heading">Join Waitlist</h3>
-      <label>First Name:</label>
-      <input
-        type="text"
-        name="FirstName"
-        placeholder="Enter your first name"
-        value={firstName}
-        onChange={handleFirstNameChange}
-      />
-      <label>Last Name:</label>
-      <input
-        type="text"
-        name="Lname"
-        placeholder="Enter your last name"
-        value={lastName}
-        onChange={handleLastNameChange}
-      />
-      <label>Email Address:</label>
-      <input
-        type="text"
-        name="Email"
-        placeholder="Enter your email address"
-        value={email}
-        onChange={handleEmailChange}
-      />
-      <label>Phone Number:</label>
-      <input
-        type="text"
-        name="Phone"
-        placeholder="Enter your phone number"
-        value={phone}
-        onChange={handlePhoneChange}
-      />
+
+        <label>First Name:</label>
+        <input
+          type="text"
+          name="FirstName"
+          placeholder="Enter your first name"
+          value={firstName}
+          onChange={handleFirstNameChange}
+        />
+        {firstNameError && <span className="errorMessage">{firstNameError}</span>}
+
+        <label>Last Name:</label>
+        <input
+          type="text"
+          name="Lastname"
+          placeholder="Enter your last name"
+          value={lastName}
+          onChange={handleLastNameChange}
+        />
+        {lastNameError && <span className="errorMessage">{lastNameError}</span>}
+      
+        <label>Email Address:</label>
+        <input
+          type="text"
+          name="Email"
+          placeholder="Enter your email address"
+          value={email}
+          onChange={handleEmailChange}
+        />
+        {emailError && <span className="errorMessage">{emailError}</span>}
+      
+      
+        <label>Phone Number:</label>
+        <input
+          type="text"
+          name="Phone"
+          placeholder="Enter your phone number"
+          value={phone}
+          onChange={handlePhoneChange}
+        />
+        {phoneError && <span  className="errorMessage">{phoneError}</span>}
+      
       <div className="row">
         <input type="checkbox" name="SMS" checked={sms} onChange={handleSMSChange} />
         <label>
@@ -142,3 +217,7 @@ const JoinWaitList = () => {
 }
 
 export default JoinWaitList
+
+
+  
+      
