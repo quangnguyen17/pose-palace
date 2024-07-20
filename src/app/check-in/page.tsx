@@ -77,7 +77,7 @@ const CheckIn = () => {
     if (lastName.trim() === ''){
       setLastNameError('Last Name is required!')
       valid = false
-    } else if (!/^[a-zA-Z]*$/.test(firstName)) {
+    } else if (!/^[a-zA-Z]*$/.test(lastName)) {
       setLastNameError('Last name should only contain letters!')
       valid = false
     }
@@ -139,6 +139,13 @@ const CheckIn = () => {
   }
 }
 
+// Determine if all fields are filled
+const isFormFilled = 
+  firstName.trim() !== '' 
+  && lastName.trim() !== '' 
+  && email.trim() !== '' 
+  && phone.trim() !== ''
+
   return (
     <form>
       <Image
@@ -196,7 +203,7 @@ const CheckIn = () => {
           our latest stuff
         </label>
       </div>
-      <Button type="submit" onClick={handleSubmit}>
+      <Button type="submit" onClick={handleSubmit} disabled={!isFormFilled} className={isFormFilled ? 'submitButtonActive' : 'submitButtonInactive'}>
         Submit
       </Button>
       <Modal
