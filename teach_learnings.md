@@ -28,7 +28,14 @@
 - [ ] Reusability
 - [ ] Separation of Concerns (SoC)
 
+### API
+
+- [ ] Intro to API
+  - [ ] REST (POST, GET, PUT, DELETE)
+  - [ ] CRUD (CREATE, READ, UPDATE, DELETE)
+
 ### Live Coding
 
 - [ ] How to build a modal from scratch (without any libraries) using HTML/CSS/Javascript
+- [ ] How to create a basic REST CRUD API
 - TBD
