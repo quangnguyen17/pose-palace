@@ -30,12 +30,18 @@
 
 ### API
 
-- [ ] Intro to API
-  - [ ] REST (POST, GET, PUT, DELETE)
-  - [ ] CRUD (CREATE, READ, UPDATE, DELETE)
+- [ ] What is an API
+  - API stands for Application Programming Interface. APIs are used to allow different systems to communicate and exchange information
+- [ ] REST
+- [ ] WebSocket
+- [ ] What is microservices
+  - Microservices are a software development approach that breaks down large applications into smaller, independent services that communicate through APIs
+- [ ] HTTP Request [Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+- [ ] REST API (POST, GET, PUT, DELETE)
+- [ ] CRUD (CREATE, READ, UPDATE, DELETE)
 
 ### Live Coding
 
 - [ ] How to build a modal from scratch (without any libraries) using HTML/CSS/Javascript
-- [ ] How to create a basic REST CRUD API
+- [ ] How to build a basic REST API that serves user data
 - TBD
