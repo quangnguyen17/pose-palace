@@ -1,112 +1,48 @@
 'use client'
 
-import { useState } from 'react'
 import Image from 'next/image'
 import { Button } from 'semantic-ui-react'
 import axios from 'axios'
-import { useCheckInForm } from '../useCheckInForm'
+import { useForm } from '../useForm'
 import '../form.css'
-import './modal.css'
+import '../modal.css'
+import '../loading.css'
 
 const CheckIn = () => {
   const {
-    formData,
-    setFormData,
+    formData, 
     formErrors,
-    setFormErrors,
     isModalOpen,
-    setIsModalOpen,
-    handleInputChange,
-  } = useCheckInForm()
+    isLoading,
+    ...formMethods
+  } = useForm()
 
-  const showModal = () => {
-    setIsModalOpen(true)
-  }
-
-  const handleOk = () => {
-    setIsModalOpen(false)
-  }
-
-  const validateForm = () => {
-    // let valid = true
-
-    // //First Name validation
-    // if (firstName.trim() === '') {
-    //   setFirstNameError('First Name is required!')
-    //   valid = false
-    // } else if (!/^[a-zA-Z]*$/.test(firstName)) {
-    //   setFirstNameError('First name should only contain letters!')
-    //   valid = false
-    // }
-
-    // //Last Name validation
-    // if (lastName.trim() === '') {
-    //   setLastNameError('Last Name is required!')
-    //   valid = false
-    // } else if (!/^[a-zA-Z]*$/.test(firstName)) {
-    //   setLastNameError('Last name should only contain letters!')
-    //   valid = false
-    // }
-
-    // //Email validation
-    // if (email.trim() === '') {
-    //   setEmailError('Email address is required!')
-    //   valid = false
-    // } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    //   setEmailError('Email address is invalid!')
-    //   valid = false
-    // }
-
-    // //Phone number validation (assuming 10 digits)
-    // if (phone.trim() === '') {
-    //   setPhoneError('Phone number is required!')
-    // } else if (!/^\d{10}$/.test(phone)) {
-    //   setPhoneError('Phone number is invalid!')
-    //   valid = false
-    // }
-
-    // return valid
-    return true
-  }
-
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
+    const isValid = formMethods.validateForm()
 
-    showModal()
+    if (isValid) {
+      formMethods.showLoading()
 
-    // const isValid = validateForm()
-
-    // if (isValid) {
-    //   const objt = { firstName, lastName, email, phone, sms }
-
-    //   console.log(
-    //     `\n
-    //     First Name: ${firstName} \n
-    //     Last Name: ${lastName} \n
-    //     Email Address: ${email} \n
-    //     Phone Number: ${phone} \n
-    //     SMS Promotions: ${sms}
-    //     `,
-    //   )
-
-    //   axios
-    //     .post('https://sheetdb.io/api/v1/ccqoxfdvii2py', objt)
-    //     .then((response) => {
-    //       console.log(response)
-    //       setFirstName('')
-    //       setLastName('')
-    //       setEmail('')
-    //       setPhone('')
-    //       setSMS(false)
-    //       showModal()
-    //     })
-    //     .catch((error) => {
-    //       console.error(error)
-    //     })
-    // } else {
-    //   console.log('Form has errors.')
-    // }
-  }
+     try {
+        await axios.post('https://api.zerosheets.com/v1/yki', formData);
+        formMethods.setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          sms: true,
+        });
+          formMethods.hideLoading(); // Hide loading screen
+          formMethods.setIsModalOpen(true); // Show modal
+      } catch (error) {
+        console.error(error);''
+        formMethods.hideLoading()
+      }
+    } else {
+      console.log('Form has errors.');
+    }
+  };
 
   return (
     <form>
@@ -124,7 +60,7 @@ const CheckIn = () => {
         name="firstName"
         placeholder="Enter your first name"
         value={formData.firstName}
-        onChange={handleInputChange}
+        onChange={formMethods.handleInputChange}
       />
       {formErrors.firstName && <span className="errorMessage">{formErrors.firstName}</span>}
 
@@ -134,7 +70,7 @@ const CheckIn = () => {
         name="lastName"
         placeholder="Enter your last name"
         value={formData.lastName}
-        onChange={handleInputChange}
+        onChange={formMethods.handleInputChange}
       />
       {formErrors.lastName && <span className="errorMessage">{formErrors.lastName}</span>}
 
@@ -144,7 +80,7 @@ const CheckIn = () => {
         name="email"
         placeholder="Enter your email address"
         value={formData.email}
-        onChange={handleInputChange}
+        onChange={formMethods.handleInputChange}
       />
       {formErrors.email && <span className="errorMessage">{formErrors.email}</span>}
 
@@ -154,28 +90,37 @@ const CheckIn = () => {
         name="phone"
         placeholder="Enter your phone number"
         value={formData.phone}
-        onChange={handleInputChange}
+        onChange={formMethods.handleInputChange}
       />
-      {formData.phone && <span className="errorMessage">{formData.phone}</span>}
+      {formErrors.phone && <span className="errorMessage">{formErrors.phone}</span>}
 
       <div className="row">
-        <input type="checkbox" name="sms" checked={formData.sms} onChange={handleInputChange} />
+        <input 
+        type="checkbox" 
+        name="sms" 
+        checked={formData.sms} 
+        onChange={formMethods.handleInputChange} />
         <label>
           Allow SMS promotions, receive our latest offers and promotions and stay up to date with
           our latest stuff
         </label>
       </div>
-      <Button type="submit" onClick={handleSubmit}>
+      <Button type="submit" onClick={handleSubmit} disabled={!formMethods.isFormFilled()}>
         Submit
       </Button>
-      {/* <Modal
-        title="You're on the waitlist!"
-        open={isModalOpen}
-        onOk={handleOk}
-        cancelButtonProps={{ style: { display: 'none' } }}
-        okButtonProps={{ style: { backgroundColor: 'black' } }}
-      >
-      </Modal> */}
+
+       {/* Loading Screen */}
+       <div className={`loading-overlay${isLoading ? '-visible' : ''}`}>
+        <div className="loading">
+          <div className="loading-dots">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+
+      {/* Modal */}
       <div className={`modal-overlay${isModalOpen ? '-visible' : ''}`}>
         <div className={`modal${isModalOpen ? '-visible' : ''}`}>
           <h2>You're on the waitlist!</h2>
