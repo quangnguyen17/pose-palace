@@ -87,7 +87,7 @@ const CheckIn = () => {
       setEmailError('Email address is required!')
       valid = false
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setEmailError('Email address is invalid!')
+      setEmailError('Invalid email address.')
       valid = false
     }
 
@@ -95,7 +95,7 @@ const CheckIn = () => {
     if (phone.trim() === '') {
       setPhoneError('Phone number is required!')
     } else if (!/^\d{10}$/.test(phone)) {
-      setPhoneError('Phone number is invalid!')
+      setPhoneError('Invalid phone number.')
       valid = false;
     }
 
@@ -120,6 +120,7 @@ const CheckIn = () => {
         `,
     )
 
+    //fix this 
     axios
       .post('https://sheetdb.io/api/v1/ccqoxfdvii2py', objt)
       .then((response) => {
@@ -203,7 +204,7 @@ const isFormFilled =
           our latest stuff
         </label>
       </div>
-      <Button type="submit" onClick={handleSubmit} disabled={!isFormFilled} className={isFormFilled ? 'submitButtonActive' : 'submitButtonInactive'}>
+      <Button type="submit" onClick={handleSubmit} disabled={!isFormFilled} >
         Submit
       </Button>
       <Modal

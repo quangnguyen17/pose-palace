@@ -20,7 +20,7 @@ input[type='text'] {
   border: 1px solid rgb(210, 210, 210);
 }
 
-.submitButtonActive {
+Button[type='submit'] {
   width: 100%;
   color: white;
   background-color: black;
@@ -34,7 +34,7 @@ input[type='text'] {
   cursor: pointer;
 }
 
-.submitButtonInactive {
+Button[type='submit']:disabled {
   width: 100%;
   color: white;
   background-color: gray;

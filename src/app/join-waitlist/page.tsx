@@ -88,7 +88,7 @@ const JoinWaitList = () => {
       setEmailError('Email address is required!')
       valid = false
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setEmailError('Email address is invalid!')
+      setEmailError('Invalid email address.')
       valid = false
     }
 
@@ -96,7 +96,7 @@ const JoinWaitList = () => {
     if (phone.trim() === '') {
       setPhoneError('Phone number is required!')
     } else if (!/^\d{10}$/.test(phone)) {
-      setPhoneError('Phone number is invalid!')
+      setPhoneError('Invalid phone number.')
       valid = false;
     }
 
@@ -207,7 +207,7 @@ const isFormFilled =
           our latest stuff
         </label>
       </div>
-      <Button type="submit" disabled={!isFormFilled} onClick={handleSubmit} className={isFormFilled ? 'submitButtonActive' : 'submitButtonInactive'}>
+      <Button type="submit" disabled={!isFormFilled} onClick={handleSubmit} >
         Submit
       </Button>
       <Modal
