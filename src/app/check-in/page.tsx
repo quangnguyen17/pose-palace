@@ -4,54 +4,20 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { Button } from 'semantic-ui-react'
 import axios from 'axios'
-import { Modal } from 'antd'
+import { useCheckInForm } from '../useCheckInForm'
 import '../form.css'
+import './modal.css'
 
 const CheckIn = () => {
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [email, setEmail] = useState('')
-  const [phone, setPhone] = useState('')
-
-  const [firstNameError, setFirstNameError] = useState('')
-  const [lastNameError, setLastNameError] = useState('')
-  const [emailError, setEmailError] = useState('')
-  const [phoneError, setPhoneError] = useState('')
-
-  const [sms, setSMS] = useState(true)
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
-  const handleFirstNameChange = (event) => {
-    const value = event.target.value
-
-    if (/^[a-zA-Z]*$/.test(value) || value === '') { 
-      setFirstName(value); setFirstNameError(''); 
-    } else { 
-      setFirstNameError('First name should only contain letters!'); }
-  }
-
-  const handleLastNameChange = (event) => {
-    const value = event.target.value
-
-    if (/^[a-zA-Z]*$/.test(value) || value === '') { 
-      setLastName(value); setLastNameError(''); 
-    } else { 
-      setLastNameError('Last name should only contain letters!'); }
-  }
-
-  const handleEmailChange = (event) => {
-    setEmail(event.target.value)
-    setEmailError('')
-  }
-
-  const handlePhoneChange = (event) => {
-    setPhone(event.target.value)
-    setPhoneError('')
-  }
-
-  const handleSMSChange = (event) => {
-    setSMS(event.target.checked)
-  }
+  const {
+    formData,
+    setFormData,
+    formErrors,
+    setFormErrors,
+    isModalOpen,
+    setIsModalOpen,
+    handleInputChange,
+  } = useCheckInForm()
 
   const showModal = () => {
     setIsModalOpen(true)
@@ -62,82 +28,85 @@ const CheckIn = () => {
   }
 
   const validateForm = () => {
-    let valid = true;
+    // let valid = true
 
-    //First Name validation
-    if (firstName.trim() === ''){
-      setFirstNameError('First Name is required!')
-      valid = false
-    } else if (!/^[a-zA-Z]*$/.test(firstName)) {
-      setFirstNameError('First name should only contain letters!')
-      valid = false
-    }
+    // //First Name validation
+    // if (firstName.trim() === '') {
+    //   setFirstNameError('First Name is required!')
+    //   valid = false
+    // } else if (!/^[a-zA-Z]*$/.test(firstName)) {
+    //   setFirstNameError('First name should only contain letters!')
+    //   valid = false
+    // }
 
-    //Last Name validation
-    if (lastName.trim() === ''){
-      setLastNameError('Last Name is required!')
-      valid = false
-    } else if (!/^[a-zA-Z]*$/.test(firstName)) {
-      setLastNameError('Last name should only contain letters!')
-      valid = false
-    }
+    // //Last Name validation
+    // if (lastName.trim() === '') {
+    //   setLastNameError('Last Name is required!')
+    //   valid = false
+    // } else if (!/^[a-zA-Z]*$/.test(firstName)) {
+    //   setLastNameError('Last name should only contain letters!')
+    //   valid = false
+    // }
 
-    //Email validation
-    if (email.trim() === '') {
-      setEmailError('Email address is required!')
-      valid = false
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setEmailError('Email address is invalid!')
-      valid = false
-    }
+    // //Email validation
+    // if (email.trim() === '') {
+    //   setEmailError('Email address is required!')
+    //   valid = false
+    // } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    //   setEmailError('Email address is invalid!')
+    //   valid = false
+    // }
 
-    //Phone number validation (assuming 10 digits)
-    if (phone.trim() === '') {
-      setPhoneError('Phone number is required!')
-    } else if (!/^\d{10}$/.test(phone)) {
-      setPhoneError('Phone number is invalid!')
-      valid = false;
-    }
+    // //Phone number validation (assuming 10 digits)
+    // if (phone.trim() === '') {
+    //   setPhoneError('Phone number is required!')
+    // } else if (!/^\d{10}$/.test(phone)) {
+    //   setPhoneError('Phone number is invalid!')
+    //   valid = false
+    // }
 
-    return valid;
+    // return valid
+    return true
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    const isValid = validateForm();
+    showModal()
 
-    if (isValid) {
-    const objt = { firstName, lastName, email, phone, sms }
+    // const isValid = validateForm()
 
-    console.log(
-      `\n
-        First Name: ${firstName} \n
-        Last Name: ${lastName} \n
-        Email Address: ${email} \n
-        Phone Number: ${phone} \n
-        SMS Promotions: ${sms}
-        `,
-    )
+    // if (isValid) {
+    //   const objt = { firstName, lastName, email, phone, sms }
 
-    axios
-      .post('https://sheetdb.io/api/v1/ccqoxfdvii2py', objt)
-      .then((response) => {
-        console.log(response)
-        setFirstName('')
-        setLastName('')
-        setEmail('')
-        setPhone('')
-        setSMS(false)
-        showModal()
-      })
-      .catch((error) => {
-        console.error(error)
-      })
-  } else {
-    console.log('Form has errors.')
+    //   console.log(
+    //     `\n
+    //     First Name: ${firstName} \n
+    //     Last Name: ${lastName} \n
+    //     Email Address: ${email} \n
+    //     Phone Number: ${phone} \n
+    //     SMS Promotions: ${sms}
+    //     `,
+    //   )
+
+    //   axios
+    //     .post('https://sheetdb.io/api/v1/ccqoxfdvii2py', objt)
+    //     .then((response) => {
+    //       console.log(response)
+    //       setFirstName('')
+    //       setLastName('')
+    //       setEmail('')
+    //       setPhone('')
+    //       setSMS(false)
+    //       showModal()
+    //     })
+    //     .catch((error) => {
+    //       console.error(error)
+    //     })
+    // } else {
+    //   console.log('Form has errors.')
+    // }
   }
-}
 
   return (
     <form>
@@ -154,43 +123,43 @@ const CheckIn = () => {
         type="text"
         name="firstName"
         placeholder="Enter your first name"
-        value={firstName}
-        onChange={handleFirstNameChange}
+        value={formData.firstName}
+        onChange={handleInputChange}
       />
-      {firstNameError && <span className="errorMessage">{firstNameError}</span>}
+      {formErrors.firstName && <span className="errorMessage">{formErrors.firstName}</span>}
 
       <label>Last Name:</label>
       <input
         type="text"
         name="lastName"
         placeholder="Enter your last name"
-        value={lastName}
-        onChange={handleLastNameChange}
+        value={formData.lastName}
+        onChange={handleInputChange}
       />
-      {lastNameError && <span className="errorMessage">{lastNameError}</span>}
+      {formErrors.lastName && <span className="errorMessage">{formErrors.lastName}</span>}
 
       <label>Email Address:</label>
       <input
         type="text"
-        name="Email"
+        name="email"
         placeholder="Enter your email address"
-        value={email}
-        onChange={handleEmailChange}
+        value={formData.email}
+        onChange={handleInputChange}
       />
-      {emailError && <span className="errorMessage">{emailError}</span>}
+      {formErrors.email && <span className="errorMessage">{formErrors.email}</span>}
 
       <label>Phone Number:</label>
       <input
         type="text"
-        name="Phone"
+        name="phone"
         placeholder="Enter your phone number"
-        value={phone}
-        onChange={handlePhoneChange}
+        value={formData.phone}
+        onChange={handleInputChange}
       />
-      {phoneError && <span className="errorMessage">{phoneError}</span>}
-      
+      {formData.phone && <span className="errorMessage">{formData.phone}</span>}
+
       <div className="row">
-        <input type="checkbox" name="sms" checked={sms} onChange={handleSMSChange} />
+        <input type="checkbox" name="sms" checked={formData.sms} onChange={handleInputChange} />
         <label>
           Allow SMS promotions, receive our latest offers and promotions and stay up to date with
           our latest stuff
@@ -199,15 +168,20 @@ const CheckIn = () => {
       <Button type="submit" onClick={handleSubmit}>
         Submit
       </Button>
-      <Modal
+      {/* <Modal
         title="You're on the waitlist!"
         open={isModalOpen}
         onOk={handleOk}
         cancelButtonProps={{ style: { display: 'none' } }}
         okButtonProps={{ style: { backgroundColor: 'black' } }}
       >
-        <p>Please stay nearby, we'll be in contact as soon as it is your turn.</p>
-      </Modal>
+      </Modal> */}
+      <div className={`modal-overlay${isModalOpen ? '-visible' : ''}`}>
+        <div className={`modal${isModalOpen ? '-visible' : ''}`}>
+          <h2>You're on the waitlist!</h2>
+          <p>Please stay nearby, we'll be in contact as soon as it is your turn.</p>
+        </div>
+      </div>
     </form>
   )
 }
