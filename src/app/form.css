@@ -34,7 +34,7 @@ Button[type='submit'] {
   cursor: pointer;
 }
 
-Button[type='submit']:disabled {
+button[type='submit']:disabled {
   width: 100%;
   color: white;
   background-color: gray;
