@@ -5,7 +5,7 @@ export const StickyBanner: FC = () => {
   return (
     <Link
       style={{
-        backgroundColor: 'rgb(0, 0, 0)',
+        backgroundColor: '#60b58d',
         color: 'white',
         padding: '16px',
         fontWeight: 500,
@@ -16,7 +16,7 @@ export const StickyBanner: FC = () => {
       href="https://calendly.com/posepalacestudio"
       target="_blank"
     >
-      {`👉 Book your first self-portrait session today 📸`}
+      {`Book a self-portrait session with us today 📸`}
     </Link>
   )
 }
