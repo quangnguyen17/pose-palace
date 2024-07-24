@@ -1,10 +1,10 @@
-import './styles.css'
-
 import Link from 'next/link'
 import Image from 'next/image'
+import { Page } from '../components/Page'
+import './styles.css'
 
-const More = () => {
-  return (
+const About = () => (
+  <Page>
     <div className="container">
       <Image
         src="/logo-long.png"
@@ -48,7 +48,6 @@ const More = () => {
         <li>Stools</li>
         <li>Party props like glasses, headbands, hats, etc.</li>
       </ul>
-
       <p>
         <span>(We are located inside the AR Galleria)</span>
         <Link
@@ -72,7 +71,7 @@ const More = () => {
         © 2024 Crystal Lighthouse LLC
       </p>
     </div>
-  )
-}
+  </Page>
+)
 
-export default More
+export default About

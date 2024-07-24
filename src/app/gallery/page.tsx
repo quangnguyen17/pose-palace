@@ -1,16 +1,15 @@
 import Image from 'next/image'
+import { Page } from '../components/Page'
 import './gallery.css'
 
 const getPhotos = () => {
   return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => `/sample-${num}.jpg`)
 }
 
-const Gallery = () => {
-  const photos = getPhotos()
-
-  return (
+const Gallery = () => (
+  <Page>
     <div className="gallery">
-      {photos.map((photo) => (
+      {getPhotos().map((photo) => (
         <Image
           key={photo}
           src={photo}
@@ -23,7 +22,7 @@ const Gallery = () => {
         />
       ))}
     </div>
-  )
-}
+  </Page>
+)
 
 export default Gallery
