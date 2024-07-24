@@ -36,7 +36,8 @@ const App = () => (
           href="https://calendly.com/posepalacestudio/5-minute-session"
           target="_blank"
         >
-          {`Book and shine ✨`}
+          <p>Book now</p>
+          <img className="right-arrow" src="/right-arrow.png" alt="/right-arrow.png" />
         </Link>
       </div>
       <div className="cell bg-purple">
@@ -71,7 +72,8 @@ const App = () => (
           href="https://calendly.com/posepalacestudio/15-minute-session"
           target="_blank"
         >
-          {`Book now ✌️`}
+          <p>Book now</p>
+          <img className="right-arrow" src="/right-arrow.png" alt="/right-arrow.png" />
         </Link>
       </div>
       <div className="cell bg-icy-blue">

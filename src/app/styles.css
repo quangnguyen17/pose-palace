@@ -68,9 +68,13 @@ main {
   font-size: 15px;
   line-height: 20px;
   font-weight: 500;
-  padding: 16px;
+  padding: 1rem;
   border: none;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .TabBar {
@@ -155,4 +159,10 @@ a {
   font-size: 50px;
   line-height: 50px;
   font-weight: 700;
+}
+
+.right-arrow {
+  filter: invert(1);
+  width: 17px;
+  height: 17px;
 }
