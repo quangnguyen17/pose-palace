@@ -16,7 +16,7 @@ export const StickyBanner: FC = () => {
       href="https://calendly.com/posepalacestudio"
       target="_blank"
     >
-      {`✨ Book your self-portrait session now ✨`}
+      {`✨ Book your self-portrait session today ✨`}
     </Link>
   )
 }

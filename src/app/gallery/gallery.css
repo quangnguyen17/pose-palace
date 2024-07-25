@@ -1,10 +1,16 @@
 .gallery {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.collection {
+  display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .photo {
