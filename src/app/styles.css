@@ -63,7 +63,7 @@ main {
 
 .cell-footer {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
   font-size: 15px;
   line-height: 20px;
@@ -78,7 +78,6 @@ main {
 }
 
 .TabBar {
-  margin: 0 auto;
   width: 100%;
   background-color: white;
   display: flex;
