@@ -61,7 +61,7 @@ main {
   gap: 1rem;
 }
 
-.cell-footer-action {
+.cell-footer {
   width: 100%;
   background-color: black;
   color: white;
@@ -95,7 +95,7 @@ main {
   }
 }
 
-.cell .text,
+.cell,
 li {
   font-size: 15px;
   line-height: 23px;
@@ -155,20 +155,23 @@ a {
   background-color: rgb(246, 246, 246);
 }
 
-.pricing-label {
+p.price {
   font-size: 70px;
   line-height: 70px;
   font-weight: 700;
 }
 
-.pricing-off {
+p.discount {
   font-size: 50px;
   line-height: 50px;
   font-weight: 700;
 }
 
-.right-arrow {
+p.text {
+  font-size: 15px;
+  line-height: 23px;
+}
+
+.invert-color {
   filter: invert(1);
-  width: 17px;
-  height: 17px;
 }
