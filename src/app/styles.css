@@ -63,7 +63,7 @@ main {
 
 .cell-footer {
   width: 100%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.45);
   color: white;
   font-size: 15px;
   line-height: 20px;

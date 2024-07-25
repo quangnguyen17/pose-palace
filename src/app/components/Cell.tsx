@@ -16,11 +16,12 @@ const RightArrow: FC = () => {
 
 const Footer: FC<{
   link?: string | undefined
-}> = ({ link }) => {
-  if (!link) return <></>
+  cta?: string | undefined
+}> = ({ link, cta }) => {
+  if (!link || !cta) return <></>
   return (
     <Link className="cell-footer" href={link} target="_blank">
-      <p>Book now</p>
+      <p>{cta}</p>
       <RightArrow />
     </Link>
   )

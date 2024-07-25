@@ -29,7 +29,10 @@ const App = () => (
             </li>
           </ul>
         </Cell.Content>
-        <Cell.Footer link="https://calendly.com/posepalacestudio/5-minute-session" />
+        <Cell.Footer
+          link="https://calendly.com/posepalacestudio/5-minute-session"
+          cta="Book and shine ✨"
+        />
       </Cell>
       <Cell className="bg-purple">
         <Cell.Content title="15-minute session" price="$67">
@@ -56,7 +59,10 @@ const App = () => (
             </li>
           </ul>
         </Cell.Content>
-        <Cell.Footer link="https://calendly.com/posepalacestudio/15-minute-session" />
+        <Cell.Footer
+          link="https://calendly.com/posepalacestudio/15-minute-session"
+          cta="Book now"
+        />
       </Cell>
       <Cell className="bg-icy-blue">
         <Cell.Content
