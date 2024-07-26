@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: 'Pose Palace self-portrait studio',
   },
   icons: [
-    { rel: 'icon', url: '/app-icon.jpg' },
-    { rel: 'apple-touch-icon', url: '/app-icon.jpg' },
+    { rel: 'icon', url: '/logo-instagram.png' },
+    { rel: 'apple-touch-icon', url: '/logo-instagram.png' },
   ],
 }
