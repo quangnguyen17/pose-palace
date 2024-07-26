@@ -7,7 +7,7 @@ div.collection {
   flex-direction: row;
   overflow: auto;
   padding: 0 1rem;
-  gap: 1rem;
+  gap: 0.7rem;
 }
 
 img.photo {

@@ -18,7 +18,6 @@ const Gallery = () => (
           quality={100}
           width={100}
           height={100}
-          unoptimized
           className="photo"
         />
       ))}
@@ -33,7 +32,6 @@ const Gallery = () => (
           quality={100}
           width={100}
           height={100}
-          unoptimized
           className="photo"
         />
       ))}
