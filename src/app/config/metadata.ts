@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'POSE PALACE self-portrait studio',
+  title: 'Pose Palace Studio',
   creator: 'Pose Palace self-portrait studio',
   keywords: [
     'Pose Palace',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     'garden grove portraits',
   ],
   openGraph: {
-    title: 'POSE PALACE self-portrait studio',
+    title: 'Pose Palace Studio',
     description: 'Pose Palace self-portrait studio',
   },
   icons: [
