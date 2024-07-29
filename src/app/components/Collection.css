@@ -20,24 +20,24 @@ div.photo-headline {
   top: 1rem;
   left: 1rem;
   right: 1rem;
+  text-align: center;
 }
 
 p.type {
-  font-weight: normal;
-  font-size: 17px;
-  line-height: 23px;
+  font-weight: bolder;
+  font-size: 25px;
 }
 
 p.room {
-  font-weight: bolder;
-  font-size: 23px;
-  line-height: 29px;
+  font-weight: normal;
+  font-size: 20px;
 }
 
 div.photo-wrapper,
 img.photo {
   width: 400px;
-  height: calc(400px * 1.1);
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: 0% 0%;
 }
@@ -51,6 +51,5 @@ div.photo-wrapper {
   div.photo-wrapper,
   img.photo {
     width: 100vw;
-    height: calc(100vw * 1.1);
   }
 }
