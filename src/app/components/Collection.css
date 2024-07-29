@@ -5,8 +5,6 @@ div.collection {
   align-items: flex-start;
   overflow-y: hidden;
   overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
@@ -15,7 +13,7 @@ div.collection::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
 
-div.photo-headline {
+p.headline {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -23,33 +21,22 @@ div.photo-headline {
   text-align: center;
 }
 
-p.type {
-  font-weight: bolder;
-  font-size: 25px;
+span.type {
+  font-weight: normal;
 }
 
-p.room {
-  font-weight: normal;
-  font-size: 20px;
+span.room {
+  font-weight: bolder;
 }
 
 div.photo-wrapper,
 img.photo {
-  width: 400px;
-  height: auto;
-  aspect-ratio: 1 / 1;
+  width: 300px;
+  height: calc(300px * 6 / 4);
   object-fit: cover;
   object-position: 0% 0%;
 }
 
 div.photo-wrapper {
-  scroll-snap-align: start;
   position: relative;
-}
-
-@media (max-width: 400px) {
-  div.photo-wrapper,
-  img.photo {
-    width: 100vw;
-  }
 }
