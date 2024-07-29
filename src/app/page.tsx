@@ -8,7 +8,8 @@ const fullBodyWhiteRoomPhotos = mapPhotos([6, 7, 8, 9, 10])
 
 const App = () => (
   <Page padding="0" gap="0">
-    <Cell className="bg-yellow">
+    <Collection type="STANDARD" room="COLOR ROOM" photos={standardColorRoomPhotos} />
+    <Cell>
       <Cell.Content title="5-minute session" price="$27">
         <ul>
           <li>For 2 people (each additional: $5)</li>
@@ -35,8 +36,8 @@ const App = () => (
       </Cell.Content>
       <Cell.BookNow link="https://calendly.com/posepalacestudio/5-minute-session" />
     </Cell>
-    <Collection type="STANDARD" room="COLOR ROOM" photos={standardColorRoomPhotos} />
-    <Cell className="bg-purple">
+    <Collection type="FULL BODY" room="WHITE ROOM" photos={fullBodyWhiteRoomPhotos} />
+    <Cell>
       <Cell.Content title="15-minute session" price="$67">
         <ul>
           <li>For 2 people (each additional: $5)</li>
@@ -63,8 +64,7 @@ const App = () => (
       </Cell.Content>
       <Cell.BookNow link="https://calendly.com/posepalacestudio/15-minute-session" />
     </Cell>
-    <Collection type="FULL BODY" room="WHITE ROOM" photos={fullBodyWhiteRoomPhotos} />
-    <Cell className="bg-icy-blue">
+    <Cell>
       <Cell.Content
         title={`🎂 Birthday Promotion`}
         discount={`10% OFF`}
@@ -73,7 +73,7 @@ const App = () => (
           month.`}
       />
     </Cell>
-    <Cell className="bg-tea-green">
+    <Cell>
       <Cell.Content
         title={`🩷 Wedding / Couple Anniversary Promotion`}
         discount={`10% OFF`}
@@ -82,7 +82,7 @@ const App = () => (
           anniversary for verification and inform one of our associates about your special occasion.`}
       />
     </Cell>
-    <Cell className="bg-baby-blue">
+    <Cell>
       <Cell.Content
         title={`🎓 Graduation Promotion`}
         discount={`10% OFF`}
@@ -91,7 +91,7 @@ const App = () => (
           our associates to redeem this special discount and make your achievement unforgettable.`}
       />
     </Cell>
-    <Cell className="bg-light-pink">
+    <Cell>
       <Cell.Content
         title={`🎊 Quinceañera`}
         discount={`10% OFF`}
@@ -100,7 +100,7 @@ const App = () => (
           Quinceañera with one of our associates to redeem this offer and create lasting memories.`}
       />
     </Cell>
-    <Cell className="bg-banana-green">
+    <Cell>
       <Cell.Content
         title={`🪖 Military Personnel and 🏥 Healthcare Workers`}
         discount={`10% OFF`}

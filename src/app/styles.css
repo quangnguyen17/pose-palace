@@ -101,38 +101,6 @@ a {
   text-align: center;
 }
 
-.bg-yellow {
-  background-color: #f1ead0;
-}
-
-.bg-purple {
-  background-color: #ece3f0;
-}
-
-.bg-baby-blue {
-  background-color: #cfebf3;
-}
-
-.bg-icy-blue {
-  background-color: #dbe3f0;
-}
-
-.bg-tea-green {
-  background-color: #ddf8e8;
-}
-
-.bg-light-pink {
-  background-color: #f4dfe6;
-}
-
-.bg-banana-green {
-  background-color: #e8f4d4;
-}
-
-.bg-gray {
-  background-color: rgb(246, 246, 246);
-}
-
 p.price {
   font-size: 70px;
   line-height: 70px;
