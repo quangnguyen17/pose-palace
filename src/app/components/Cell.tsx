@@ -8,19 +8,19 @@ const RightArrow: FC = () => {
       className="invert-color"
       src="/right-arrow.png"
       alt="/right-arrow.png"
-      width={18}
-      height={18}
+      width={25}
+      height={25}
     />
   )
 }
 
-const Footer: FC<{
+const BookNow: FC<{
   link?: string | undefined
   cta?: string | undefined
-}> = ({ link, cta }) => {
+}> = ({ link, cta = 'Book now' }) => {
   if (!link || !cta) return <></>
   return (
-    <Link className="cell-footer" href={link} target="_blank">
+    <Link className="cell-book-now" href={link} target="_blank">
       <p>{cta}</p>
       <RightArrow />
     </Link>
@@ -52,13 +52,13 @@ const Cell: FC<
     className?: string | undefined
   }>
 > & {
-  Footer: typeof Footer
+  BookNow: typeof BookNow
   Content: typeof Content
 } = ({ children, className }) => {
   return <div className={`cell ${className}`}>{children}</div>
 }
 
 Cell.Content = Content
-Cell.Footer = Footer
+Cell.BookNow = BookNow
 
 export { Cell }

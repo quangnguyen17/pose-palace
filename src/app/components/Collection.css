@@ -15,19 +15,28 @@ div.collection::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
 
-p.headline {
+div.photo-headline {
   position: absolute;
   top: 1rem;
+  left: 1rem;
   right: 1rem;
   text-align: center;
-  font-weight: 700;
-  font-size: 14px;
+}
+
+p.type {
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+p.room {
+  font-weight: normal;
+  font-size: 20px;
 }
 
 div.photo-wrapper,
 img.photo {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: calc(400px * 1.1);
   object-fit: cover;
   object-position: 0% 0%;
 }
@@ -37,10 +46,10 @@ div.photo-wrapper {
   position: relative;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
   div.photo-wrapper,
   img.photo {
     width: 100vw;
-    height: 100vw;
+    height: calc(100vw * 1.1);
   }
 }

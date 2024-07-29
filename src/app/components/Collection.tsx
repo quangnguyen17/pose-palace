@@ -21,9 +21,14 @@ export const Collection: FC<CollectionProps> = ({ type, room, photos }) => (
           unoptimized
           className="photo"
         />
-        <p className="headline" style={{ color: room === 'WHITE ROOM' ? 'black' : 'white' }}>
-          {type} • {room}
-        </p>
+        <div className="photo-headline">
+          <p className="type" style={{ color: room === 'WHITE ROOM' ? 'black' : 'white' }}>
+            {type}
+          </p>
+          <p className="room" style={{ color: room === 'WHITE ROOM' ? 'black' : 'white' }}>
+            {room}
+          </p>
+        </div>
       </div>
     ))}
   </div>

@@ -4,7 +4,7 @@ import { Collection } from './components/Collection'
 
 const mapPhotos = (photos: number[]) => photos.map((photo) => `/sample-${photo}.jpg`)
 const standardColorRoomPhotos = mapPhotos([1, 2, 3, 4, 5])
-const fullBodyWhiteRoomPhotos = mapPhotos([6, 7, 8, 9, 10, 11, 12])
+const fullBodyWhiteRoomPhotos = mapPhotos([6, 7, 8, 9, 10])
 
 const App = () => (
   <Page padding="0" gap="0">
@@ -34,10 +34,7 @@ const App = () => (
           </li>
         </ul>
       </Cell.Content>
-      <Cell.Footer
-        link="https://calendly.com/posepalacestudio/5-minute-session"
-        cta="Book and shine ✨"
-      />
+      <Cell.BookNow link="https://calendly.com/posepalacestudio/5-minute-session" />
     </Cell>
     <Collection type="FULL BODY" room="WHITE ROOM" photos={fullBodyWhiteRoomPhotos} />
     <Cell className="bg-purple">
@@ -65,7 +62,7 @@ const App = () => (
           </li>
         </ul>
       </Cell.Content>
-      <Cell.Footer link="https://calendly.com/posepalacestudio/15-minute-session" cta="Book now" />
+      <Cell.BookNow link="https://calendly.com/posepalacestudio/15-minute-session" />
     </Cell>
     <Cell className="bg-icy-blue">
       <Cell.Content
