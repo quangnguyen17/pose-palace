@@ -10,11 +10,6 @@ const tabBarItems = [
     href: '/',
   },
   {
-    key: 'gallery',
-    label: 'gallery',
-    href: '/gallery',
-  },
-  {
     key: 'about',
     label: 'about',
     href: '/about',

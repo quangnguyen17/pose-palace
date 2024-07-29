@@ -1,8 +1,14 @@
 import { Page } from './components/Page'
 import { Cell } from './components/Cell'
+import { Collection } from './components/Collection'
+
+const mapPhotos = (photos: number[]) => photos.map((photo) => `/sample-${photo}.jpg`)
+const standardColorRoomPhotos = mapPhotos([1, 2, 3, 4, 5])
+const fullBodyWhiteRoomPhotos = mapPhotos([6, 7, 8, 9, 10, 11, 12])
 
 const App = () => (
-  <Page>
+  <Page padding="0" gap="0">
+    <Collection type="STANDARD" room="COLOR ROOM" photos={standardColorRoomPhotos} />
     <Cell className="bg-yellow">
       <Cell.Content title="5-minute session" price="$27">
         <ul>
@@ -33,6 +39,7 @@ const App = () => (
         cta="Book and shine ✨"
       />
     </Cell>
+    <Collection type="FULL BODY" room="WHITE ROOM" photos={fullBodyWhiteRoomPhotos} />
     <Cell className="bg-purple">
       <Cell.Content title="15-minute session" price="$67">
         <ul>
