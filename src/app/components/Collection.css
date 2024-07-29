@@ -20,17 +20,18 @@ div.photo-headline {
   top: 1rem;
   left: 1rem;
   right: 1rem;
-  text-align: center;
 }
 
 p.type {
-  font-weight: bolder;
-  font-size: 24px;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 23px;
 }
 
 p.room {
-  font-weight: normal;
-  font-size: 20px;
+  font-weight: bolder;
+  font-size: 23px;
+  line-height: 29px;
 }
 
 div.photo-wrapper,
