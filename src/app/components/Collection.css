@@ -1,16 +1,18 @@
 div.collection {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
   overflow: auto;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
 }
 
-div.photo-wrapper {
-  scroll-snap-align: start;
-  flex: 1;
-  position: relative;
+div.collection::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
 p.headline {
@@ -22,16 +24,30 @@ p.headline {
   font-size: 14px;
 }
 
+div.photo-wrapper,
 img.photo {
   width: auto;
   height: 500px;
   object-fit: contain;
 }
 
+div.photo-wrapper {
+  scroll-snap-align: start;
+  position: relative;
+}
+
+img.photo {
+  object-fit: contain;
+}
+
 @media (max-width: 500px) {
+  div.photo-wrapper,
   img.photo {
     width: 100vw;
-    height: calc(100vw * 1.3);
+    height: calc(100vw * 6 / 4);
+  }
+
+  img.photo {
     object-fit: cover;
   }
 }
