@@ -3,7 +3,7 @@ div.collection {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  overflow: auto;
+  overflow-y: hidden;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -26,9 +26,10 @@ p.headline {
 
 div.photo-wrapper,
 img.photo {
-  width: auto;
+  width: 500px;
   height: 500px;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: 0% 0%;
 }
 
 div.photo-wrapper {
@@ -36,18 +37,10 @@ div.photo-wrapper {
   position: relative;
 }
 
-img.photo {
-  object-fit: contain;
-}
-
 @media (max-width: 500px) {
   div.photo-wrapper,
   img.photo {
     width: 100vw;
-    height: calc(100vw * 6 / 4);
-  }
-
-  img.photo {
-    object-fit: cover;
+    height: 100vw;
   }
 }
