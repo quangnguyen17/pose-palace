@@ -8,7 +8,6 @@ const fullBodyWhiteRoomPhotos = mapPhotos([6, 7, 8, 9, 10])
 
 const App = () => (
   <Page padding="0" gap="0">
-    <Collection type="STANDARD" room="COLOR ROOM" photos={standardColorRoomPhotos} />
     <Cell className="bg-yellow">
       <Cell.Content title="5-minute session" price="$27">
         <ul>
@@ -36,7 +35,7 @@ const App = () => (
       </Cell.Content>
       <Cell.BookNow link="https://calendly.com/posepalacestudio/5-minute-session" />
     </Cell>
-    <Collection type="FULL BODY" room="WHITE ROOM" photos={fullBodyWhiteRoomPhotos} />
+    <Collection type="STANDARD" room="COLOR ROOM" photos={standardColorRoomPhotos} />
     <Cell className="bg-purple">
       <Cell.Content title="15-minute session" price="$67">
         <ul>
@@ -64,6 +63,7 @@ const App = () => (
       </Cell.Content>
       <Cell.BookNow link="https://calendly.com/posepalacestudio/15-minute-session" />
     </Cell>
+    <Collection type="FULL BODY" room="WHITE ROOM" photos={fullBodyWhiteRoomPhotos} />
     <Cell className="bg-icy-blue">
       <Cell.Content
         title={`🎂 Birthday Promotion`}
