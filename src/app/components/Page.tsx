@@ -1,5 +1,3 @@
-'use client'
-
 import { CSSProperties, FC, PropsWithChildren } from 'react'
 import '../config/firebase'
 
