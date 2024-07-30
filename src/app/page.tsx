@@ -36,7 +36,7 @@ const App = () => (
           </li>
         </ul>
       </Cell.Content>
-      <Cell.BookNow link="https://calendly.com/posepalacestudio/5-minute-session" />
+      <Cell.BookNow />
     </Cell>
     <Collection type="FULL BODY" room="WHITE ROOM" photos={fullBodyWhiteRoomPhotos} />
     <Cell>
@@ -64,7 +64,7 @@ const App = () => (
           </li>
         </ul>
       </Cell.Content>
-      <Cell.BookNow link="https://calendly.com/posepalacestudio/15-minute-session" />
+      <Cell.BookNow />
     </Cell>
     <Cell.Content
       title={`🎂 Birthday Promotion`}

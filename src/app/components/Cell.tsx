@@ -2,27 +2,17 @@ import { FC, PropsWithChildren } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const RightArrow: FC = () => {
+const BookNow: FC = () => {
   return (
-    <Image
-      className="invert-color"
-      src="/right-arrow.png"
-      alt="/right-arrow.png"
-      width={24}
-      height={24}
-    />
-  )
-}
-
-const BookNow: FC<{
-  link?: string | undefined
-  cta?: string | undefined
-}> = ({ link, cta = 'Book now' }) => {
-  if (!link || !cta) return <></>
-  return (
-    <Link className="cell-book-now" href={link} target="_blank">
-      <p>{cta}</p>
-      <RightArrow />
+    <Link className="cell-book-now" href="https://calendly.com/posepalacestudio" target="_blank">
+      <p>Book Now</p>
+      <Image
+        className="invert-color"
+        src="/right-arrow.png"
+        alt="/right-arrow.png"
+        width={24}
+        height={24}
+      />
     </Link>
   )
 }
