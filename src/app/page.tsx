@@ -1,3 +1,5 @@
+import Link from 'next/link'
+import Image from 'next/image'
 import { Page } from './components/Page'
 import { Cell } from './components/Cell'
 import { Collection } from './components/Collection'
@@ -64,49 +66,131 @@ const App = () => (
       </Cell.Content>
       <Cell.BookNow link="https://calendly.com/posepalacestudio/15-minute-session" />
     </Cell>
-    <Cell>
-      <Cell.Content
-        title={`🎂 Birthday Promotion`}
-        discount={`10% OFF`}
-        text={`Celebrate your birthday month with an exclusive gift: enjoy 10% off your self-portrait
+    <Cell.Content
+      title={`🎂 Birthday Promotion`}
+      discount={`10% OFF`}
+      text={`Celebrate your birthday month with an exclusive gift: enjoy 10% off your self-portrait
           session! To redeem this offer, simply inform one of our associates that it's your birthday
           month.`}
-      />
-    </Cell>
-    <Cell>
-      <Cell.Content
-        title={`🩷 Wedding / Couple Anniversary Promotion`}
-        discount={`10% OFF`}
-        text={`Celebrate your wedding or couple's anniversary with a special treat: enjoy 10% off your
+    />
+    <Cell.Separator />
+    <Cell.Content
+      title={`🩷 Wedding / Couple Anniversary Promotion`}
+      discount={`10% OFF`}
+      text={`Celebrate your wedding or couple's anniversary with a special treat: enjoy 10% off your
           self-portrait session! To redeem this offer, please provide an image of last year's
           anniversary for verification and inform one of our associates about your special occasion.`}
-      />
-    </Cell>
-    <Cell>
-      <Cell.Content
-        title={`🎓 Graduation Promotion`}
-        discount={`10% OFF`}
-        text={`Celebrate your graduation in style with an exclusive offer! Enjoy 10% off your
+    />
+    <Cell.Separator />
+    <Cell.Content
+      title={`🎓 Graduation Promotion`}
+      discount={`10% OFF`}
+      text={`Celebrate your graduation in style with an exclusive offer! Enjoy 10% off your
           self-portrait session as our gift to you. Simply share your graduation story with one of
           our associates to redeem this special discount and make your achievement unforgettable.`}
-      />
-    </Cell>
-    <Cell>
-      <Cell.Content
-        title={`🎊 Quinceañera`}
-        discount={`10% OFF`}
-        text={`Celebrate the milestone of your Quinceañera with an exclusive offer! Enjoy a 10% discount
+    />
+    <Cell.Separator />
+    <Cell.Content
+      title={`🎊 Quinceañera`}
+      discount={`10% OFF`}
+      text={`Celebrate the milestone of your Quinceañera with an exclusive offer! Enjoy a 10% discount
           on your self-portrait session as our special gift to you. Simply share the story of your
           Quinceañera with one of our associates to redeem this offer and create lasting memories.`}
+    />
+    <Cell.Separator />
+    <Cell.Content
+      title={`🪖 Military Personnel and 🏥 Healthcare Workers`}
+      discount={`10% OFF`}
+      text={`Receive a 10% automatic discount for military personnel and healthcare workers, our token
+          of gratitude for your service and dedication.`}
+    />
+    <Cell.Separator />
+    <Cell>
+      <Image
+        src="/logo-long.png"
+        alt="Pose Palace Full Logo"
+        width={100}
+        height={100}
+        style={{
+          objectFit: 'contain',
+          width: 'auto',
+          height: '100px',
+          padding: '1rem 1rem 0 1rem',
+        }}
       />
+      <Cell.Content
+        text={`We are a proud Vietnamese-American-owned self-portrait photo studio conveniently located
+            in Koreatown, Garden Grove. Our mission is to provide professional photos at affordable
+            prices. You might wonder what a self-portrait studio is. Essentially, it's a photography
+            studio where customers take photos of themselves, rather than being photographed by a
+            professional. Equipped with a 32-inch monitor displaying the camera's live feed, you can
+            see yourself exactly as you appear in the camera, much like looking into a mirror. We
+            firmly believe that capturing memorable moments is invaluable. What better way to
+            preserve these moments than by capturing them yourself, with your own authentic
+            expressions and feelings?`}
+      />
+      <Cell.Separator />
     </Cell>
     <Cell>
       <Cell.Content
-        title={`🪖 Military Personnel and 🏥 Healthcare Workers`}
-        discount={`10% OFF`}
-        text={`Receive a 10% automatic discount for military personnel and healthcare workers, our token
-          of gratitude for your service and dedication.`}
+        title="How it works"
+        text={`Our studio consists of two rooms: one features a cyclorama white wall, ideal for wide,
+          full-body shots, while the other offers multiple color backdrops, perfect for more
+          personal waist-up to headshot portraits. An on-site attendant will guide you into either
+          room, provide you with a remote clicker to trigger the camera shutter, assist you in
+          taking your first shot to familiarize you with the equipment, and finally, start the
+          timer for your booked session.`}
       />
+      <Cell.Separator />
+    </Cell>
+    <Cell>
+      <Cell.Content title="Our equipments">
+        <ul>
+          <li>1 Sony Full-Frame camera</li>
+          <li>{`1 32-inch monitor displaying the camera's live view/feed`}</li>
+          <li>1 27-inch monitor displaying the last photo taken</li>
+          <li>1-2 photography strobe lights depending on the room.</li>
+        </ul>
+      </Cell.Content>
+      <Cell.Separator />
+    </Cell>
+    <Cell>
+      <Cell.Content title="Props available for use">
+        <ul>
+          <li>Benches</li>
+          <li>Cubes</li>
+          <li>Chairs</li>
+          <li>Stools</li>
+          <li>Party props like glasses, headbands, hats, etc.</li>
+        </ul>
+      </Cell.Content>
+      <Cell.Separator />
+    </Cell>
+    <Cell>
+      <Cell.Content>
+        <p className="text">
+          <span>(We are located inside the AR Galleria)</span>
+          <Link
+            href="http://maps.google.com/maps?q=9618+Garden+Grove+Blvd%2C+Garden+Grove%2C+CA+92844"
+            target="_blank"
+            style={{ textAlign: 'left', color: 'black' }}
+          >
+            9618 Garden Grove Blvd # 106
+            <br />
+            Garden Grove, CA 92844
+          </Link>
+          <Link href="tel:714-467-7036" style={{ textAlign: 'left', color: 'black' }}>
+            (714) 467-7036
+          </Link>
+          <Link
+            href="mailto:posepalacestudio@gmail.com"
+            style={{ textAlign: 'left', color: 'black' }}
+          >
+            posepalacestudio@gmail.com
+          </Link>
+          © 2024 Crystal Lighthouse LLC
+        </p>
+      </Cell.Content>
     </Cell>
   </Page>
 )

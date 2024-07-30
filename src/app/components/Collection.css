@@ -13,7 +13,7 @@ div.collection::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
 
-p.headline {
+div.headline {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -21,12 +21,16 @@ p.headline {
   text-align: center;
 }
 
-span.type {
-  font-weight: normal;
+p.type {
+  font-weight: bolder;
+  font-size: 21px;
+  line-height: 25px;
 }
 
-span.room {
-  font-weight: bolder;
+p.room {
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 21px;
 }
 
 div.photo-wrapper,
@@ -39,4 +43,13 @@ img.photo {
 
 div.photo-wrapper {
   position: relative;
+}
+
+img.instagram {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
 }

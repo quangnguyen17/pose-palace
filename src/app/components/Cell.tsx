@@ -8,8 +8,8 @@ const RightArrow: FC = () => {
       className="invert-color"
       src="/right-arrow.png"
       alt="/right-arrow.png"
-      width={25}
-      height={25}
+      width={24}
+      height={24}
     />
   )
 }
@@ -47,6 +47,10 @@ const Content: FC<
   )
 }
 
+const Separator: FC = () => {
+  return <div className="separator"></div>
+}
+
 const Cell: FC<
   PropsWithChildren<{
     className?: string | undefined
@@ -54,11 +58,13 @@ const Cell: FC<
 > & {
   BookNow: typeof BookNow
   Content: typeof Content
+  Separator: typeof Separator
 } = ({ children, className }) => {
   return <div className={`cell ${className}`}>{children}</div>
 }
 
 Cell.Content = Content
 Cell.BookNow = BookNow
+Cell.Separator = Separator
 
 export { Cell }
