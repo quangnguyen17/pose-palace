@@ -10,7 +10,7 @@ const fullBodyWhiteRoomPhotos = mapPhotos([6, 7, 8, 9, 10])
 
 const App = () => (
   <Page padding="0" gap="0">
-    <Collection type="STANDARD" room="COLOR ROOM" photos={standardColorRoomPhotos} />
+    <Collection type="Standard" room="Color Room" photos={standardColorRoomPhotos} />
     <Cell>
       <Cell.Content title="5-minute session" price="$27">
         <ul>
@@ -38,7 +38,7 @@ const App = () => (
       </Cell.Content>
       <Cell.BookNow />
     </Cell>
-    <Collection type="FULL BODY" room="WHITE ROOM" photos={fullBodyWhiteRoomPhotos} />
+    <Collection type="Full Body" room="White Room" photos={fullBodyWhiteRoomPhotos} />
     <Cell>
       <Cell.Content title="15-minute session" price="$67">
         <ul>
