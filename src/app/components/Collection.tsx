@@ -26,7 +26,14 @@ export const Collection: FC<CollectionProps> = ({ type, room, photos }) => {
             alignItems: 'center',
           }}
         >
-          <img src="/instagram.png" alt="/instagram.png" className="instagram" />
+          <Image
+            src="/instagram.png"
+            alt="/instagram.png"
+            className="instagram"
+            unoptimized
+            width={0}
+            height={0}
+          />
         </Link>
       </div>
       <div className="collection">
