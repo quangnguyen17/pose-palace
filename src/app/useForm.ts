@@ -99,11 +99,20 @@ export const useForm = () => {
     [handleInputChange, validateForm, isFormFilled, showLoading, hideLoading],
   )
 
+  const formPayload = () => ({
+    'First Name': formData.firstName,
+    'Last Name': formData.lastName,
+    Email: formData.email,
+    'Phone Number': formData.phone,
+    'Allow SMS Offers and Promos': formData.sms ? `✅` : `❌`,
+  })
+
   return {
     formData,
     formErrors,
     isModalOpen,
     isLoading,
+    formPayload,
     ...formMethods,
   }
 }

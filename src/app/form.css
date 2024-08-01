@@ -3,33 +3,29 @@ form {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 16px;
+  gap: 1rem;
 }
 
 label {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 1rem;
 }
 
 input[type='text'] {
   width: 100%;
-  padding: 16px;
-  font-size: 16px;
-  line-height: 20px;
-  border-radius: 10px;
-  border: 1px solid rgb(210, 210, 210);
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 0.7rem;
+  border: none;
+  background-color: rgb(244, 244, 244);
 }
 
 Button[type='submit'] {
   width: 100%;
   color: white;
   background-color: black;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  border-radius: 10px;
-  font-weight: 400;
-  padding: 16px;
+  font-size: 1rem;
+  border-radius: 0.7rem;
+  padding: 1rem;
   border: none;
   cursor: pointer;
 }
@@ -37,7 +33,7 @@ Button[type='submit'] {
 button[type='submit']:disabled {
   width: 100%;
   color: white;
-  background-color: gray;
+  background-color: rgb(200, 200, 200);
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
@@ -65,6 +61,5 @@ input[type='checkbox'] {
 
 .errorMessage {
   color: red;
-  margin-left: 10px;
-  font-size: 1em;
+  font-size: 1rem;
 }

@@ -10,48 +10,38 @@ import '../modal.css'
 import '../loading.css'
 
 const JoinWaitList = () => {
-  const { formData, formErrors, isModalOpen, isLoading, ...formMethods } = useForm()
+  const { formPayload, formData, formErrors, isModalOpen, isLoading, ...formMethods } = useForm()
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault()
+
     const isValid = formMethods.validateForm()
+    if (!isValid) return
 
-    if (isValid) {
-      formMethods.showLoading()
+    formMethods.showLoading()
 
-      try {
-        await axios.post('https://api.zerosheets.com/v1/pfj', formData)
-        formMethods.setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          sms: true,
-        })
-        formMethods.hideLoading() // Hide loading screen
-        formMethods.setIsModalOpen(true) // Show modal
-      } catch (error) {
-        console.error(error)
-        ;('')
-        formMethods.hideLoading()
-      }
-    } else {
-      console.log('Form has errors.')
+    try {
+      await axios.post('https://api.zerosheets.com/v1/cms', formPayload())
+      formMethods.setIsModalOpen(true) // Show modal
+    } catch (error) {
+      console.error(error)
     }
+
+    formMethods.hideLoading() // Hide loading screen
   }
 
   return (
     <Page>
       <form>
         <Image
-          src="/logo-short.png"
+          src="/logo-long.png"
           alt="Pose Palace Short Logo"
           width={200}
-          height={40}
+          height={100}
+          unoptimized
           style={{ objectFit: 'contain', width: 'auto' }}
         />
-        <h3 className="heading">Join Waitlist</h3>
-
+        <h2>Join Waitlist</h2>
         <label>First Name:</label>
         <input
           type="text"
@@ -61,7 +51,6 @@ const JoinWaitList = () => {
           onChange={formMethods.handleInputChange}
         />
         {formErrors.firstName && <span className="errorMessage">{formErrors.firstName}</span>}
-
         <label>Last Name:</label>
         <input
           type="text"
@@ -71,7 +60,6 @@ const JoinWaitList = () => {
           onChange={formMethods.handleInputChange}
         />
         {formErrors.lastName && <span className="errorMessage">{formErrors.lastName}</span>}
-
         <label>Email Address:</label>
         <input
           type="text"
@@ -81,7 +69,6 @@ const JoinWaitList = () => {
           onChange={formMethods.handleInputChange}
         />
         {formErrors.email && <span className="errorMessage">{formErrors.email}</span>}
-
         <label>Phone Number:</label>
         <input
           type="text"
@@ -91,7 +78,6 @@ const JoinWaitList = () => {
           onChange={formMethods.handleInputChange}
         />
         {formErrors.phone && <span className="errorMessage">{formErrors.phone}</span>}
-
         <div className="row">
           <input
             type="checkbox"
@@ -107,7 +93,6 @@ const JoinWaitList = () => {
         <Button type="submit" onClick={handleSubmit} disabled={!formMethods.isFormFilled()}>
           Submit
         </Button>
-
         {/* Loading Screen */}
         <div className={`loading-overlay${isLoading ? '-visible' : ''}`}>
           <div className="loading">
@@ -118,12 +103,11 @@ const JoinWaitList = () => {
             </div>
           </div>
         </div>
-
         {/* Modal */}
         <div className={`modal-overlay${isModalOpen ? '-visible' : ''}`}>
           <div className={`modal${isModalOpen ? '-visible' : ''}`}>
             <h2>You're on the waitlist!</h2>
-            <p>Please stay nearby, we'll be in contact as soon as it is your turn.</p>
+            <p>Please stay nearby, we'll contact you as soon as it is your turn.</p>
           </div>
         </div>
       </form>
