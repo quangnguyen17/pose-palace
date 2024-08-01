@@ -10,6 +10,41 @@ const fullBodyWhiteRoomPhotos = mapPhotos([6, 7, 8, 9, 10])
 
 const App = () => (
   <Page padding="0" gap="0">
+    <Cell.Content>
+      <Image
+        src="/logo-short.png"
+        alt="Pose Palace Logo Short"
+        width={100}
+        height={100}
+        unoptimized
+        style={{
+          objectFit: 'contain',
+          width: 'auto',
+          height: '55px',
+        }}
+      />
+      <p className="text">
+        <Link
+          href="http://maps.google.com/maps?q=9618+Garden+Grove+Blvd%2C+Garden+Grove%2C+CA+92844"
+          target="_blank"
+          style={{ textAlign: 'left', color: 'black' }}
+        >
+          9618 Garden Grove Blvd # 106
+          <br />
+          Garden Grove, CA 92844
+        </Link>
+        <Link href="tel:714-467-7036" style={{ textAlign: 'left', color: 'black' }}>
+          (714) 467-7036
+        </Link>
+        <Link
+          href="mailto:posepalacestudio@gmail.com"
+          style={{ textAlign: 'left', color: 'black' }}
+        >
+          posepalacestudio@gmail.com
+        </Link>
+      </p>
+    </Cell.Content>
+    <Cell.Separator />
     <Collection type="Standard" room="Color Room" photos={standardColorRoomPhotos} />
     <Cell>
       <Cell.Content title="5-minute session" price="$27">
@@ -111,10 +146,11 @@ const App = () => (
         alt="Pose Palace Full Logo"
         width={100}
         height={100}
+        unoptimized
         style={{
           objectFit: 'contain',
           width: 'auto',
-          height: '100px',
+          height: '115px',
           padding: '1rem 1rem 0 1rem',
         }}
       />
@@ -166,32 +202,9 @@ const App = () => (
       </Cell.Content>
       <Cell.Separator />
     </Cell>
-    <Cell>
-      <Cell.Content>
-        <p className="text">
-          <span>(We are located inside the AR Galleria)</span>
-          <Link
-            href="http://maps.google.com/maps?q=9618+Garden+Grove+Blvd%2C+Garden+Grove%2C+CA+92844"
-            target="_blank"
-            style={{ textAlign: 'left', color: 'black' }}
-          >
-            9618 Garden Grove Blvd # 106
-            <br />
-            Garden Grove, CA 92844
-          </Link>
-          <Link href="tel:714-467-7036" style={{ textAlign: 'left', color: 'black' }}>
-            (714) 467-7036
-          </Link>
-          <Link
-            href="mailto:posepalacestudio@gmail.com"
-            style={{ textAlign: 'left', color: 'black' }}
-          >
-            posepalacestudio@gmail.com
-          </Link>
-          © 2024 Crystal Lighthouse LLC
-        </p>
-      </Cell.Content>
-    </Cell>
+    <Cell.Content>
+      <p className="text">© 2024 Crystal Lighthouse LLC</p>
+    </Cell.Content>
   </Page>
 )
 
