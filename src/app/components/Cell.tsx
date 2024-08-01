@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const BookNow: FC = () => {
   return (
-    <Link className="cell-book-now" href="https://calendly.com/posepalacestudio" target="_blank">
+    <Link className="cell-book-now" href="/book-now">
       <p>Book Now</p>
       <Image
         className="invert-color"
