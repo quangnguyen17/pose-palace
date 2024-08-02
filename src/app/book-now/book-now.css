@@ -1,3 +1,7 @@
+:root {
+  --book-now-card-gradient: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+}
+
 .book-now {
   background-color: white;
   position: absolute;
@@ -18,16 +22,16 @@
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  align-content: flex-start;
+  align-content: center;
   justify-content: center;
-  text-align: left;
+  text-align: center;
   color: white;
   cursor: pointer;
 }
 
 .book-now-card > h1 {
   font-size: 4rem;
-  line-height: 4.8rem;
+  line-height: 4.5rem;
 }
 
 .book-now-card > p {
@@ -36,22 +40,22 @@
 }
 
 .sample1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/sample-1.jpg');
+  background: var(--book-now-card-gradient), url('/sample-1.jpg');
   background-position: 40% 40%;
 }
 
 .sample2 {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/sample-2.jpg');
+  background: var(--book-now-card-gradient), url('/sample-2.jpg');
   background-position: 0% 0%;
 }
 
 .sample3 {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/sample-7.jpg');
+  background: var(--book-now-card-gradient), url('/sample-7.jpg');
   background-position: 40% 40%;
 }
 
 .sample4 {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/sample-10.jpg');
+  background: var(--book-now-card-gradient), url('/sample-10.jpg');
   background-position: 50% 50%;
 }
 
