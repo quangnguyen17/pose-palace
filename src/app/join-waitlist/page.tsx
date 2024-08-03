@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { Button } from 'semantic-ui-react'
-import axios from 'axios'
 import { Page } from '../components/Page'
 import { Cell } from '../components/Cell'
 import { useForm } from '../useForm'
@@ -11,38 +10,21 @@ import '../modal.css'
 import '../loading.css'
 
 const JoinWaitList = () => {
-  const { formPayload, formData, formErrors, isModalOpen, isLoading, ...formMethods } = useForm()
-
-  const handleSubmit = async (event: any) => {
-    event.preventDefault()
-
-    const isValid = formMethods.validateForm()
-    if (!isValid) return
-
-    formMethods.showLoading()
-
-    try {
-      await axios.post('https://api.zerosheets.com/v1/cms', formPayload())
-      formMethods.setIsModalOpen(true) // Show modal
-    } catch (error) {
-      console.error(error)
-    }
-
-    formMethods.hideLoading() // Hide loading screen
-  }
+  const { handleSubmit, formData, formErrors, isModalOpen, isLoading, ...formMethods } =
+    useForm('join-waitlist')
 
   return (
     <Page>
       <form>
         <Image
           src="/logo-short.png"
-          alt="Pose Palace Short Logo"
+          alt="Pose Palace Logo Short"
           width={0}
           height={0}
           unoptimized
-          style={{ objectFit: 'contain', width: 'auto', height: '50px', margin: '0px auto' }}
+          style={{ objectFit: 'contain', width: 'auto', height: '60px' }}
         />
-        <h2 style={{ margin: '0px auto' }}>Join Waitlist</h2>
+        <h2>Join Waitlist</h2>
         <Cell.Separator />
         <label>First Name:</label>
         <input

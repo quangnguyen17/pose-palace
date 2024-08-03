@@ -1,6 +1,9 @@
 import { useState, useCallback, useMemo } from 'react'
+import axios from 'axios'
 
-export const useForm = () => {
+type FormType = 'join-waitlist' | 'check-in'
+
+export const useForm = (formType: FormType) => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -77,29 +80,21 @@ export const useForm = () => {
     )
   }, [formData])
 
-  const showLoading = useCallback(() => {
-    setIsLoading(true)
-  }, [])
+  const showLoading = () => setIsLoading(true)
+  const hideLoading = () => setIsLoading(false)
 
-  const hideLoading = useCallback(() => {
-    setIsLoading(false)
-  }, [])
+  const formMethods = {
+    setFormData,
+    setFormErrors,
+    setIsModalOpen,
+    handleInputChange,
+    validateForm,
+    isFormFilled,
+    showLoading,
+    hideLoading,
+  }
 
-  const formMethods = useMemo(
-    () => ({
-      setFormData,
-      setFormErrors,
-      setIsModalOpen,
-      handleInputChange,
-      validateForm,
-      isFormFilled,
-      showLoading,
-      hideLoading,
-    }),
-    [handleInputChange, validateForm, isFormFilled, showLoading, hideLoading],
-  )
-
-  const formPayload = () => ({
+  const getFormPayload = () => ({
     'First Name': formData.firstName,
     'Last Name': formData.lastName,
     Email: formData.email,
@@ -107,12 +102,31 @@ export const useForm = () => {
     'Allow SMS Offers and Promos': formData.sms ? `✅` : `❌`,
   })
 
+  const handleSubmit = async (event: any) => {
+    event.preventDefault()
+
+    const isValid = formMethods.validateForm()
+    if (!isValid) return
+
+    formMethods.showLoading()
+
+    try {
+      const formKey = formType === 'check-in' ? 'lob' : 'cms'
+      await axios.post(`https://api.zerosheets.com/v1/${formKey}`, getFormPayload())
+      formMethods.setIsModalOpen(true) // Show modal
+    } catch (error) {
+      console.error(error)
+    }
+
+    formMethods.hideLoading() // Hide loading screen
+  }
+
   return {
     formData,
     formErrors,
     isModalOpen,
     isLoading,
-    formPayload,
+    handleSubmit,
     ...formMethods,
   }
 }

@@ -11,38 +11,21 @@ import '../modal.css'
 import '../loading.css'
 
 const CheckIn = () => {
-  const { formData, formPayload, formErrors, isModalOpen, isLoading, ...formMethods } = useForm()
-
-  const handleSubmit = async (event: any) => {
-    event.preventDefault()
-
-    const isValid = formMethods.validateForm()
-    if (!isValid) return
-
-    formMethods.showLoading()
-
-    try {
-      await axios.post('https://api.zerosheets.com/v1/lob', formPayload())
-      formMethods.setIsModalOpen(true) // Show modal
-    } catch (error) {
-      console.error(error)
-    }
-
-    formMethods.hideLoading() // Hide loading screen
-  }
+  const { handleSubmit, formData, formErrors, isModalOpen, isLoading, ...formMethods } =
+    useForm('check-in')
 
   return (
     <Page>
       <form>
         <Image
           src="/logo-short.png"
-          alt="Pose Palace Short Logo"
+          alt="Pose Palace Logo Short"
           width={0}
           height={0}
           unoptimized
-          style={{ objectFit: 'contain', width: 'auto', height: '50px', margin: '0px auto' }}
+          style={{ objectFit: 'contain', width: 'auto', height: '60px' }}
         />
-        <h2 style={{ margin: '0px auto' }}>Check In</h2>
+        <h2>Check In</h2>
         <Cell.Separator />
         <label>First Name:</label>
         <input
