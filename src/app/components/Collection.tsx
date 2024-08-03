@@ -12,25 +12,13 @@ type CollectionProps = {
 export const Collection: FC<CollectionProps> = ({ type, room, photos }) => {
   return (
     <Fragment>
-      <div className="headline">
+      <Link href="/book-now" className="headline">
         <p>
           {type && <span className="type">{type}</span>}{' '}
           {room && <span className="room">{room}</span>}
         </p>
-        <Link
-          href="/book-now"
-          style={{
-            backgroundColor: 'rgb(0, 0, 0)',
-            color: 'rgb(255, 255, 255)',
-            padding: '12px',
-            fontSize: '15px',
-            lineHeight: '15px',
-            fontWeight: 500,
-          }}
-        >
-          Book Now
-        </Link>
-      </div>
+        <Image src="/right-arrow.png" alt="/right-arrow.png" width={24} height={24} />
+      </Link>
       <div className="collection">
         {photos.map((photo) => (
           <Image

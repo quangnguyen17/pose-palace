@@ -35,72 +35,74 @@ const Header: FC = () => {
           posepalacestudio@gmail.com
         </Link>
       </p>
-      <p className="text" style={{ margin: '0px auto' }}>
-        Follow us on social media
-        <div
+      <div
+        style={{
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '8px',
+        }}
+      >
+        <Link
+          href="https://www.instagram.com/posepalacestudio/"
+          target="_blank"
           style={{
             display: 'flex',
-            flexDirection: 'row',
-            paddingTop: '10px',
-            gap: '8px',
+            flexDirection: 'column',
             justifyContent: 'center',
+            alignItems: 'center',
           }}
         >
-          <Link
-            href="https://www.instagram.com/posepalacestudio/"
-            target="_blank"
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Image
-              src="/instagram.png"
-              alt="/instagram.png"
-              className="social-media-icon"
-              unoptimized
-              width={0}
-              height={0}
-            />
-          </Link>
-          <Link
-            href="https://www.facebook.com/profile.php?id=61562108288648"
-            target="_blank"
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Image
-              src="/facebook.png"
-              alt="/facebook.png"
-              className="social-media-icon"
-              unoptimized
-              width={0}
-              height={0}
-            />
-          </Link>
-        </div>
-      </p>
+          <Image
+            src="/instagram.png"
+            alt="/instagram.png"
+            className="social-media-icon"
+            unoptimized
+            width={0}
+            height={0}
+          />
+        </Link>
+        <Link
+          href="https://www.facebook.com/profile.php?id=61562108288648"
+          target="_blank"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Image
+            src="/facebook.png"
+            alt="/facebook.png"
+            className="social-media-icon"
+            unoptimized
+            width={0}
+            height={0}
+          />
+        </Link>
+      </div>
     </div>
   )
 }
+
+const RightArrow: FC<{ invert?: boolean }> = ({ invert }) => (
+  <Image
+    className={invert ? 'invert-color' : ''}
+    src="/right-arrow.png"
+    alt="/right-arrow.png"
+    width={24}
+    height={24}
+  />
+)
 
 const BookNow: FC = () => {
   return (
     <Link className="cell-book-now" href="/book-now">
       <p>Book Now</p>
-      <Image
-        className="invert-color"
-        src="/right-arrow.png"
-        alt="/right-arrow.png"
-        width={24}
-        height={24}
-      />
+      <RightArrow invert />
     </Link>
   )
 }

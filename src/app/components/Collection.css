@@ -13,8 +13,9 @@ div.collection::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
 
-div.headline {
-  padding: 12px 16px;
+a.headline {
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -38,10 +39,4 @@ img.photo {
   height: calc(300px * 6 / 4);
   object-fit: cover;
   object-position: 0% 0%;
-}
-
-img.instagram {
-  width: 23px;
-  height: 23px;
-  object-fit: contain;
 }
