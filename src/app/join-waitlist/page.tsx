@@ -1,13 +1,12 @@
 'use client'
 
-import Image from 'next/image'
 import { Button } from 'semantic-ui-react'
 import { Page } from '../components/Page'
-import { Cell } from '../components/Cell'
+import { Form } from '../components/Form'
+import { Modal } from '../components/Modal'
+import { Loading } from '../components/Loading'
 import { useForm } from '../useForm'
 import '../form.css'
-import '../modal.css'
-import '../loading.css'
 
 const JoinWaitList = () => {
   const { handleSubmit, formData, formErrors, isModalOpen, isLoading, ...formMethods } =
@@ -16,16 +15,7 @@ const JoinWaitList = () => {
   return (
     <Page>
       <form>
-        <Image
-          src="/logo-short.png"
-          alt="Pose Palace Logo Short"
-          width={0}
-          height={0}
-          unoptimized
-          style={{ objectFit: 'contain', width: 'auto', height: '60px' }}
-        />
-        <h2>Join Waitlist</h2>
-        <Cell.Separator />
+        <Form.Header title="Join Waitlist" />
         <label>First Name:</label>
         <input
           type="text"
@@ -62,7 +52,7 @@ const JoinWaitList = () => {
           onChange={formMethods.handleInputChange}
         />
         {formErrors.phone && <span className="errorMessage">{formErrors.phone}</span>}
-        <div className="row">
+        <div className="row-checkbox">
           <input
             type="checkbox"
             name="sms"
@@ -77,23 +67,12 @@ const JoinWaitList = () => {
         <Button type="submit" onClick={handleSubmit} disabled={!formMethods.isFormFilled()}>
           Submit
         </Button>
-        {/* Loading Screen */}
-        <div className={`loading-overlay${isLoading ? '-visible' : ''}`}>
-          <div className="loading">
-            <div className="loading-dots">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          </div>
-        </div>
-        {/* Modal */}
-        <div className={`modal-overlay${isModalOpen ? '-visible' : ''}`}>
-          <div className={`modal${isModalOpen ? '-visible' : ''}`}>
-            <h2>You're on the waitlist!</h2>
-            <p>Please stay nearby, we'll contact you as soon as it is your turn.</p>
-          </div>
-        </div>
+        <Loading isLoading={isLoading} />
+        <Modal
+          isOpen={isModalOpen}
+          title={`You are now on the waitlist ✅`}
+          description={`Please stay nearby, we'll contact you as soon as it is your turn.`}
+        />
       </form>
     </Page>
   )

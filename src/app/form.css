@@ -10,7 +10,8 @@ label {
   font-size: 1rem;
 }
 
-input[type='text'] {
+input[type='text'],
+select {
   width: 100%;
   padding: 1rem;
   font-size: 1rem;
@@ -32,7 +33,7 @@ button[type='submit']:disabled {
   color: rgb(150, 150, 150);
 }
 
-.row {
+div.row-checkbox {
   display: flex;
   flex-direction: row;
   justify-content: center;

@@ -1,14 +1,13 @@
 'use client'
 
-import Image from 'next/image'
+import { Fragment } from 'react'
 import { Button } from 'semantic-ui-react'
-import axios from 'axios'
 import { Page } from '../components/Page'
-import { Cell } from '../components/Cell'
+import { Form } from '../components/Form'
+import { Modal } from '../components/Modal'
+import { Loading } from '../components/Loading'
 import { useForm } from '../useForm'
 import '../form.css'
-import '../modal.css'
-import '../loading.css'
 
 const CheckIn = () => {
   const { handleSubmit, formData, formErrors, isModalOpen, isLoading, ...formMethods } =
@@ -17,16 +16,26 @@ const CheckIn = () => {
   return (
     <Page>
       <form>
-        <Image
-          src="/logo-short.png"
-          alt="Pose Palace Logo Short"
-          width={0}
-          height={0}
-          unoptimized
-          style={{ objectFit: 'contain', width: 'auto', height: '60px' }}
-        />
-        <h2>Check In</h2>
-        <Cell.Separator />
+        <Form.Header title="Check In" />
+        <label>Room:</label>
+        <select name="room" value={formData.room} onChange={formMethods.handleInputChange}>
+          <option value="white">Full Body White Color</option>
+          <option value="color">Standard Color Room</option>
+        </select>
+        <label>Duration:</label>
+        <select name="duration" value={formData.duration} onChange={formMethods.handleInputChange}>
+          <option value="5">5 Minutes</option>
+          <option value="15">15 Minutes</option>
+        </select>
+        {formData.duration.toString() === '5' && (
+          <Fragment>
+            <label>Session by:</label>
+            <select name="type" value={formData.type} onChange={formMethods.handleInputChange}>
+              <option value="walk-in">Walk In</option>
+              <option value="appointment">Appointment</option>
+            </select>
+          </Fragment>
+        )}
         <label>First Name:</label>
         <input
           type="text"
@@ -63,7 +72,7 @@ const CheckIn = () => {
           onChange={formMethods.handleInputChange}
         />
         {formErrors.phone && <span className="errorMessage">{formErrors.phone}</span>}
-        <div className="row">
+        <div className="row-checkbox">
           <input
             type="checkbox"
             name="sms"
@@ -78,23 +87,12 @@ const CheckIn = () => {
         <Button type="submit" onClick={handleSubmit} disabled={!formMethods.isFormFilled()}>
           Submit
         </Button>
-        {/* Loading Screen */}
-        <div className={`loading-overlay${isLoading ? '-visible' : ''}`}>
-          <div className="loading">
-            <div className="loading-dots">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          </div>
-        </div>
-        {/* Modal */}
-        <div className={`modal-overlay${isModalOpen ? '-visible' : ''}`}>
-          <div className={`modal${isModalOpen ? '-visible' : ''}`}>
-            <h2>{`You are checked in ✅`}</h2>
-            <p>Please come to the front desk and show this to one of our associates</p>
-          </div>
-        </div>
+        <Loading isLoading={isLoading} />
+        <Modal
+          isOpen={isModalOpen}
+          title={`You are now checked in ✅`}
+          description={`Please come to the front desk and show this to one of our associates`}
+        />
       </form>
     </Page>
   )

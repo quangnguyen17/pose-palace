@@ -1,15 +1,30 @@
-import { useState, useCallback, useMemo } from 'react'
+import { useState, useCallback } from 'react'
 import axios from 'axios'
 
+type AppointmentType = 'walk-in' | 'appointment'
+type AppointmentRoom = 'white' | 'color'
 type FormType = 'join-waitlist' | 'check-in'
+type Form = {
+  firstName: string
+  lastName: string
+  email: string
+  phone: string
+  sms: boolean
+  type: AppointmentType
+  room: AppointmentRoom
+  duration: number
+}
 
 export const useForm = (formType: FormType) => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<Form>({
     firstName: '',
     lastName: '',
     email: '',
     phone: '',
     sms: true,
+    room: 'white',
+    type: 'walk-in',
+    duration: 5,
   })
   const [formErrors, setFormErrors] = useState({
     firstName: '',
@@ -17,21 +32,19 @@ export const useForm = (formType: FormType) => {
     email: '',
     phone: '',
     sms: '',
+    room: '',
+    type: '',
   })
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
-  //Handle input
-  const handleInputChange = useCallback((event) => {
+  // Handle input change
+  const handleInputChange = useCallback((event: any) => {
     const { name, value, type, checked } = event.target
-
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: type === 'checkbox' ? checked : value,
-    }))
+    setFormData((formData) => ({ ...formData, [name]: type === 'checkbox' ? checked : value }))
   }, [])
 
-  //Validations
+  // Validations
   const validateForm = useCallback(() => {
     const newErrors = {
       firstName: '',
@@ -39,6 +52,9 @@ export const useForm = (formType: FormType) => {
       email: '',
       phone: '',
       sms: '',
+      room: '',
+      type: '',
+      duration: '',
     }
 
     let valid = true
@@ -80,45 +96,34 @@ export const useForm = (formType: FormType) => {
     )
   }, [formData])
 
-  const showLoading = () => setIsLoading(true)
-  const hideLoading = () => setIsLoading(false)
-
-  const formMethods = {
-    setFormData,
-    setFormErrors,
-    setIsModalOpen,
-    handleInputChange,
-    validateForm,
-    isFormFilled,
-    showLoading,
-    hideLoading,
+  const getFormPayload = () => {
+    return {
+      'First Name': formData.firstName,
+      'Last Name': formData.lastName,
+      Email: formData.email,
+      'Phone Number': formData.phone,
+      'Allow SMS Offers and Promos': formData.sms ? `✅` : `❌`,
+      ...(formType === 'check-in' && {
+        Type: formData.type,
+        Room: formData.room,
+        Duration: formData.duration,
+      }),
+    }
   }
-
-  const getFormPayload = () => ({
-    'First Name': formData.firstName,
-    'Last Name': formData.lastName,
-    Email: formData.email,
-    'Phone Number': formData.phone,
-    'Allow SMS Offers and Promos': formData.sms ? `✅` : `❌`,
-  })
 
   const handleSubmit = async (event: any) => {
     event.preventDefault()
 
-    const isValid = formMethods.validateForm()
+    const isValid = validateForm()
     if (!isValid) return
 
-    formMethods.showLoading()
+    setIsLoading(true)
 
-    try {
-      const formKey = formType === 'check-in' ? 'lob' : 'cms'
-      await axios.post(`https://api.zerosheets.com/v1/${formKey}`, getFormPayload())
-      formMethods.setIsModalOpen(true) // Show modal
-    } catch (error) {
-      console.error(error)
-    }
+    const formKey = formType === 'check-in' ? 'lob' : 'cms'
+    await axios.post(`https://api.zerosheets.com/v1/${formKey}`, getFormPayload())
 
-    formMethods.hideLoading() // Hide loading screen
+    setIsModalOpen(true)
+    setIsLoading(false)
   }
 
   return {
@@ -127,6 +132,8 @@ export const useForm = (formType: FormType) => {
     isModalOpen,
     isLoading,
     handleSubmit,
-    ...formMethods,
+    validateForm,
+    isFormFilled,
+    handleInputChange,
   }
 }
