@@ -14,7 +14,7 @@ input[type='text'] {
   width: 100%;
   padding: 1rem;
   font-size: 1rem;
-  border-radius: 0.7rem;
+  border-radius: 8px;
   border: none;
   background-color: rgb(244, 244, 244);
 }
@@ -24,7 +24,7 @@ Button[type='submit'] {
   color: white;
   background-color: black;
   font-size: 1rem;
-  border-radius: 0.7rem;
+  border-radius: 8px;
   padding: 1rem;
   border: none;
   cursor: pointer;

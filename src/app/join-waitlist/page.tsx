@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Button } from 'semantic-ui-react'
 import axios from 'axios'
 import { Page } from '../components/Page'
+import { Cell } from '../components/Cell'
 import { useForm } from '../useForm'
 import '../form.css'
 import '../modal.css'
@@ -34,14 +35,15 @@ const JoinWaitList = () => {
     <Page>
       <form>
         <Image
-          src="/logo-long.png"
+          src="/logo-short.png"
           alt="Pose Palace Short Logo"
-          width={200}
-          height={100}
+          width={0}
+          height={0}
           unoptimized
-          style={{ objectFit: 'contain', width: 'auto' }}
+          style={{ objectFit: 'contain', width: 'auto', height: '50px', margin: '0px auto' }}
         />
-        <h2>Join Waitlist</h2>
+        <h2 style={{ margin: '0px auto' }}>Join Waitlist</h2>
+        <Cell.Separator />
         <label>First Name:</label>
         <input
           type="text"
@@ -86,8 +88,8 @@ const JoinWaitList = () => {
             onChange={formMethods.handleInputChange}
           />
           <label>
-            Allow SMS promotions, receive our latest offers and promotions and stay up to date with
-            our latest stuff
+            Opt in for SMS promotions to receive exclusive offers and stay updated with our latest
+            news and deals.
           </label>
         </div>
         <Button type="submit" onClick={handleSubmit} disabled={!formMethods.isFormFilled()}>

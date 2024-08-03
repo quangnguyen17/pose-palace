@@ -4,13 +4,14 @@ import Image from 'next/image'
 import { Button } from 'semantic-ui-react'
 import axios from 'axios'
 import { Page } from '../components/Page'
+import { Cell } from '../components/Cell'
 import { useForm } from '../useForm'
 import '../form.css'
 import '../modal.css'
 import '../loading.css'
 
 const CheckIn = () => {
-  const { formData, formErrors, isModalOpen, isLoading, ...formMethods } = useForm()
+  const { formData, formPayload, formErrors, isModalOpen, isLoading, ...formMethods } = useForm()
 
   const handleSubmit = async (event: any) => {
     event.preventDefault()
@@ -21,7 +22,7 @@ const CheckIn = () => {
     formMethods.showLoading()
 
     try {
-      await axios.post('https://api.zerosheets.com/v1/cms', formData)
+      await axios.post('https://api.zerosheets.com/v1/lob', formPayload())
       formMethods.setIsModalOpen(true) // Show modal
     } catch (error) {
       console.error(error)
@@ -34,14 +35,15 @@ const CheckIn = () => {
     <Page>
       <form>
         <Image
-          src="/logo-long.png"
+          src="/logo-short.png"
           alt="Pose Palace Short Logo"
-          width={200}
-          height={100}
+          width={0}
+          height={0}
           unoptimized
-          style={{ objectFit: 'contain', width: 'auto' }}
+          style={{ objectFit: 'contain', width: 'auto', height: '50px', margin: '0px auto' }}
         />
-        <h2>Check In</h2>
+        <h2 style={{ margin: '0px auto' }}>Check In</h2>
+        <Cell.Separator />
         <label>First Name:</label>
         <input
           type="text"
@@ -86,8 +88,8 @@ const CheckIn = () => {
             onChange={formMethods.handleInputChange}
           />
           <label>
-            Allow SMS promotions, receive our latest offers and promotions and stay up to date with
-            our latest stuff
+            Opt in for SMS promotions to receive exclusive offers and stay updated with our latest
+            news and deals.
           </label>
         </div>
         <Button type="submit" onClick={handleSubmit} disabled={!formMethods.isFormFilled()}>
@@ -106,8 +108,8 @@ const CheckIn = () => {
         {/* Modal */}
         <div className={`modal-overlay${isModalOpen ? '-visible' : ''}`}>
           <div className={`modal${isModalOpen ? '-visible' : ''}`}>
-            <h2>You're on the waitlist!</h2>
-            <p>Please stay nearby, we'll be in contact as soon as it is your turn.</p>
+            <h2>{`You are checked in ✅`}</h2>
+            <p>Please come to the front desk and show this to one of our associates</p>
           </div>
         </div>
       </form>
