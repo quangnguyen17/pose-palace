@@ -17,12 +17,12 @@ const CheckIn = () => {
     <Page>
       <form>
         <Form.Header title="Check In" />
-        <label>Room:</label>
+        <label>Select room:</label>
         <select name="room" value={formData.room} onChange={formMethods.handleInputChange}>
           <option value="white">Full Body White Color</option>
           <option value="color">Standard Color Room</option>
         </select>
-        <label>Duration:</label>
+        <label>Select duration:</label>
         <select name="duration" value={formData.duration} onChange={formMethods.handleInputChange}>
           <option value="5">5 Minutes</option>
           <option value="15">15 Minutes</option>

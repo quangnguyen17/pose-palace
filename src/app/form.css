@@ -10,6 +10,20 @@ label {
   font-size: 1rem;
 }
 
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  box-shadow: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border-radius: 0;
+}
+
 input[type='text'],
 select {
   width: 100%;
