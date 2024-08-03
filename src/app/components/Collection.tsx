@@ -4,8 +4,8 @@ import Link from 'next/link'
 import './Collection.css'
 
 type CollectionProps = {
-  type: string
-  room: string
+  type?: string
+  room?: string
   photos: string[]
 }
 
@@ -14,26 +14,21 @@ export const Collection: FC<CollectionProps> = ({ type, room, photos }) => {
     <Fragment>
       <div className="headline">
         <p>
-          <span className="type">{type}</span> <span className="room">{room}</span>
+          {type && <span className="type">{type}</span>}{' '}
+          {room && <span className="room">{room}</span>}
         </p>
         <Link
-          href="https://www.instagram.com/posepalacestudio/"
-          target="_blank"
+          href="/book-now"
           style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
+            backgroundColor: 'rgb(0, 0, 0)',
+            color: 'rgb(255, 255, 255)',
+            padding: '12px',
+            fontSize: '15px',
+            lineHeight: '15px',
+            fontWeight: 500,
           }}
         >
-          <Image
-            src="/instagram.png"
-            alt="/instagram.png"
-            className="instagram"
-            unoptimized
-            width={0}
-            height={0}
-          />
+          Book Now
         </Link>
       </div>
       <div className="collection">

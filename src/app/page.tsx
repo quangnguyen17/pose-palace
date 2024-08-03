@@ -1,51 +1,30 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import { Page } from './components/Page'
 import { Cell } from './components/Cell'
 import { Collection } from './components/Collection'
 
-const mapPhotos = (photos: number[]) => photos.map((photo) => `/sample-${photo}.jpg`)
-const standardColorRoomPhotos = mapPhotos([1, 2, 3, 4, 5])
-const fullBodyWhiteRoomPhotos = mapPhotos([6, 7, 8, 9, 10])
+const WHITE_ROOM_PHOTOS = [
+  '/sample-6.jpg',
+  '/sample-7.jpg',
+  '/sample-8.jpg',
+  '/sample-9.jpg',
+  '/sample-10.jpg',
+]
+
+const COLOR_ROOM_PHOTOS = [
+  '/sample-1.jpg',
+  '/sample-2.jpg',
+  '/sample-3.jpg',
+  '/sample-4.jpg',
+  '/sample-5.jpg',
+]
 
 const App = () => (
   <Page padding="0" gap="0">
-    <Cell.Content>
-      <Image
-        src="/logo-short.png"
-        alt="Pose Palace Logo Short"
-        width={100}
-        height={100}
-        unoptimized
-        style={{
-          objectFit: 'contain',
-          width: 'auto',
-          height: '55px',
-        }}
-      />
-      <p className="text">
-        <Link
-          href="http://maps.google.com/maps?q=9618+Garden+Grove+Blvd%2C+Garden+Grove%2C+CA+92844"
-          target="_blank"
-          style={{ textAlign: 'left', color: 'black' }}
-        >
-          9618 Garden Grove Blvd # 106
-          <br />
-          Garden Grove, CA 92844
-        </Link>
-        <Link href="tel:714-467-7036" style={{ textAlign: 'left', color: 'black' }}>
-          (714) 467-7036
-        </Link>
-        <Link
-          href="mailto:posepalacestudio@gmail.com"
-          style={{ textAlign: 'left', color: 'black' }}
-        >
-          posepalacestudio@gmail.com
-        </Link>
-      </p>
-    </Cell.Content>
+    <Cell.Header />
     <Cell.Separator />
-    <Collection type="Standard" room="Color Room" photos={standardColorRoomPhotos} />
+    <Collection type="Full Body" room="White Room" photos={WHITE_ROOM_PHOTOS} />
+    <Collection type="Standard" room="Color Room" photos={COLOR_ROOM_PHOTOS} />
     <Cell>
       <Cell.Content title="5-minute session" price="$27">
         <ul>
@@ -73,7 +52,6 @@ const App = () => (
       </Cell.Content>
       <Cell.BookNow />
     </Cell>
-    <Collection type="Full Body" room="White Room" photos={fullBodyWhiteRoomPhotos} />
     <Cell>
       <Cell.Content title="15-minute session" price="$67">
         <ul>
