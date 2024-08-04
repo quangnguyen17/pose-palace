@@ -13,28 +13,28 @@ const BookNow: FC = () => {
 
   const sessionData = [
     {
-      className: 'book-now-card sample1 room',
+      className: 'book-now-card sample-2',
       href: 'https://calendly.com/posepalacestudio-colorroom/5min',
       price: '$27',
       duration: '5-Minute Session',
       roomType: 'Standard Color Room',
     },
     {
-      className: 'book-now-card sample2 room',
+      className: 'book-now-card sample-3',
       href: 'https://calendly.com/posepalacestudio-colorroom/15min',
       price: '$67',
       duration: '15-Minute Session',
       roomType: 'Standard Color Room',
     },
     {
-      className: 'book-now-card sample3 room',
+      className: 'book-now-card white-1',
       href: 'https://calendly.com/posepalacestudio/5min',
       price: '$27',
       duration: '5-Minute Session',
       roomType: 'Full Body White Room',
     },
     {
-      className: 'book-now-card sample4 room',
+      className: 'book-now-card white-2',
       href: 'https://calendly.com/posepalacestudio/15min',
       price: '$67',
       duration: '15-Minute Session',
