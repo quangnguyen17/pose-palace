@@ -15,15 +15,34 @@
   color: white;
 }
 
-h1.price-badge {
-  font-size: 80px;
-  line-height: 100px;
+.book-now-card > .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.book-now-card > .details > h1 {
+  font-size: 94px;
+  line-height: 94px;
   font-weight: 500;
 }
 
-.book-now-card > p {
-  font-size: 16px;
-  line-height: 24px;
+.book-now-card > .details > div.badges {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.book-now-card > .details > div.badges > .badge {
+  font-size: 15px;
+  line-height: 15px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255, 0.95);
+  color: rgb(0, 0, 0);
 }
 
 .white-1 {
