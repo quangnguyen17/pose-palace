@@ -1,4 +1,5 @@
 import './styles.css'
+import { Suspense } from 'react'
 
 export * from './config/metadata'
 
@@ -6,9 +7,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
-        <div className="App">
-          <main>{children}</main>
-        </div>
+        <Suspense>{children}</Suspense>
       </body>
     </html>
   )

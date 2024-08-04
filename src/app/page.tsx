@@ -2,29 +2,26 @@ import Image from 'next/image'
 import { Page } from './components/Page'
 import { Cell } from './components/Cell'
 import { Collection } from './components/Collection'
-
-const WHITE_ROOM_PHOTOS = [
-  '/sample-6.jpg',
-  '/sample-7.jpg',
-  '/sample-8.jpg',
-  '/sample-9.jpg',
-  '/sample-10.jpg',
-]
-
-const COLOR_ROOM_PHOTOS = [
-  '/sample-1.jpg',
-  '/sample-2.jpg',
-  '/sample-3.jpg',
-  '/sample-4.jpg',
-  '/sample-5.jpg',
-]
+import { BookNow } from './components/BookNow'
 
 const App = () => (
   <Page padding="0" gap="0">
     <Cell.Header />
     <Cell.Separator />
-    <Collection type="Full Body" room="White Room" photos={WHITE_ROOM_PHOTOS} />
-    <Collection type="Standard" room="Color Room" photos={COLOR_ROOM_PHOTOS} />
+    <BookNow text="Full Body" afterText="White Room" searchParams="room=white" />
+    <Collection
+      photos={[
+        '/sample-6.jpg',
+        '/sample-7.jpg',
+        '/sample-8.jpg',
+        '/sample-9.jpg',
+        '/sample-10.jpg',
+      ]}
+    />
+    <BookNow text="Standard" afterText="Color Room" searchParams="room=color" />
+    <Collection
+      photos={['/sample-1.jpg', '/sample-2.jpg', '/sample-3.jpg', '/sample-4.jpg', '/sample-5.jpg']}
+    />
     <Cell>
       <Cell.Content title="5-minute session" price="$27">
         <ul>
@@ -50,8 +47,8 @@ const App = () => (
           </li>
         </ul>
       </Cell.Content>
-      <Cell.BookNow />
     </Cell>
+    <BookNow theme="dark" searchParams="duration=5" />
     <Cell>
       <Cell.Content title="15-minute session" price="$67">
         <ul>
@@ -77,8 +74,8 @@ const App = () => (
           </li>
         </ul>
       </Cell.Content>
-      <Cell.BookNow />
     </Cell>
+    <BookNow theme="dark" searchParams="duration=15" />
     <Cell.Content
       title={`🎂 Birthday Promotion`}
       discount={`10% OFF`}

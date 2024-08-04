@@ -1,4 +1,4 @@
-import { FC, Fragment, PropsWithChildren } from 'react'
+import { FC, PropsWithChildren } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -88,25 +88,6 @@ const Header: FC = () => {
   )
 }
 
-const RightArrow: FC<{ invert?: boolean }> = ({ invert }) => (
-  <Image
-    className={invert ? 'invert-color' : ''}
-    src="/right-arrow.png"
-    alt="/right-arrow.png"
-    width={24}
-    height={24}
-  />
-)
-
-const BookNow: FC = () => {
-  return (
-    <Link className="cell-book-now" href="/book-now">
-      <p>Book Now</p>
-      <RightArrow invert />
-    </Link>
-  )
-}
-
 const Content: FC<
   PropsWithChildren<{
     className?: string | undefined
@@ -137,7 +118,6 @@ const Cell: FC<
   }>
 > & {
   Header: typeof Header
-  BookNow: typeof BookNow
   Content: typeof Content
   Separator: typeof Separator
 } = ({ children, className }) => {
@@ -146,7 +126,6 @@ const Cell: FC<
 
 Cell.Header = Header
 Cell.Content = Content
-Cell.BookNow = BookNow
 Cell.Separator = Separator
 
 export { Cell }
