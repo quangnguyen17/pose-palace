@@ -1,5 +1,4 @@
 :root {
-  --card-gradient-light: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8));
   --card-gradient-dark: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
 }
 
@@ -12,7 +11,7 @@
   justify-content: flex-end;
   text-align: left;
   cursor: pointer;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .book-now-card > .details {
@@ -20,13 +19,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .book-now-card > .details > h1 {
-  font-size: 94px;
-  line-height: 94px;
-  font-weight: 500;
+  font-size: 5rem;
+  line-height: 5rem;
 }
 
 .book-now-card > .details > div.badges {
@@ -37,11 +35,11 @@
 }
 
 .book-now-card > .details > div.badges > .badge {
-  font-size: 15px;
-  line-height: 15px;
-  padding: 5px;
-  border-radius: 5px;
-  background-color: rgb(255, 255, 255, 0.95);
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
 }
 

@@ -97,12 +97,15 @@ export const useForm = (formType: FormType) => {
   }, [formData])
 
   const getFormPayload = () => {
+    const date = new Date()
     return {
       'First Name': formData.firstName,
       'Last Name': formData.lastName,
       Email: formData.email,
       'Phone Number': formData.phone,
       'Allow SMS Offers and Promos': formData.sms ? `✅` : `❌`,
+      Date: date.toLocaleDateString(),
+      Time: date.toLocaleTimeString(),
       ...(formType === 'check-in' && {
         Type: formData.type,
         Room: formData.room,
