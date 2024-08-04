@@ -1,5 +1,5 @@
 :root {
-  --card-gradient-dark: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+  --card-gradient-dark: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
 }
 
 .book-now-card {
@@ -25,20 +25,21 @@
 .book-now-card > .details > h1 {
   font-size: 5rem;
   line-height: 5rem;
+  font-weight: 500;
 }
 
 .book-now-card > .details > div.badges {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 5px;
 }
 
 .book-now-card > .details > div.badges > .badge {
-  font-size: 1rem;
-  line-height: 1rem;
-  padding: 4px;
-  border-radius: 4px;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 5px;
+  border-radius: 5px;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
 }
