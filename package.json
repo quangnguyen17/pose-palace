@@ -1,6 +1,6 @@
 {
   "name": "pose-palace",
-  "version": "0.1.0",
+  "version": "1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,18 +10,13 @@
     "prettier": "npx prettier . --write"
   },
   "dependencies": {
-    "antd": "^5.19.1",
     "axios": "^1.7.2",
     "firebase": "^10.12.4",
     "modal": "^1.2.0",
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.52.1",
-    "react-router-dom": "^6.24.1",
-    "reactjs-popup": "^2.0.6",
-    "semantic-ui-css": "^2.5.0",
-    "semantic-ui-react": "^2.1.5"
+    "react-router-dom": "^6.24.1"
   },
   "devDependencies": {
     "@types/node": "^20",

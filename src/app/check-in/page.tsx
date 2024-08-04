@@ -1,7 +1,6 @@
 'use client'
 
 import { Fragment } from 'react'
-import { Button } from 'semantic-ui-react'
 import { Page } from '../components/Page'
 import { Form } from '../components/Form'
 import { Modal } from '../components/Modal'
@@ -84,9 +83,9 @@ const CheckIn = () => {
             news and deals.
           </label>
         </div>
-        <Button type="submit" onClick={handleSubmit} disabled={!formMethods.isFormFilled()}>
+        <button type="submit" onClick={handleSubmit} disabled={!formMethods.isFormFilled()}>
           Submit
-        </Button>
+        </button>
         <Loading isLoading={isLoading} />
         <Modal
           isOpen={isModalOpen}
