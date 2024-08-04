@@ -1,6 +1,6 @@
 :root {
-  --card-gradient-light: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9));
-  --card-gradient-dark: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
+  --card-gradient-light: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8));
+  --card-gradient-dark: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
 }
 
 .book-now-card {
@@ -27,19 +27,18 @@ h1.price-badge {
 }
 
 .white-1 {
-  background: var(--card-gradient-light), url('/white-1.jpg');
+  background: var(--card-gradient-dark), url('/white-1.jpg');
 }
 
 .white-2 {
-  background: var(--card-gradient-light), url('/white-2.jpg');
+  background: var(--card-gradient-dark), url('/white-2.jpg');
 }
 
 .white-1,
 .white-2 {
   background-position: 0% 0%;
-  color: black;
-  text-align: left;
   background-size: cover;
+  color: white;
 }
 
 .sample-2 {
@@ -53,6 +52,6 @@ h1.price-badge {
 .sample-2,
 .sample-3 {
   background-position: 0% 0%;
-  color: white;
   background-size: cover;
+  color: white;
 }
