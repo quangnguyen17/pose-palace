@@ -83,6 +83,25 @@ const Header: FC = () => {
             height={0}
           />
         </Link>
+        <Link
+          href="https://www.tiktok.com/@posepalacestudio"
+          target="_blank"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Image
+            src="/tiktok.png"
+            alt="/tiktok.png"
+            className="social-media-icon"
+            unoptimized
+            width={0}
+            height={0}
+          />
+        </Link>
       </div>
     </div>
   )
