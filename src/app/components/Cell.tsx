@@ -42,7 +42,7 @@ const Header: FC = () => {
           flexDirection: 'row',
           justifyContent: 'center',
           alignItems: 'center',
-          gap: '8px',
+          gap: '12px',
         }}
       >
         <Link
@@ -96,6 +96,25 @@ const Header: FC = () => {
           <Image
             src="/tiktok.png"
             alt="/tiktok.png"
+            className="social-media-icon"
+            unoptimized
+            width={0}
+            height={0}
+          />
+        </Link>
+        <Link
+          href="https://www.yelp.com/biz/pose-palace-self-portrait-studio-garden-grove"
+          target="_blank"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Image
+            src="/yelp.png"
+            alt="/yelp.png"
             className="social-media-icon"
             unoptimized
             width={0}
