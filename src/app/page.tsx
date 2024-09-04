@@ -8,7 +8,7 @@ const App = () => (
   <Page padding="0" gap="0">
     <Cell.Header />
     <Cell.Separator />
-    <BookNow text="Full Body" afterText="White Room" href="https://calendly.com/posepalacestudio" />
+    <BookNow text="Full Body" afterText="White Room" />
     <Collection
       photos={[
         '/sample-6.jpg',
@@ -18,11 +18,7 @@ const App = () => (
         '/sample-10.jpg',
       ]}
     />
-    <BookNow
-      text="Standard"
-      afterText="Color Room"
-      href="https://calendly.com/posepalacestudio-colorroom"
-    />
+    <BookNow text="Standard" afterText="Color Room" />
     <Collection
       photos={['/sample-1.jpg', '/sample-2.jpg', '/sample-3.jpg', '/sample-4.jpg', '/sample-5.jpg']}
     />
@@ -52,7 +48,7 @@ const App = () => (
         </ul>
       </Cell.Content>
     </Cell>
-    <BookNow theme="dark" searchParams={{ duration: '5', room: 'white' }} />
+    <BookNow theme="dark" />
     <Cell>
       <Cell.Content title="15-minute session" price="$67">
         <ul>
@@ -79,7 +75,7 @@ const App = () => (
         </ul>
       </Cell.Content>
     </Cell>
-    <BookNow theme="dark" searchParams={{ duration: '15', room: 'white' }} />
+    <BookNow theme="dark" />
     <Cell.Content
       title={`🎂 Birthday Promotion`}
       discount={`10% OFF`}

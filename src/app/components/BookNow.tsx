@@ -1,21 +1,17 @@
 import { FC } from 'react'
-import queryString from 'query-string'
+import Link from 'next/link'
 import Image from 'next/image'
 
 export const BookNow: FC<{
   theme?: 'light' | 'dark'
   text?: string
   afterText?: string
-  searchParams?: Record<any, any>
-  href?: string
-}> = ({ theme = 'light', text = 'Book Now', afterText, searchParams, href }) => {
+}> = ({ theme = 'light', text = 'Book Now', afterText }) => {
   const backgroundColor = theme === 'light' ? 'rgb(255, 255, 255)' : 'rgb(0, 0, 0)'
   const color = theme === 'light' ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)'
-  const bookingPageHref =
-    href || `/book-now${searchParams ? `?${queryString.stringify(searchParams)}` : ``}`
 
   return (
-    <a
+    <Link
       style={{
         backgroundColor,
         display: 'flex',
@@ -24,8 +20,7 @@ export const BookNow: FC<{
         alignItems: 'center',
         padding: '12px 16px',
       }}
-      target="_blank"
-      href={bookingPageHref}
+      href="/book-now"
     >
       <p style={{ fontSize: '15px', lineHeight: '15px', color }}>
         {text && <span>{text}</span>}{' '}
@@ -43,6 +38,6 @@ export const BookNow: FC<{
         height={25}
         unoptimized
       />
-    </a>
+    </Link>
   )
 }
