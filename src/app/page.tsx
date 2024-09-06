@@ -8,20 +8,6 @@ const App = () => (
   <Page padding="0" gap="0">
     <Cell.Header />
     <Cell.Separator />
-    <BookNow text="Full Body" afterText="White Room" />
-    <Collection
-      photos={[
-        '/sample-6.jpg',
-        '/sample-7.jpg',
-        '/sample-8.jpg',
-        '/sample-9.jpg',
-        '/sample-10.jpg',
-      ]}
-    />
-    <BookNow text="Standard" afterText="Color Room" />
-    <Collection
-      photos={['/sample-1.jpg', '/sample-2.jpg', '/sample-3.jpg', '/sample-4.jpg', '/sample-5.jpg']}
-    />
     <Cell>
       <Cell.Content title="5-minute session" price="$27">
         <ul>
@@ -49,6 +35,19 @@ const App = () => (
       </Cell.Content>
     </Cell>
     <BookNow theme="dark" />
+    <Collection
+      photos={[
+        '/white1.JPG',
+        '/white2.JPG',
+        '/white3.JPG',
+        '/white4.JPG',
+        '/white5.JPG',
+        '/white6.JPG',
+        '/white7.JPG',
+        '/white8.JPG',
+      ]}
+      caption="Full Body White Room"
+    />
     <Cell>
       <Cell.Content title="15-minute session" price="$67">
         <ul>
@@ -76,6 +75,18 @@ const App = () => (
       </Cell.Content>
     </Cell>
     <BookNow theme="dark" />
+    <Collection
+      photos={[
+        '/color1.JPG',
+        '/color2.JPG',
+        '/color3.JPG',
+        '/color4.JPG',
+        '/color5.JPG',
+        '/color6.JPG',
+        '/color7.JPG',
+      ]}
+      caption="Standard Color Room"
+    />
     <Cell.Content
       title={`🎂 Birthday Promotion`}
       discount={`10% OFF`}
