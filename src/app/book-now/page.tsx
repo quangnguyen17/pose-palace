@@ -1,6 +1,5 @@
-'use client'
-
 import { FC } from 'react'
+import Link from 'next/link'
 import './book-now.css'
 
 const sessions = [
@@ -26,9 +25,9 @@ const BookNow: FC = () => {
   return (
     <div className="sessions">
       {sessions.map((session, index) => (
-        <a key={index} href={session.link} className="session">
+        <Link key={index} href={session.link} className="session">
           <h1>{session.title}</h1>
-        </a>
+        </Link>
       ))}
     </div>
   )
