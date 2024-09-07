@@ -1,14 +1,24 @@
 .sessions {
-  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .session {
-  padding: 0.5rem 1rem;
+  width: 100%;
+  border-bottom: 0.5px solid rgb(230, 230, 230);
+  padding: 1rem;
   color: rgb(0, 0, 0);
   text-align: left;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.session:hover {
+  background-color: rgb(240, 240, 240);
+}
+
+.session > h1 {
+  font-size: 25px;
 }
