@@ -18,7 +18,8 @@ const App = () => (
         '/color6.JPG',
         '/color7.JPG',
       ]}
-      caption="Standard Color Room"
+      caption="STANDARD COLOR ROOM"
+      color="white"
     />
     <Cell.Content title="5-minute session" price="$27">
       <ul>
@@ -56,7 +57,7 @@ const App = () => (
         '/white7.JPG',
         '/white8.JPG',
       ]}
-      caption="Full Body White Room"
+      caption="FULL BODY WHITE ROOM"
     />
     <Cell.Content title="15-minute session" price="$67">
       <ul>
