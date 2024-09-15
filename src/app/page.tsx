@@ -7,34 +7,44 @@ import { BookNow } from './components/BookNow'
 const App = () => (
   <Page padding="0" gap="0">
     <Cell.Header />
-    <Cell.Separator />
-    <Cell>
-      <Cell.Content title="5-minute session" price="$27">
-        <ul>
-          <li>For 2 people (each additional: $5)</li>
-          <li>Instantly available digital photos (available for 7 days)</li>
-          <li>All props included</li>
-          <li>
-            <p>
-              Prints (you can choose <b>one</b> of the followings):
-            </p>
-            <ul>
-              <li>
-                <b>1</b> <u>4x6</u> in (1, 3, 4 photo layouts)
-              </li>
-              <li>
-                <b>2</b> <u>2x2</u> in passport photos
-              </li>
-            </ul>
-          </li>
-          <li>
-            A $20 deposit is required upon booking (refundable if canceled more than 24 hours in
-            advance).
-          </li>
-        </ul>
-      </Cell.Content>
-    </Cell>
-    <BookNow theme="dark" />
+    <BookNow />
+    <Collection
+      photos={[
+        '/color1.JPG',
+        '/color2.JPG',
+        '/color3.JPG',
+        '/color4.JPG',
+        '/color5.JPG',
+        '/color6.JPG',
+        '/color7.JPG',
+      ]}
+      caption="Standard Color Room"
+    />
+    <Cell.Content title="5-minute session" price="$27">
+      <ul>
+        <li>For 2 people (each additional: $5)</li>
+        <li>Instantly available digital photos (available for 7 days)</li>
+        <li>All props included</li>
+        <li>
+          <p>
+            Prints (you can choose <b>one</b> of the followings):
+          </p>
+          <ul>
+            <li>
+              <b>1</b> <u>4x6</u> in (1, 3, 4 photo layouts)
+            </li>
+            <li>
+              <b>2</b> <u>2x2</u> in passport photos
+            </li>
+          </ul>
+        </li>
+        <li>
+          A $20 deposit is required upon booking (refundable if canceled more than 24 hours in
+          advance).
+        </li>
+      </ul>
+    </Cell.Content>
+    <BookNow />
     <Collection
       photos={[
         '/white1.JPG',
@@ -48,45 +58,31 @@ const App = () => (
       ]}
       caption="Full Body White Room"
     />
-    <Cell>
-      <Cell.Content title="15-minute session" price="$67">
-        <ul>
-          <li>For 2 people (each additional: $5)</li>
-          <li>Instantly available digital photos (available for 7 days)</li>
-          <li>All props included</li>
-          <li>
-            <p>
-              Prints (you can choose <b>one</b> of the followings):
-            </p>
-            <ul>
-              <li>
-                <b>3</b> <u>4x6</u> in (1, 3, 4 photo layouts)
-              </li>
-              <li>
-                <b>2</b> <u>2x2</u> in passport photos
-              </li>
-            </ul>
-          </li>
-          <li>
-            A $20 deposit is required upon booking (refundable if canceled more than 24 hours in
-            advance).
-          </li>
-        </ul>
-      </Cell.Content>
-    </Cell>
-    <BookNow theme="dark" />
-    <Collection
-      photos={[
-        '/color1.JPG',
-        '/color2.JPG',
-        '/color3.JPG',
-        '/color4.JPG',
-        '/color5.JPG',
-        '/color6.JPG',
-        '/color7.JPG',
-      ]}
-      caption="Standard Color Room"
-    />
+    <Cell.Content title="15-minute session" price="$67">
+      <ul>
+        <li>For 2 people (each additional: $5)</li>
+        <li>Instantly available digital photos (available for 7 days)</li>
+        <li>All props included</li>
+        <li>
+          <p>
+            Prints (you can choose <b>one</b> of the followings):
+          </p>
+          <ul>
+            <li>
+              <b>3</b> <u>4x6</u> in (1, 3, 4 photo layouts)
+            </li>
+            <li>
+              <b>2</b> <u>2x2</u> in passport photos
+            </li>
+          </ul>
+        </li>
+        <li>
+          A $20 deposit is required upon booking (refundable if canceled more than 24 hours in
+          advance).
+        </li>
+      </ul>
+    </Cell.Content>
+    <BookNow />
     <Cell.Content
       title={`🎂 Birthday Promotion`}
       discount={`10% OFF`}
