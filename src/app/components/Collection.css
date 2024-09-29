@@ -15,11 +15,14 @@
 
 .collection-caption {
   position: absolute;
-  top: 12px;
-  left: 10px;
-  font-size: 19px;
+  bottom: 16px;
+  left: 16px;
+  font-size: 12px;
   font-weight: 900;
   font-style: italic;
+  border-radius: 4px;
+  padding: 8px 10px;
+  background-color: rgba(255, 255, 255, 0.875);
 }
 
 div.collection::-webkit-scrollbar {

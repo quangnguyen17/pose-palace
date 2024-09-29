@@ -19,7 +19,6 @@ const App = () => (
         '/color7.JPG',
       ]}
       caption="STANDARD COLOR ROOM"
-      color="white"
     />
     <Cell.Content title="5-minute session" price="$27">
       <ul>

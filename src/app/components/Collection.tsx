@@ -2,11 +2,7 @@ import { FC } from 'react'
 import Image from 'next/image'
 import './Collection.css'
 
-export const Collection: FC<{ photos: string[]; caption?: string; color?: string }> = ({
-  photos,
-  caption,
-  color = 'black',
-}) => {
+export const Collection: FC<{ photos: string[]; caption?: string }> = ({ photos, caption }) => {
   return (
     <div className="collection-container">
       <div className="collection">
@@ -22,11 +18,7 @@ export const Collection: FC<{ photos: string[]; caption?: string; color?: string
             className="photo"
           />
         ))}
-        {caption && (
-          <p className="collection-caption" style={{ color }}>
-            {caption}
-          </p>
-        )}
+        {caption && <p className="collection-caption">{caption}</p>}
       </div>
     </div>
   )
