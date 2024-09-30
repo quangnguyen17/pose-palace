@@ -99,3 +99,15 @@ img.social-media-icon {
   height: 30px;
   object-fit: contain;
 }
+
+.bg-azure {
+  background-color: #e4e4dd;
+}
+
+.bg-ghost-white {
+  background-color: #d1e9e2;
+}
+
+.bg-lavender {
+  background-color: #e4e2f4;
+}

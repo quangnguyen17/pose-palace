@@ -1,5 +1,12 @@
 .collection-container {
+  padding: 16px 0px 16px 0px;
   position: relative;
+}
+
+.collection-caption {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0px 16px 16px 16px;
 }
 
 .collection {
@@ -11,18 +18,8 @@
   overflow-x: scroll;
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
-}
-
-.collection-caption {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  font-size: 12px;
-  font-weight: 900;
-  font-style: italic;
-  border-radius: 4px;
-  padding: 8px 10px;
-  background-color: rgba(255, 255, 255, 0.875);
+  gap: 12px;
+  padding: 0px 16px 0px 16px;
 }
 
 div.collection::-webkit-scrollbar {
@@ -55,4 +52,5 @@ img.photo {
   height: calc(300px * 6 / 4);
   object-fit: cover;
   object-position: 0% 0%;
+  border-radius: 16px;
 }

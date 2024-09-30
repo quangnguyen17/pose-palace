@@ -5,6 +5,7 @@ import './Collection.css'
 export const Collection: FC<{ photos: string[]; caption?: string }> = ({ photos, caption }) => {
   return (
     <div className="collection-container">
+      {caption && <p className="collection-caption">{caption}</p>}
       <div className="collection">
         {photos.map((photo) => (
           <Image
@@ -18,7 +19,6 @@ export const Collection: FC<{ photos: string[]; caption?: string }> = ({ photos,
             className="photo"
           />
         ))}
-        {caption && <p className="collection-caption">{caption}</p>}
       </div>
     </div>
   )

@@ -1,0 +1,20 @@
+div.sessions {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  gap: 12px;
+  padding: 16px;
+}
+
+div.session {
+  flex: 1;
+  min-width: 325px;
+  max-width: 375px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  gap: 10px;
+  padding: 16px;
+}

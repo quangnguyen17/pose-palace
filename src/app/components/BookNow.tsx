@@ -17,7 +17,9 @@ export const BookNow: FC<{
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '12px 12px 12px 16px',
+        padding: '10px 10px 10px 16px',
+        borderRadius: '10px',
+        margin: '0 16px',
       }}
       href="/book-now"
     >

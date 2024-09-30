@@ -3,11 +3,83 @@ import { Page } from './components/Page'
 import { Cell } from './components/Cell'
 import { Collection } from './components/Collection'
 import { BookNow } from './components/BookNow'
+import { Sessions, Session } from './components/Sessions'
 
 const App = () => (
   <Page padding="0" gap="0">
     <Cell.Header />
     <BookNow />
+    <Sessions>
+      <Session className="bg-azure">
+        <h3>5-minute session</h3>
+        <p className="price">$27</p>
+        <ul>
+          <li>For 2 people (each additional: $5)</li>
+          <li>Instantly available digital photos (available for 7 days)</li>
+          <li>All props included</li>
+          <li>
+            <p>
+              Prints (you can choose <b>one</b> of the followings):
+            </p>
+            <ul>
+              <li>
+                <b>1</b> <u>4x6</u> in (1, 3, 4 photo layouts)
+              </li>
+              <li>
+                <b>2</b> <u>2x2</u> in passport photos
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </Session>
+      <Session className="bg-ghost-white">
+        <h3>15-minute session</h3>
+        <p className="price">$67</p>
+        <ul>
+          <li>For 2 people (each additional: $5)</li>
+          <li>Instantly available digital photos (available for 7 days)</li>
+          <li>All props included</li>
+          <li>
+            <p>
+              Prints (you can choose <b>one</b> of the followings):
+            </p>
+            <ul>
+              <li>
+                <b>3</b> <u>4x6</u> in (1, 3, 4 photo layouts)
+              </li>
+              <li>
+                <b>2</b> <u>2x2</u> in passport photos
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </Session>
+      <Session className="bg-lavender">
+        <h3>30-minute session</h3>
+        <p className="price">$100</p>
+        <ul>
+          <li>For 2 people (each additional: $5)</li>
+          <li>Instantly available digital photos (available for 7 days)</li>
+          <li>All props included</li>
+          <li>
+            <p>
+              Prints (you can choose <b>one</b> of the followings):
+            </p>
+            <ul>
+              <li>
+                <b>6</b> <u>4x6</u> in (1, 3, 4 photo layouts)
+              </li>
+              <li>
+                <b>2</b> <u>2x2</u> in passport photos
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </Session>
+    </Sessions>
+    <p className="text" style={{ padding: '0px 16px 0px 16px', fontStyle: 'italic' }}>
+      $20 deposit is required upon booking (refundable if canceled more than 24 hours in advance).
+    </p>
     <Collection
       photos={[
         '/color1.JPG',
@@ -20,30 +92,6 @@ const App = () => (
       ]}
       caption="STANDARD COLOR ROOM"
     />
-    <Cell.Content title="5-minute session" price="$27">
-      <ul>
-        <li>For 2 people (each additional: $5)</li>
-        <li>Instantly available digital photos (available for 7 days)</li>
-        <li>All props included</li>
-        <li>
-          <p>
-            Prints (you can choose <b>one</b> of the followings):
-          </p>
-          <ul>
-            <li>
-              <b>1</b> <u>4x6</u> in (1, 3, 4 photo layouts)
-            </li>
-            <li>
-              <b>2</b> <u>2x2</u> in passport photos
-            </li>
-          </ul>
-        </li>
-        <li>
-          A $20 deposit is required upon booking (refundable if canceled more than 24 hours in
-          advance).
-        </li>
-      </ul>
-    </Cell.Content>
     <BookNow />
     <Collection
       photos={[
@@ -58,30 +106,6 @@ const App = () => (
       ]}
       caption="FULL BODY WHITE ROOM"
     />
-    <Cell.Content title="15-minute session" price="$67">
-      <ul>
-        <li>For 2 people (each additional: $5)</li>
-        <li>Instantly available digital photos (available for 7 days)</li>
-        <li>All props included</li>
-        <li>
-          <p>
-            Prints (you can choose <b>one</b> of the followings):
-          </p>
-          <ul>
-            <li>
-              <b>3</b> <u>4x6</u> in (1, 3, 4 photo layouts)
-            </li>
-            <li>
-              <b>2</b> <u>2x2</u> in passport photos
-            </li>
-          </ul>
-        </li>
-        <li>
-          A $20 deposit is required upon booking (refundable if canceled more than 24 hours in
-          advance).
-        </li>
-      </ul>
-    </Cell.Content>
     <BookNow />
     <Cell.Content
       title={`🎂 Birthday Promotion`}
