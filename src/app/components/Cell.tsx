@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Header: FC = () => {
   return (
-    <div className="cell-content">
+    <div className="cell-content" style={{ background: 'none', margin: 0 }}>
       <Image
         src="/logo-long.png"
         alt="Pose Palace Logo Long"
