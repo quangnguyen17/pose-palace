@@ -136,7 +136,7 @@ const Content: FC<
   }>
 > = ({ children, className, title, price, discount, text }) => {
   return (
-    <div className={`cell-content ${className}`}>
+    <div className={`cell-content${className ? ` ${className}` : ``}`}>
       {title && <h3>{title}</h3>}
       {price && <p className="price">{price}</p>}
       {discount && <p className="discount">{discount}</p>}
@@ -159,7 +159,7 @@ const Cell: FC<
   Content: typeof Content
   Separator: typeof Separator
 } = ({ children, className }) => {
-  return <div className={`cell ${className}`}>{children}</div>
+  return <div className={`cell${className ? ` ${className}` : ``}`}>{children}</div>
 }
 
 Cell.Header = Header
