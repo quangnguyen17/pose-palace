@@ -1,15 +1,18 @@
 .session {
   padding: 1rem;
   text-align: left;
-  color: rgb(0, 0, 0);
-  border-bottom: 1px solid rgb(230, 230, 230);
+  background-color: rgb(240, 240, 240);
+  color: black;
+  border: none;
   transition: background-color 0.1s ease-in-out;
+  border-radius: 12px;
+  margin: 16px 16px 0 16px;
 }
 
 .session:hover {
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(220, 220, 220);
 }
 
 .session > h1 {
-  font-size: 1.7rem;
+  font-size: 27px;
 }
