@@ -90,7 +90,7 @@ const App = () => (
         '/color6.JPG',
         '/color7.JPG',
       ]}
-      caption="STANDARD COLOR ROOM"
+      caption="Standard Color Room"
     />
     <BookNow />
     <Collection
@@ -104,7 +104,7 @@ const App = () => (
         '/white7.JPG',
         '/white8.JPG',
       ]}
-      caption="FULL BODY WHITE ROOM"
+      caption="Full Body White Room"
     />
     <BookNow />
     <Cell.Content
