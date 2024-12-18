@@ -1,18 +1,27 @@
-.session {
+.selector-subheading {
   padding: 1rem;
-  text-align: left;
-  background-color: rgb(240, 240, 240);
+  font-size: 15px;
+  line-height: 21px;
+  color: rgb(180, 180, 183);
+  font-weight: lighter;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(239, 239, 239);
+}
+
+.selector-button {
+  background-color: white;
   color: black;
+  font-size: 1rem;
   border: none;
-  transition: background-color 0.1s ease-in-out;
-  border-radius: 12px;
-  margin: 16px 16px 0 16px;
+  border-bottom: 1px solid rgb(239, 239, 239);
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
-.session:hover {
-  background-color: rgb(220, 220, 220);
-}
-
-.session > h1 {
-  font-size: 27px;
+.selector-button:hover,
+.selector-button::selection {
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }

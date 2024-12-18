@@ -1,40 +1,68 @@
+'use client'
+
+import { Fragment, useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { Page } from '../components/Page'
-import Link from 'next/link'
 import './book-now.css'
 
 const BookNow = () => {
+  const router = useRouter()
+  const [selector, setSelector] = useState<'duration' | 'room'>('duration')
+  const [duration, setDuration] = useState<number | null>(null)
+  const [room, setRoom] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (duration && room) {
+      router.push(
+        `https://calendly.com/posepalacestudio${room === 'white' ? '' : '-colorroom'}/${duration}min`,
+      )
+    }
+  }, [duration, room])
+
   return (
-    <Page gap="0" padding="0">
-      {[
-        {
-          title: '$27 • 5-Minute @ Standard Color Room',
-          link: 'https://calendly.com/posepalacestudio-colorroom/5min',
-        },
-        {
-          title: '$27 • 5-Minute @ Full Body White Room',
-          link: 'https://calendly.com/posepalacestudio/5min',
-        },
-        {
-          title: '$67 • 15-Minute @ Standard Color Room',
-          link: 'https://calendly.com/posepalacestudio-colorroom/15min',
-        },
-        {
-          title: '$67 • 15-Minute @ Full Body White Room',
-          link: 'https://calendly.com/posepalacestudio/15min',
-        },
-        {
-          title: '$100 • 30-Minute @ Standard Color Room',
-          link: 'https://calendly.com/posepalacestudio-colorroom/30min',
-        },
-        {
-          title: '$100 • 30-Minute @ Full Body White Room',
-          link: 'https://calendly.com/posepalacestudio/30min',
-        },
-      ].map((session, index) => (
-        <Link key={index} href={session.link} className="session">
-          <h1>{session.title}</h1>
-        </Link>
-      ))}
+    <Page gap="0" padding="0" justifyContent="center" style={{ height: '100%' }}>
+      <p className="selector-subheading">{`SELECT A ${selector.toUpperCase()} FOR YOUR APPOINTMENT`}</p>
+      {/* Duration Selector */}
+      {selector === 'duration' && (
+        <Fragment>
+          {[
+            { title: '5 Minutes', value: 5 },
+            { title: '15 Minutes', value: 15 },
+            { title: '30 Minutes', value: 30 },
+          ].map((item, index) => (
+            <button
+              key={index}
+              className="selector-button"
+              onClick={() => {
+                setDuration(item.value)
+                setSelector('room')
+              }}
+            >
+              <h1>{item.title}</h1>
+            </button>
+          ))}
+        </Fragment>
+      )}
+      {/* Room Selector */}
+      {selector === 'room' && (
+        <Fragment>
+          {[
+            { title: 'Full Body White Room', value: 'white' },
+            { title: 'Standard Color Room', value: 'color' },
+          ].map((item, index) => (
+            <button
+              key={index}
+              className="selector-button"
+              onClick={() => {
+                setRoom(item.value)
+                setSelector('room')
+              }}
+            >
+              <h1>{item.title}</h1>
+            </button>
+          ))}
+        </Fragment>
+      )}
     </Page>
   )
 }
