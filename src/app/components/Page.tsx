@@ -1,7 +1,10 @@
 import { CSSProperties, FC, PropsWithChildren } from 'react'
 import '../config/firebase'
 
-type PageProps = Pick<CSSProperties, 'gap' | 'padding' | 'alignItems' | 'justifyContent'> & {
+type PageProps = Pick<
+  CSSProperties,
+  'gap' | 'padding' | 'alignItems' | 'justifyContent' | 'height'
+> & {
   style?: CSSProperties | undefined
 }
 
@@ -11,6 +14,7 @@ export const Page: FC<PropsWithChildren<PageProps>> = ({
   padding = '1rem',
   alignItems,
   justifyContent,
+  height,
   style,
 }) => {
   return (
@@ -24,6 +28,7 @@ export const Page: FC<PropsWithChildren<PageProps>> = ({
         padding,
         alignItems,
         justifyContent,
+        height,
         ...style,
       }}
     >

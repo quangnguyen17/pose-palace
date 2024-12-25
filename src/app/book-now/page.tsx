@@ -17,10 +17,10 @@ const BookNow = () => {
         `https://calendly.com/posepalacestudio${room === 'white' ? '' : '-colorroom'}/${duration}min`,
       )
     }
-  }, [duration, room])
+  }, [duration, room, router])
 
   return (
-    <Page gap="0" padding="0" justifyContent="center" style={{ height: '100%' }}>
+    <Page gap="0" padding="0" height="100%">
       <p className="selector-subheading">{`SELECT A ${selector.toUpperCase()} FOR YOUR APPOINTMENT`}</p>
       {/* Duration Selector */}
       {selector === 'duration' && (

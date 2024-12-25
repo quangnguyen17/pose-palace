@@ -1,10 +1,7 @@
 .selector-subheading {
   padding: 1rem;
-  font-size: 15px;
-  line-height: 21px;
+  font-size: 13px;
   color: rgb(180, 180, 183);
-  font-weight: lighter;
-  text-align: center;
   padding-bottom: 1rem;
   border-bottom: 1px solid rgb(239, 239, 239);
 }
@@ -12,15 +9,15 @@
 .selector-button {
   background-color: white;
   color: black;
-  font-size: 1rem;
+  font-size: 13px;
+  text-align: left;
   border: none;
   border-bottom: 1px solid rgb(239, 239, 239);
   padding: 1rem;
   transition: all 0.3s ease-in-out;
 }
 
-.selector-button:hover,
-.selector-button::selection {
+.selector-button:hover {
   background-color: black;
   color: white;
   cursor: pointer;

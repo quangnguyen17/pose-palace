@@ -1,5 +1,6 @@
 #!/bin/bash
 
 . ~/.bash_profile
-nvm install --lts
-yarn 
+nvm install
+nvm use
+yarn
