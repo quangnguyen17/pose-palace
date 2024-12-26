@@ -5,7 +5,7 @@ import Image from 'next/image'
 export const BookNow: FC<{
   theme?: 'light' | 'dark'
   text?: string
-}> = ({ theme = 'dark', text = 'Book Now' }) => {
+}> = ({ theme = 'dark', text = 'BOOK NOW' }) => {
   const backgroundColor = theme === 'light' ? 'rgb(235, 235, 235)' : 'rgb(0, 0, 0)'
   const color = theme === 'light' ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)'
 
@@ -18,12 +18,18 @@ export const BookNow: FC<{
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: '10px 10px 10px 16px',
-        borderRadius: '10px',
-        margin: '0 16px',
+        margin: 0,
       }}
       href="/book-now"
     >
-      <p style={{ fontSize: '15px', lineHeight: '15px', color }}>{text}</p>
+      <p
+        style={{
+          fontSize: '14px',
+          color,
+        }}
+      >
+        {text}
+      </p>
       <Image
         className={theme === 'dark' ? 'invert-color' : ''}
         src="/right-arrow.png"
