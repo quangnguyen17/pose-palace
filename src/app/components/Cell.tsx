@@ -18,7 +18,7 @@ const Header: FC = () => {
           margin: '0px auto',
         }}
       />
-      <p className="text" style={{ margin: '0px auto' }}>
+      <p className="text" style={{ margin: '0px auto', textAlign: 'center' }}>
         <Link
           href="http://maps.google.com/maps?q=9618+Garden+Grove+Blvd%2C+Garden+Grove%2C+CA+92844"
           target="_blank"
@@ -28,6 +28,17 @@ const Header: FC = () => {
           <br />
           Garden Grove, CA 92844
         </Link>
+        <span>
+          <b>Open</b> 9:00 AM - 9:00 PM
+        </span>
+        <br />
+        <span>
+          <b>Appointment</b> 9:00 AM - 9:00 PM
+        </span>
+        <br />
+        <span>
+          <b>Walk-in</b> 11:30 AM - 7:30 PM
+        </span>
         <Link href="tel:714-467-7036" style={{ color: 'black' }}>
           (714) 467-7036
         </Link>

@@ -38,7 +38,7 @@ const BookNow = () => {
                 setSelector('room')
               }}
             >
-              <h1>{item.title}</h1>
+              {item.title}
             </button>
           ))}
         </Fragment>
@@ -58,7 +58,7 @@ const BookNow = () => {
                 setSelector('room')
               }}
             >
-              <h1>{item.title}</h1>
+              {item.title}
             </button>
           ))}
         </Fragment>
