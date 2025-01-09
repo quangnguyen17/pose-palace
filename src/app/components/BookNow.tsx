@@ -17,27 +17,27 @@ export const BookNow: FC<{
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '10px 10px 10px 16px',
+        padding: '18px 18px 18px 18px',
         margin: 0,
       }}
       href="/book-now"
     >
       <p
         style={{
-          fontSize: '14px',
+          fontSize: '20px',
           color,
         }}
       >
         {text}
       </p>
-      <Image
+      {/* <Image
         className={theme === 'dark' ? 'invert-color' : ''}
         src="/right-arrow.png"
         alt="/right-arrow.png"
         width={25}
         height={25}
         unoptimized
-      />
+      /> */}
     </Link>
   )
 }

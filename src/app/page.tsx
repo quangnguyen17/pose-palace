@@ -92,7 +92,7 @@ const App = () => (
       ]}
       caption="Standard Color Room"
     />
-    <BookNow />
+
     <Collection
       photos={[
         '/white1.JPG',
@@ -106,7 +106,7 @@ const App = () => (
       ]}
       caption="Full Body White Room"
     />
-    <BookNow />
+    
     <Cell.Content
       title={`🎂 Birthday Promotion`}
       discount={`10% OFF`}
