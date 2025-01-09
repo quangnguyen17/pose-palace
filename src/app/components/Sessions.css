@@ -11,9 +11,11 @@ div.session {
   flex: 1;
   min-width: 325px;
   max-width: 375px;
-  border: none;
+  border: 2px black;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 16px;
 }
+
