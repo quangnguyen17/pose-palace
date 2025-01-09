@@ -3,12 +3,41 @@ import { Page } from './components/Page'
 import { Cell } from './components/Cell'
 import { Collection } from './components/Collection'
 import { BookNow } from './components/BookNow'
+import { Description } from './components/Intro'
 import { Sessions, Session } from './components/Sessions'
 
 const App = () => (
   <Page padding="0" gap="0">
     <Cell.Header />
     <BookNow />
+    <Description />
+    <Collection
+      photos={[
+        '/color1.JPG',
+        '/color2.JPG',
+        '/color3.JPG',
+        '/color4.JPG',
+        '/color5.JPG',
+        '/color6.JPG',
+        '/color7.JPG',
+      ]}
+      caption="Standard Color Room"
+    />
+
+    <Collection
+      photos={[
+        '/white1.JPG',
+        '/white2.JPG',
+        '/white3.JPG',
+        '/white4.JPG',
+        '/white5.JPG',
+        '/white6.JPG',
+        '/white7.JPG',
+        '/white8.JPG',
+      ]}
+      caption="Full Body White Room"
+    />
+
     <Sessions>
       <Session className="bg-azure">
         <h3>5-minute session</h3>
@@ -80,34 +109,8 @@ const App = () => (
     <p className="text" style={{ padding: '0px 16px 0px 16px', fontStyle: 'italic' }}>
       $20 deposit is required upon booking (refundable if canceled more than 24 hours in advance).
     </p>
-    <Collection
-      photos={[
-        '/color1.JPG',
-        '/color2.JPG',
-        '/color3.JPG',
-        '/color4.JPG',
-        '/color5.JPG',
-        '/color6.JPG',
-        '/color7.JPG',
-      ]}
-      caption="Standard Color Room"
-    />
 
-    <Collection
-      photos={[
-        '/white1.JPG',
-        '/white2.JPG',
-        '/white3.JPG',
-        '/white4.JPG',
-        '/white5.JPG',
-        '/white6.JPG',
-        '/white7.JPG',
-        '/white8.JPG',
-      ]}
-      caption="Full Body White Room"
-    />
-    
-    <Cell.Content
+    {/* <Cell.Content
       title={`🎂 Birthday Promotion`}
       discount={`10% OFF`}
       text={`Celebrate your birthday month with an exclusive gift: enjoy 10% off your self-portrait
@@ -172,7 +175,7 @@ const App = () => (
           <li>Party props like glasses, headbands, hats, etc.</li>
         </ul>
       </Cell.Content>
-    </Cell>
+    </Cell> */}
     <div style={{ padding: '0px 16px 16px 16px' }}>
       <Image
         src="/logo-long.png"
