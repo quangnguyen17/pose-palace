@@ -26,9 +26,10 @@ export const BookNow: FC<{
         style={{
           fontSize: '20px',
           color,
+          margin: 'auto'
         }}
       >
-        {text}
+       <b>{text}</b>
       </p>
       {/* <Image
         className={theme === 'dark' ? 'invert-color' : ''}

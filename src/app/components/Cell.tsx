@@ -18,14 +18,14 @@ const Header: FC = () => {
           margin: '0px auto',
         }}
       />
-      <p className="text" style={{ margin: '20px', display: 'flex' }}>
+      <p className="text" style={{ margin: '10px auto', display: 'flex' }}>
         <Link
                   href=""
                   style={{ 
                     color: 'black',
                     fontSize: 30,
                     fontFamily: 'serif',
-                    paddingLeft: 250,
+                    paddingLeft: 50,
                   }}
         > ABOUT US
         </Link>
@@ -35,7 +35,7 @@ const Header: FC = () => {
             color: 'black',
             fontSize: 30,
             fontFamily: 'serif',
-            paddingLeft: 250
+            paddingLeft: 200
         }}
         > SERVICES
         </Link>
