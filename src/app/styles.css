@@ -27,7 +27,7 @@ body {
   align-items: flex-start;
   background-color: rgb(240, 240, 240);
   padding: 16px;
-  margin: 16px 16px 0px 16px;
+  margin: 0px 16px 16px 16px;
   gap: 16px;
 }
 
@@ -114,17 +114,22 @@ img.social-media-icon {
   background-color: #e4e2f4;
 }
 
-.sticky-book-now {
-  background-color: black;
-  color: white;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 15px;
-}
-
 .App {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
+}
+
+.view-gallery {
+  background-color: rgb(87, 131, 158);
+  color: white;
+  font-size: 14px;
+  text-align: left;
+  padding: 14px 16px;
+  margin: 0 16px 16px 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }

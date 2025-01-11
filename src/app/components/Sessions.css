@@ -1,16 +1,26 @@
 div.sessions {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-  gap: 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
   padding: 0px 16px 16px 16px;
 }
 
 div.session {
+  flex: 1;
+  min-width: 300px;
+  max-width: 375px;
   padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 10px;
+}
+
+@media (max-width: 700px) {
+  div.session {
+    min-width: 100%;
+  }
 }

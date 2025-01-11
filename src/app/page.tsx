@@ -2,8 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Page } from './components/Page'
 import { Cell } from './components/Cell'
-import { Collection } from './components/Collection'
 import { Sessions, Session } from './components/Sessions'
+import { StickyBookNow } from './components/StickyBookNow'
 
 const App = () => (
   <div className="App">
@@ -77,34 +77,10 @@ const App = () => (
           </ul>
         </Session>
       </Sessions>
-      <p className="text" style={{ padding: '0px 16px 0px 16px', fontStyle: 'italic' }}>
-        $20 deposit is required upon booking (refundable if canceled more than 24 hours in advance).
-      </p>
-      <Collection
-        photos={[
-          '/color1.JPG',
-          '/color2.JPG',
-          '/color3.JPG',
-          '/color4.JPG',
-          '/color5.JPG',
-          '/color6.JPG',
-          '/color7.JPG',
-        ]}
-        caption="Standard Color Room"
-      />
-      <Collection
-        photos={[
-          '/white1.JPG',
-          '/white2.JPG',
-          '/white3.JPG',
-          '/white4.JPG',
-          '/white5.JPG',
-          '/white6.JPG',
-          '/white7.JPG',
-          '/white8.JPG',
-        ]}
-        caption="Full Body White Room"
-      />
+      <Link href="/gallery" className="view-gallery">
+        <span>{`View our gallery`}</span>
+        <span>{`>`}</span>
+      </Link>
       <Cell.Content
         title={`🎂 Birthday Promotion`}
         discount={`10% OFF`}
@@ -181,8 +157,8 @@ const App = () => (
           style={{
             objectFit: 'contain',
             width: 'auto',
-            height: '120px',
-            padding: '20px 16px 8px 0px',
+            height: '82px',
+            marginBottom: '4px',
           }}
         />
         <p className="text">
@@ -201,9 +177,7 @@ const App = () => (
         </p>
       </div>
     </Page>
-    <Link href="/book-now" className="sticky-book-now">
-      BOOK NOW
-    </Link>
+    <StickyBookNow />
   </div>
 )
 

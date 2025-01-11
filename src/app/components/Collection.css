@@ -1,44 +1,13 @@
-.collection-container {
-  padding: 16px 0px 0px 0px;
-  position: relative;
-}
-
 .collection-caption {
-  line-height: 14px;
   font-size: 14px;
-  font-weight: 600;
-  margin: 0px 16px 16px 16px;
+  margin-bottom: 16px;
 }
 
 .collection {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  overflow: auto;
+  flex-wrap: wrap;
   gap: 12px;
-  padding: 0px 16px 0px 16px;
-}
-
-a.headline {
-  color: rgb(0, 0, 0);
-  padding: 14px 16px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-span.type {
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 15px;
-}
-
-span.room {
-  font-weight: bolder;
-  font-size: 15px;
-  line-height: 15px;
 }
 
 img.photo {
