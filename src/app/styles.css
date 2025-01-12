@@ -122,11 +122,11 @@ img.social-media-icon {
 }
 
 .view-gallery {
-  background-color: rgb(87, 131, 158);
+  background-color: rgb(113, 122, 126);
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   text-align: left;
-  padding: 14px 16px;
+  padding: 12px 16px;
   margin: 0 16px 16px 16px;
   display: flex;
   flex-direction: row;

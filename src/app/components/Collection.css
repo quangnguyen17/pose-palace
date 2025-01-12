@@ -16,3 +16,10 @@ img.photo {
   object-fit: cover;
   object-position: 0% 0%;
 }
+
+@media (max-width: 500px) {
+  img.photo {
+    width: 100%;
+    height: calc(100% * 6 / 4);
+  }
+}

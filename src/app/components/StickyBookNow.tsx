@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import { RightArrow } from './RightArrow'
 
 export const StickyBookNow = () => {
   return (
@@ -8,7 +8,7 @@ export const StickyBookNow = () => {
         backgroundColor: 'black',
         color: 'white',
         fontSize: '16px',
-        padding: '14px 16px',
+        padding: '12px 16px',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -18,14 +18,7 @@ export const StickyBookNow = () => {
       className="sticky-book-now"
     >
       <span>Book Now</span>
-      <Image
-        style={{ filter: 'invert(1)' }}
-        src="/right-arrow.png"
-        alt="/right-arrow.png"
-        width={26}
-        height={26}
-        unoptimized
-      />
+      <RightArrow />
     </Link>
   )
 }

@@ -4,6 +4,7 @@ import { Page } from './components/Page'
 import { Cell } from './components/Cell'
 import { Sessions, Session } from './components/Sessions'
 import { StickyBookNow } from './components/StickyBookNow'
+import { RightArrow } from './components/RightArrow'
 
 const App = () => (
   <div className="App">
@@ -79,7 +80,7 @@ const App = () => (
       </Sessions>
       <Link href="/gallery" className="view-gallery">
         <span>{`View our gallery`}</span>
-        <span>{`>`}</span>
+        <RightArrow />
       </Link>
       <Cell.Content
         title={`🎂 Birthday Promotion`}
