@@ -21,7 +21,7 @@ const BookNow = () => {
 
   return (
     <Page gap="0" padding="0" height="100%">
-      <p className="selector-subheading">{`SELECT A ${selector.toUpperCase()} FOR YOUR APPOINTMENT`}</p>
+      <p className="selector-subheading">{`Select a ${selector} for your session`}</p>
       {/* Duration Selector */}
       {selector === 'duration' && (
         <Fragment>

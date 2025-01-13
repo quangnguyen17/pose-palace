@@ -1,51 +1,13 @@
-.collection-container {
-  padding: 16px 0px 16px 0px;
-  position: relative;
-}
-
 .collection-caption {
-  line-height: 16px;
-  font-size: 16px;
-  font-weight: 700;
-  margin: 0px 16px 16px 16px;
+  font-size: 14px;
+  margin-bottom: 16px;
 }
 
 .collection {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  overflow-y: hidden;
-  overflow-x: scroll;
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
-  gap: 10px;
-  padding: 0px 16px 0px 16px;
-}
-
-div.collection::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
-}
-
-a.headline {
-  color: rgb(0, 0, 0);
-  padding: 14px 16px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-span.type {
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 15px;
-}
-
-span.room {
-  font-weight: bolder;
-  font-size: 15px;
-  line-height: 15px;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 img.photo {
@@ -53,4 +15,11 @@ img.photo {
   height: calc(300px * 6 / 4);
   object-fit: cover;
   object-position: 0% 0%;
+}
+
+@media (max-width: 500px) {
+  img.photo {
+    width: 100%;
+    height: calc(100% * 6 / 4);
+  }
 }
