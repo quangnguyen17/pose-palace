@@ -15,21 +15,27 @@ const App = () => (
           <h3>5-minute session</h3>
           <p className="price">$27</p>
           <ul>
-            <li>For 2 people (each additional: $5)</li>
-            <li>Instantly available digital photos (available for 7 days)</li>
-            <li>All props included</li>
+            <li>
+              For <b>2 people</b> (additional: $5 each)
+            </li>
+            <li>Unlimited pictures for the appointment duration</li>
             <li>
               <p>
-                Prints (you can choose <b>one</b> of the followings):
+                Prints (you can choose <b>one</b> of the following):
               </p>
               <ul>
                 <li>
-                  <b>1</b> <u>4x6</u> in (1, 3, 4 photo layouts)
+                  <b>1</b> <u>4 x 6</u>
                 </li>
                 <li>
-                  <b>2</b> <u>2x2</u> in passport photos
+                  <b>2</b> <u>2 x 2</u> (passport photos)
                 </li>
               </ul>
+            </li>
+            <li>Same day print</li>
+            <li>
+              All your photos will be shared with you online instantly and available for download
+              for 7 days
             </li>
           </ul>
         </Session>
@@ -37,21 +43,25 @@ const App = () => (
           <h3>15-minute session</h3>
           <p className="price">$67</p>
           <ul>
-            <li>For 2 people (each additional: $5)</li>
-            <li>Instantly available digital photos (available for 7 days)</li>
-            <li>All props included</li>
+            <li>For 2 people (additional: $5 each)</li>
+            <li>Unlimited pictures for the appointment duration</li>
             <li>
               <p>
-                Prints (you can choose <b>one</b> of the followings):
+                Prints (you can choose <b>one</b> of the following):
               </p>
               <ul>
                 <li>
-                  <b>3</b> <u>4x6</u> in (1, 3, 4 photo layouts)
+                  <b>3</b> <u>4 x 6</u>
                 </li>
                 <li>
-                  <b>2</b> <u>2x2</u> in passport photos
+                  <b>2</b> <u>2 x 2</u> (passport photos)
                 </li>
               </ul>
+            </li>
+            <li>Same day print</li>
+            <li>
+              All your photos will be shared with you online instantly and available for download
+              for 7 days
             </li>
           </ul>
         </Session>
@@ -59,21 +69,25 @@ const App = () => (
           <h3>30-minute session</h3>
           <p className="price">$100</p>
           <ul>
-            <li>For 2 people (each additional: $5)</li>
-            <li>Instantly available digital photos (available for 7 days)</li>
-            <li>All props included</li>
+            <li>For 2 people (additional: $5 each)</li>
+            <li>Unlimited pictures for the appointment duration</li>
             <li>
               <p>
-                Prints (you can choose <b>one</b> of the followings):
+                Prints (you can choose <b>one</b> of the following):
               </p>
               <ul>
                 <li>
-                  <b>6</b> <u>4x6</u> in (1, 3, 4 photo layouts)
+                  <b>6</b> <u>4 x 6</u>
                 </li>
                 <li>
-                  <b>2</b> <u>2x2</u> in passport photos
+                  <b>2</b> <u>2 x 2</u> (passport photos)
                 </li>
               </ul>
+            </li>
+            <li>Same day print</li>
+            <li>
+              All your photos will be shared with you online instantly and available for download
+              for 7 days
             </li>
           </ul>
         </Session>
