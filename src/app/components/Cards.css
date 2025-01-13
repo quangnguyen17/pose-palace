@@ -11,8 +11,8 @@ div.cards {
 
 div.card {
   flex: 1;
-  min-width: 300px;
-  max-width: 375px;
+  min-width: auto;
+  max-width: auto;
   padding: 16px;
   display: flex;
   border: 2px black;

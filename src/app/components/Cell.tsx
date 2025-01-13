@@ -30,14 +30,14 @@ const Header: FC = () => {
         > ABOUT US
         </Link>
         <Link
-            href=""
+            href="/gallery"
             style={{ 
             color: 'black',
             fontSize: 30,
             fontFamily: 'serif',
             paddingLeft: 200
         }}
-        > SERVICES
+        > GALLERY
         </Link>
         <Link
             href=""
