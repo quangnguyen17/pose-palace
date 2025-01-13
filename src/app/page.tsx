@@ -27,9 +27,12 @@ const App = () => (
           </p>
         </Card>
         <Card className="bg-azure">
-          <h3>$27 • 5-minute session</h3>
+          <div className="label-container">
+            <span className="label-price">$27</span>
+            <span>/ 5-minute session</span>
+          </div>
           <p>
-            Prints (you get to pick <b>one</b> of the options):
+            Prints (you get to pick <b>one</b> of the following):
           </p>
           <ul>
             <li>
@@ -41,9 +44,12 @@ const App = () => (
           </ul>
         </Card>
         <Card className="bg-ghost-white">
-          <h3>$67 • 15-minute session</h3>
+          <div className="label-container">
+            <span className="label-price">$67</span>
+            <span>/ 15-minute session</span>
+          </div>
           <p>
-            Prints (you get to pick <b>one</b> of the options):
+            Prints (you get to pick <b>one</b> of the following):
           </p>
           <ul>
             <li>
@@ -55,9 +61,12 @@ const App = () => (
           </ul>
         </Card>
         <Card className="bg-lavender">
-          <h3>$100 • 30-minute session</h3>
+          <div className="label-container">
+            <span className="label-price">$100</span>
+            <span>/ 30-minute session</span>
+          </div>
           <p>
-            Prints (you get to pick <b>one</b> of the options):
+            Prints (you get to pick <b>one</b> of the following):
           </p>
           <ul>
             <li>
