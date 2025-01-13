@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Page } from './components/Page'
 import { Cell } from './components/Cell'
-import { Sessions, Session } from './components/Sessions'
+import { Cards, Card } from './components/Cards'
 import { StickyBookNow } from './components/StickyBookNow'
 import { RightArrow } from './components/RightArrow'
 
@@ -10,88 +10,65 @@ const App = () => (
   <div className="App">
     <Page style={{ overflowY: 'auto', overflowX: 'hidden' }} padding="0" gap="0">
       <Cell.Header />
-      <Sessions>
-        <Session className="bg-azure">
-          <h3>5-minute session</h3>
-          <p className="price">$27</p>
+      <Cards>
+        <Card className="bg-alice-blue">
+          <p>
+            <b>Unlimited photos</b> to capture every moment!
+          </p>
+          <p>
+            Enjoy <b>same-day prints</b> to take your memories home immediately.
+          </p>
+          <p>
+            Your photos are <b>instantly shared online</b> and available for download for{' '}
+            <b>7 days</b>!
+          </p>
+          <p>
+            Includes 2 people, <b>$5</b> for each extra!
+          </p>
+        </Card>
+        <Card className="bg-azure">
+          <h3>$27 • 5-minute session</h3>
+          <p>
+            Prints (you get to pick <b>one</b> of the options):
+          </p>
           <ul>
             <li>
-              For <b>2 people</b> (additional: $5 each)
+              <b>1</b> <u>4 x 6</u>
             </li>
-            <li>Unlimited pictures for the appointment duration</li>
             <li>
-              <p>
-                Prints (you can choose <b>one</b> of the following):
-              </p>
-              <ul>
-                <li>
-                  <b>1</b> <u>4 x 6</u>
-                </li>
-                <li>
-                  <b>2</b> <u>2 x 2</u> (passport photos)
-                </li>
-              </ul>
-            </li>
-            <li>Same day print</li>
-            <li>
-              All your photos will be shared with you online instantly and available for download
-              for 7 days
+              <b>2</b> <u>2 x 2</u> (passport photos)
             </li>
           </ul>
-        </Session>
-        <Session className="bg-ghost-white">
-          <h3>15-minute session</h3>
-          <p className="price">$67</p>
+        </Card>
+        <Card className="bg-ghost-white">
+          <h3>$67 • 15-minute session</h3>
+          <p>
+            Prints (you get to pick <b>one</b> of the options):
+          </p>
           <ul>
-            <li>For 2 people (additional: $5 each)</li>
-            <li>Unlimited pictures for the appointment duration</li>
             <li>
-              <p>
-                Prints (you can choose <b>one</b> of the following):
-              </p>
-              <ul>
-                <li>
-                  <b>3</b> <u>4 x 6</u>
-                </li>
-                <li>
-                  <b>2</b> <u>2 x 2</u> (passport photos)
-                </li>
-              </ul>
+              <b>3</b> <u>4 x 6</u>
             </li>
-            <li>Same day print</li>
             <li>
-              All your photos will be shared with you online instantly and available for download
-              for 7 days
+              <b>2</b> <u>2 x 2</u> (passport photos)
             </li>
           </ul>
-        </Session>
-        <Session className="bg-lavender">
-          <h3>30-minute session</h3>
-          <p className="price">$100</p>
+        </Card>
+        <Card className="bg-lavender">
+          <h3>$100 • 30-minute session</h3>
+          <p>
+            Prints (you get to pick <b>one</b> of the options):
+          </p>
           <ul>
-            <li>For 2 people (additional: $5 each)</li>
-            <li>Unlimited pictures for the appointment duration</li>
             <li>
-              <p>
-                Prints (you can choose <b>one</b> of the following):
-              </p>
-              <ul>
-                <li>
-                  <b>6</b> <u>4 x 6</u>
-                </li>
-                <li>
-                  <b>2</b> <u>2 x 2</u> (passport photos)
-                </li>
-              </ul>
+              <b>6</b> <u>4 x 6</u>
             </li>
-            <li>Same day print</li>
             <li>
-              All your photos will be shared with you online instantly and available for download
-              for 7 days
+              <b>2</b> <u>2 x 2</u> (passport photos)
             </li>
           </ul>
-        </Session>
-      </Sessions>
+        </Card>
+      </Cards>
       <Link href="/gallery" className="view-gallery">
         <span>{`View our gallery`}</span>
         <RightArrow />
