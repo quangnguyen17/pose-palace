@@ -15,6 +15,7 @@ img.photo {
   height: calc(300px * 6 / 4);
   object-fit: cover;
   object-position: 0% 0%;
+  border-radius: 16px;
 }
 
 @media (max-width: 500px) {

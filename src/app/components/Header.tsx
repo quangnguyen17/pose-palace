@@ -30,7 +30,7 @@ export const Header: FC = () => {
       <p
         style={{
           fontSize: '16px',
-          lineHeight: '22px',
+          lineHeight: '24px',
         }}
       >
         <Link

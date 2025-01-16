@@ -155,8 +155,7 @@ const App = () => (
           style={{
             objectFit: 'contain',
             width: 'auto',
-            height: '92px',
-            marginBottom: '4px',
+            height: '82px',
           }}
         />
         <p>
