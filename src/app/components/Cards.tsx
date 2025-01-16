@@ -5,11 +5,9 @@ export const Cards: FC<PropsWithChildren> = ({ children }) => {
   return <div className="cards">{children}</div>
 }
 
-export const Card: FC<PropsWithChildren<{ className?: string | undefined }>> = ({
-  children,
-  className,
-  ...props
-}) => {
+export const Card: FC<
+  PropsWithChildren<{ className?: string | undefined; borderless?: boolean }>
+> = ({ children, className, ...props }) => {
   return (
     <div className={`card ${className}`} {...props}>
       {children}

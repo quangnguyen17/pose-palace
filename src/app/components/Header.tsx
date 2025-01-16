@@ -1,10 +1,19 @@
-import { FC, PropsWithChildren } from 'react'
+import { FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const Header: FC = () => {
+export const Header: FC = () => {
   return (
-    <div className="cell-content" style={{ background: 'none', margin: 0 }}>
+    <div
+      style={{
+        width: '100%',
+        textAlign: 'center',
+        paddingTop: '16px',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '16px',
+      }}
+    >
       <Image
         src="/logo-long.png"
         alt="Pose Palace Logo Long"
@@ -18,7 +27,12 @@ const Header: FC = () => {
           margin: '0px auto',
         }}
       />
-      <p className="text" style={{ margin: '0px auto', textAlign: 'center' }}>
+      <p
+        style={{
+          fontSize: '16px',
+          lineHeight: '22px',
+        }}
+      >
         <Link
           href="http://maps.google.com/maps?q=9618+Garden+Grove+Blvd%2C+Garden+Grove%2C+CA+92844"
           target="_blank"
@@ -136,45 +150,3 @@ const Header: FC = () => {
     </div>
   )
 }
-
-const Content: FC<
-  PropsWithChildren<{
-    className?: string | undefined
-    title?: string | undefined
-    price?: string | undefined
-    discount?: string | undefined
-    text?: string | undefined
-  }>
-> = ({ children, className, title, price, discount, text }) => {
-  return (
-    <div className={`cell-content${className ? ` ${className}` : ``}`}>
-      {title && <h3>{title}</h3>}
-      {price && <p className="price">{price}</p>}
-      {discount && <p className="discount">{discount}</p>}
-      {text && <p className="text">{text}</p>}
-      {children}
-    </div>
-  )
-}
-
-const Separator: FC = () => {
-  return <div className="separator"></div>
-}
-
-const Cell: FC<
-  PropsWithChildren<{
-    className?: string | undefined
-  }>
-> & {
-  Header: typeof Header
-  Content: typeof Content
-  Separator: typeof Separator
-} = ({ children, className }) => {
-  return <div className={`cell${className ? ` ${className}` : ``}`}>{children}</div>
-}
-
-Cell.Header = Header
-Cell.Content = Content
-Cell.Separator = Separator
-
-export { Cell }

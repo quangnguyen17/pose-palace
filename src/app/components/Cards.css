@@ -9,6 +9,11 @@ div.cards {
   padding: 0px 16px 16px 16px;
 }
 
+div.cards > p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
 div.card {
   flex: 1;
   min-width: 300px;
@@ -18,7 +23,19 @@ div.card {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 10px;
+  gap: 8px;
+  border-radius: 16px;
+}
+
+div.card > p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+div.card > p.price-label {
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 600;
 }
 
 @media (max-width: 700px) {
