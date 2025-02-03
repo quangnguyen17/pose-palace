@@ -2,12 +2,13 @@ import Image from 'next/image'
 import { Page } from './components/Page'
 import { Header } from './components/Header'
 import { Cards, Card } from './components/Cards'
-import { StickyBookNow } from './components/StickyBookNow'
+import { BookNow } from './components/BookNow'
 
 const App = () => (
   <Page style={{ overflowY: 'auto', overflowX: 'hidden' }} padding="0" gap="0">
     <Cards>
       <Header />
+      <BookNow />
       <Card className="bg-alice-blue" style={{ alignItems: 'stretch' }}>
         <p className="text-left">
           <b>Unlimited photos</b> to capture every moment
@@ -176,7 +177,6 @@ const App = () => (
         <p>© 2024 Crystal Lighthouse LLC</p>
       </Card>
     </Cards>
-    <StickyBookNow />
   </Page>
 )
 
