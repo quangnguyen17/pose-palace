@@ -8,10 +8,10 @@ export const Header: FC = () => {
       style={{
         width: '100%',
         textAlign: 'center',
-        paddingTop: '16px',
         display: 'flex',
         flexDirection: 'column',
         gap: '16px',
+        paddingBottom: '8px',
       }}
     >
       <Image

@@ -5,37 +5,32 @@ div.cards {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 16px;
-  padding: 0px 16px 16px 16px;
+  gap: 8px;
+  padding: 16px;
 }
 
 div.card {
   flex: 1;
   min-width: 300px;
   max-width: 375px;
-  padding: 16px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 10px;
-  border-radius: 16px;
-}
-
-div.cards > p,
-div.card > p {
-  font-size: 16px;
-  line-height: 24px;
-}
-
-div.card > p.price-label {
-  font-size: 52px;
-  line-height: 52px;
-  font-weight: 600;
+  gap: 12px;
+  border-radius: 20px;
 }
 
 @media (max-width: 700px) {
   div.card {
     min-width: 100%;
+  }
+}
+
+@media (min-width: 700px) {
+  div.card {
+    max-width: 500px;
+    min-width: 400px;
   }
 }

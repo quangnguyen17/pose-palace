@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from 'react'
+import { CSSProperties, FC, PropsWithChildren } from 'react'
 import './Cards.css'
 
 export const Cards: FC<PropsWithChildren> = ({ children }) => {
@@ -6,10 +6,14 @@ export const Cards: FC<PropsWithChildren> = ({ children }) => {
 }
 
 export const Card: FC<
-  PropsWithChildren<{ className?: string | undefined; borderless?: boolean }>
-> = ({ children, className, ...props }) => {
+  PropsWithChildren<{
+    className?: string | undefined
+    borderless?: boolean
+    style?: CSSProperties | undefined
+  }>
+> = ({ children, className, style, ...props }) => {
   return (
-    <div className={`card ${className}`} {...props}>
+    <div className={`card ${className}`} style={style} {...props}>
       {children}
     </div>
   )

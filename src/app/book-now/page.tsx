@@ -20,49 +20,51 @@ const BookNow = () => {
   }, [duration, room, router])
 
   return (
-    <Page gap="0" padding="0" height="100%">
-      <p className="selector-subheading">{`Select a ${selector} for your session`}</p>
-      {/* Duration Selector */}
-      {selector === 'duration' && (
-        <Fragment>
-          {[
-            { title: '5 Minutes', value: 5 },
-            { title: '15 Minutes', value: 15 },
-            { title: '30 Minutes', value: 30 },
-          ].map((item, index) => (
-            <button
-              key={index}
-              className="selector-button"
-              onClick={() => {
-                setDuration(item.value)
-                setSelector('room')
-              }}
-            >
-              {item.title}
-            </button>
-          ))}
-        </Fragment>
-      )}
-      {/* Room Selector */}
-      {selector === 'room' && (
-        <Fragment>
-          {[
-            { title: 'Full Body White Room', value: 'white' },
-            { title: 'Standard Color Room', value: 'color' },
-          ].map((item, index) => (
-            <button
-              key={index}
-              className="selector-button"
-              onClick={() => {
-                setRoom(item.value)
-                setSelector('room')
-              }}
-            >
-              {item.title}
-            </button>
-          ))}
-        </Fragment>
-      )}
+    <Page>
+      <p>Select {selector}:</p>
+      <div className="selector-container">
+        {/* Duration Selector */}
+        {selector === 'duration' && (
+          <Fragment>
+            {[
+              { title: '5 Minutes', value: 5 },
+              { title: '15 Minutes', value: 15 },
+              { title: '30 Minutes', value: 30 },
+            ].map((item, index) => (
+              <button
+                key={index}
+                className="selector-button"
+                onClick={() => {
+                  setDuration(item.value)
+                  setSelector('room')
+                }}
+              >
+                {item.title}
+              </button>
+            ))}
+          </Fragment>
+        )}
+        {/* Room Selector */}
+        {selector === 'room' && (
+          <Fragment>
+            {[
+              { title: 'Full Body White Room', value: 'white' },
+              { title: 'Standard Color Room', value: 'color' },
+            ].map((item, index) => (
+              <button
+                key={index}
+                className="selector-button"
+                onClick={() => {
+                  setRoom(item.value)
+                  setSelector('room')
+                }}
+              >
+                {item.title}
+              </button>
+            ))}
+          </Fragment>
+        )}
+      </div>
     </Page>
   )
 }
