@@ -9,18 +9,18 @@ const App = () => (
     <Cards>
       <Header />
       <BookNow />
-      <Card className="bg-alice-blue" style={{ alignItems: 'stretch' }}>
-        <p className="text-left">
+      <Card className="bg-alice-blue">
+        <p>
           <b>Unlimited photos</b> to capture every moment
         </p>
-        <p className="text-left">
+        <p>
           Enjoy <b>same-day prints</b> to take your memories home immediately
         </p>
-        <p className="text-left">
+        <p>
           Your photos are <b>instantly shared online</b> and available for download for{' '}
           <b>7 days</b>
         </p>
-        <p className="text-left">
+        <p>
           Includes 2 people, <b>$5</b> for each extra
         </p>
       </Card>

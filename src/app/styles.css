@@ -71,8 +71,8 @@ p {
 }
 
 p.text-medium {
-  font-size: 17px;
-  line-height: 27px;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 p.text-left {
@@ -86,6 +86,7 @@ p.text-right {
 p.price-label {
   display: inline;
   font-size: 30px;
+  line-height: 32px;
   font-weight: 900;
 }
 
