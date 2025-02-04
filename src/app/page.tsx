@@ -29,16 +29,11 @@ const App = () => (
           <div className="col">
             <p>5-minute session</p>
             <p>
-              Prints (you get to pick <b>one</b> of the following):
+              <b>4 x 6</b> photo prints x 1
             </p>
-            <ul>
-              <li>
-                <b>1</b> <u>4 x 6</u>
-              </li>
-              <li>
-                <b>2</b> <u>2 x 2</u> (passport photos)
-              </li>
-            </ul>
+            <p>
+              <b>2 x 2</b> passport photos x 2
+            </p>
           </div>
           <p className="price-label">$27</p>
         </div>
@@ -48,16 +43,11 @@ const App = () => (
           <div className="col">
             <p>15-minute session</p>
             <p>
-              Prints (you get to pick <b>one</b> of the following):
+              <b>4 x 6</b> photo prints x 3
             </p>
-            <ul>
-              <li>
-                <b>3</b> <u>4 x 6</u>
-              </li>
-              <li>
-                <b>2</b> <u>2 x 2</u> (passport photos)
-              </li>
-            </ul>
+            <p>
+              <b>2 x 2</b> passport photos x 2
+            </p>
           </div>
           <p className="price-label">$67</p>
         </div>
@@ -67,16 +57,11 @@ const App = () => (
           <div className="col">
             <p>30-minute session</p>
             <p>
-              Prints (you get to pick <b>one</b> of the following):
+              <b>4 x 6</b> photo prints x 6
             </p>
-            <ul>
-              <li>
-                <b>6</b> <u>4 x 6</u>
-              </li>
-              <li>
-                <b>2</b> <u>2 x 2</u> (passport photos)
-              </li>
-            </ul>
+            <p>
+              <b>2 x 2</b> passport photos x 2
+            </p>
           </div>
           <p className="price-label">$100</p>
         </div>

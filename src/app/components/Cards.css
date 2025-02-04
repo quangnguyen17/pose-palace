@@ -13,13 +13,13 @@ div.card {
   flex: 1;
   min-width: 300px;
   max-width: 375px;
-  padding: 20px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 12px;
-  border-radius: 20px;
+  border-radius: 24px;
 }
 
 @media (max-width: 700px) {

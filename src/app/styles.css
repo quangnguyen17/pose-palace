@@ -13,26 +13,6 @@ body {
   height: 100%;
 }
 
-.cell {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  overflow: hidden;
-}
-
-.cell-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background-color: rgb(240, 240, 240);
-  padding: 16px;
-  margin: 0px 16px 16px 16px;
-  gap: 16px;
-}
-
 .TabBar {
   width: 100%;
   background-color: white;
@@ -41,21 +21,6 @@ body {
   justify-content: space-evenly;
   align-items: center;
   padding: 1rem;
-}
-
-div.Page > p {
-  font-size: 16px;
-  line-height: 22px;
-}
-
-.cell,
-li {
-  font-size: 15px;
-  line-height: 25px;
-}
-
-ul {
-  margin-left: 1rem;
 }
 
 a {
@@ -130,5 +95,5 @@ p.price-label {
 .col {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 4px;
 }
