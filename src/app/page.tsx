@@ -27,11 +27,11 @@ const App = () => (
       <Card className="bg-azure">
         <div className="row">
           <div className="col">
-            <p>5-minute session</p>
-            <p>
+            <p className="text-medium">
+              5-minute session
+              <br />
               <b>4 x 6</b> photo prints x 1
-            </p>
-            <p>
+              <br />
               <b>2 x 2</b> passport photos x 2
             </p>
           </div>
@@ -41,11 +41,11 @@ const App = () => (
       <Card className="bg-ghost-white">
         <div className="row">
           <div className="col">
-            <p>15-minute session</p>
-            <p>
+            <p className="text-medium">
+              15-minute session
+              <br />
               <b>4 x 6</b> photo prints x 3
-            </p>
-            <p>
+              <br />
               <b>2 x 2</b> passport photos x 2
             </p>
           </div>
@@ -55,11 +55,11 @@ const App = () => (
       <Card className="bg-lavender">
         <div className="row">
           <div className="col">
-            <p>30-minute session</p>
-            <p>
+            <p className="text-medium">
+              30-minute session
+              <br />
               <b>4 x 6</b> photo prints x 6
-            </p>
-            <p>
+              <br />
               <b>2 x 2</b> passport photos x 2
             </p>
           </div>
