@@ -18,17 +18,17 @@ div.card {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 12px;
+  gap: 10px;
   border-radius: 24px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   div.card {
     min-width: 100%;
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 500px) {
   div.card {
     max-width: 500px;
     min-width: 400px;
