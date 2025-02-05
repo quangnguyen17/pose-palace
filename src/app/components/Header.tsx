@@ -27,12 +27,7 @@ export const Header: FC = () => {
           margin: '0px auto',
         }}
       />
-      <p
-        style={{
-          fontSize: '16px',
-          lineHeight: '24px',
-        }}
-      >
+      <p>
         <Link
           href="http://maps.google.com/maps?q=9618+Garden+Grove+Blvd%2C+Garden+Grove%2C+CA+92844"
           target="_blank"
