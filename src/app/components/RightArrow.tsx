@@ -6,8 +6,8 @@ export const RightArrow = () => {
       style={{ filter: 'invert(1)' }}
       src="/right-arrow.png"
       alt="/right-arrow.png"
-      width={26}
-      height={26}
+      width={27}
+      height={27}
       unoptimized
     />
   )

@@ -3,15 +3,16 @@ import { RightArrow } from './RightArrow'
 
 export const BookNow = () => {
   return (
-    <div style={{ position: 'fixed', bottom: 0, left: 0, right: 0, padding: '16px' }}>
+    <div style={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}>
       <Link
         style={{
           width: '100%',
           backgroundColor: 'black',
           color: 'white',
-          padding: '12px 20px',
-          fontSize: '16px',
-          borderRadius: '24px',
+          padding: '15px 20px',
+          borderRadius: '20px 20px 0px 0px',
+          fontSize: '17px',
+          fontWeight: 400,
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-between',

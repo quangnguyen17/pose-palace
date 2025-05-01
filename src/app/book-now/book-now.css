@@ -1,20 +1,19 @@
 .selector-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
   gap: 8px;
 }
 
 .selector-button {
   font-size: 16px;
+  font-weight: 500;
   color: black;
   text-align: left;
-  background-color: white;
-  border: 1px solid rgb(230, 230, 230);
-  border-radius: 24px;
-  padding: 14px 24px;
+  background-color: rgb(245, 245, 245);
+  border: none;
+  border-radius: 16px;
+  padding: 16px;
   transition: all 0.3s ease-in-out;
 }
 
