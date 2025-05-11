@@ -1,16 +1,28 @@
 import Link from 'next/link'
 import { RightArrow } from './RightArrow'
+import { MOBILE_BREAKPOINT, SPACING } from '../constants'
 
 export const BookNow = () => {
   return (
-    <div style={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}>
+    <div
+      style={{
+        position: 'fixed',
+        left: SPACING,
+        right: SPACING,
+        bottom: SPACING,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
       <Link
         style={{
-          width: '100%',
+          flex: 1,
+          maxWidth: MOBILE_BREAKPOINT,
           backgroundColor: 'black',
           color: 'white',
-          padding: '15px 20px',
-          borderRadius: '20px 20px 0px 0px',
+          padding: '16px 20px',
+          borderRadius: '20px',
           fontSize: '17px',
           fontWeight: 400,
           display: 'flex',

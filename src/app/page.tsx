@@ -88,18 +88,6 @@ const App = () => (
         </p>
       </Card>
       <Card className="bg-light-gray">
-        <Image
-          src="/logo-long.png"
-          alt="Pose Palace Full Logo"
-          width={100}
-          height={100}
-          unoptimized
-          style={{
-            objectFit: 'contain',
-            width: 'auto',
-            height: '82px',
-          }}
-        />
         <p>
           We are a proud Vietnamese-American-owned self-portrait photo studio conveniently located
           in Koreatown, Garden Grove. Our mission is to provide professional photos at affordable
