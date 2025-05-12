@@ -11,6 +11,8 @@ type PageProps = Pick<
 
 export const Page: FC<PropsWithChildren<PageProps>> = ({
   children,
+  gap,
+  padding,
   alignItems,
   justifyContent,
   height,
@@ -21,6 +23,8 @@ export const Page: FC<PropsWithChildren<PageProps>> = ({
       className="Page"
       data-testid="Page"
       style={{
+        gap,
+        padding,
         alignItems,
         justifyContent,
         flexDirection: 'column',

@@ -20,7 +20,7 @@ const BookNow = () => {
   }, [duration, room, router])
 
   return (
-    <Page>
+    <Page padding="16px 0px" gap="12px">
       <p>Select {selector}:</p>
       <div className="selector-container">
         {/* Duration Selector */}

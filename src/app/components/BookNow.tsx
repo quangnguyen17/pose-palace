@@ -21,7 +21,7 @@ export const BookNow = () => {
           maxWidth: MOBILE_BREAKPOINT,
           backgroundColor: 'black',
           color: 'white',
-          padding: '16px 20px',
+          padding: '14px 20px',
           borderRadius: '20px',
           fontSize: '17px',
           fontWeight: 400,
