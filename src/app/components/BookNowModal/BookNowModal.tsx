@@ -2,11 +2,9 @@
 
 import { Fragment, useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { Page } from '../components/Page'
-import './book-now.css'
-import { SPACING } from '../constants'
+import './BookNowModal.css'
 
-const BookNow = () => {
+export const BookNowModal = () => {
   const router = useRouter()
   const [selector, setSelector] = useState<'duration' | 'room'>('duration')
   const [duration, setDuration] = useState<number | null>(null)
@@ -21,8 +19,8 @@ const BookNow = () => {
   }, [duration, room, router])
 
   return (
-    <Page padding={SPACING} gap={SPACING}>
-      <p>Select {selector}:</p>
+    <div className="BookNowModal">
+      <h3>Select {selector}:</h3>
       <div className="selector-container">
         {/* Duration Selector */}
         {selector === 'duration' && (
@@ -66,8 +64,6 @@ const BookNow = () => {
           </Fragment>
         )}
       </div>
-    </Page>
+    </div>
   )
 }
-
-export default BookNow

@@ -17,7 +17,8 @@
     "query-string": "^9.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-router-dom": "^6.24.1"
+    "react-router-dom": "^6.24.1",
+    "react-spring-bottom-sheet": "^3.4.1"
   },
   "devDependencies": {
     "@types/node": "^20",
