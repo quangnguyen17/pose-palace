@@ -28,7 +28,6 @@ export const BookNow = () => {
           padding: '16px 28px',
           borderRadius: '32px',
           fontSize: '1rem',
-          fontWeight: 300,
           cursor: 'pointer',
           display: 'flex',
           flexDirection: 'row',
