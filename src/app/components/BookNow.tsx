@@ -1,16 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import { BottomSheet } from 'react-spring-bottom-sheet'
-import { RightArrow } from './RightArrow'
-import { MOBILE_BREAKPOINT, SPACING } from '../constants'
+import { SPACING } from '../constants'
 import { BookNowModal } from './BookNowModal/BookNowModal'
-import 'react-spring-bottom-sheet/dist/style.css'
 
 export const BookNow = () => {
-  const [open, setOpen] = useState(false)
-  const openModal = () => setOpen(true)
-  const closeModal = () => setOpen(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <div
@@ -26,29 +21,19 @@ export const BookNow = () => {
     >
       <button
         style={{
-          flex: 1,
-          maxWidth: MOBILE_BREAKPOINT - SPACING * 2,
-          backgroundColor: 'black',
-          color: 'white',
           border: 'none',
-          padding: '14px 20px',
-          borderRadius: '20px',
-          fontSize: '17px',
-          fontWeight: 400,
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
+          color: 'white',
+          backgroundColor: 'black',
+          padding: '16px 28px',
+          borderRadius: '32px',
+          fontSize: '1rem',
           cursor: 'pointer',
         }}
-        onClick={openModal}
+        onClick={() => setIsOpen(true)}
       >
-        <span>Book now</span>
-        <RightArrow />
+        Book Now
       </button>
-      <BottomSheet open={open} onDismiss={closeModal}>
-        <BookNowModal />
-      </BottomSheet>
+      <BookNowModal isOpen={isOpen} onDismiss={() => setIsOpen(false)} />
     </div>
   )
 }
