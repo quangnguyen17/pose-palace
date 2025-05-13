@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { SPACING } from '../constants'
 import { BookNowModal } from './BookNowModal/BookNowModal'
+import { Clock } from './Clock'
 
 export const BookNow = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -27,11 +28,18 @@ export const BookNow = () => {
           padding: '16px 28px',
           borderRadius: '32px',
           fontSize: '1rem',
+          fontWeight: 300,
           cursor: 'pointer',
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '10px',
         }}
         onClick={() => setIsOpen(true)}
       >
-        Book Now
+        <Clock />
+        <span>Book Now</span>
       </button>
       <BookNowModal isOpen={isOpen} onDismiss={() => setIsOpen(false)} />
     </div>
