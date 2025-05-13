@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { SPACING } from '../constants'
 
 export const Header: FC = () => {
   return (
@@ -11,7 +12,7 @@ export const Header: FC = () => {
         display: 'flex',
         flexDirection: 'column',
         gap: '16px',
-        paddingBottom: '8px',
+        marginBottom: SPACING / 2,
       }}
     >
       <Image

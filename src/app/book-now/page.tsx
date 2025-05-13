@@ -4,6 +4,7 @@ import { Fragment, useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { Page } from '../components/Page'
 import './book-now.css'
+import { SPACING } from '../constants'
 
 const BookNow = () => {
   const router = useRouter()
@@ -20,7 +21,7 @@ const BookNow = () => {
   }, [duration, room, router])
 
   return (
-    <Page padding="16px 0px" gap="12px">
+    <Page padding={SPACING} gap={SPACING}>
       <p>Select {selector}:</p>
       <div className="selector-container">
         {/* Duration Selector */}

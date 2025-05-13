@@ -18,7 +18,7 @@ export const BookNow = () => {
       <Link
         style={{
           flex: 1,
-          maxWidth: MOBILE_BREAKPOINT,
+          maxWidth: MOBILE_BREAKPOINT - SPACING * 2,
           backgroundColor: 'black',
           color: 'white',
           padding: '14px 20px',
