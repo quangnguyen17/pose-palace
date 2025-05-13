@@ -6,8 +6,8 @@ export const Clock = () => {
       style={{ filter: 'invert(1)' }}
       src="/clock.png"
       alt="/clock.png"
-      width={24}
-      height={24}
+      width={25}
+      height={25}
       unoptimized
     />
   )
