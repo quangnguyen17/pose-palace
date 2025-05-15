@@ -1,9 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { SPACING } from '../constants'
+import { SPACING, SPACING_PX } from '../constants'
 import { BookNowModal } from './BookNowModal/BookNowModal'
-import { Clock } from './Clock'
 
 export const BookNow = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,20 +24,14 @@ export const BookNow = () => {
           border: 'none',
           color: 'white',
           backgroundColor: 'black',
-          padding: '16px 28px 16px 26px',
+          padding: `${SPACING}px ${SPACING * 1.5}px`,
           borderRadius: '32px',
-          fontSize: '17px',
+          fontSize: '1rem',
           cursor: 'pointer',
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          gap: '10px',
         }}
         onClick={() => setIsOpen(true)}
       >
-        <Clock />
-        <span>Book Now</span>
+        Book Now!
       </button>
       <BookNowModal isOpen={isOpen} onDismiss={() => setIsOpen(false)} />
     </div>
