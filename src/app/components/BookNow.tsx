@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { SPACING, SPACING_PX } from '../constants'
+import { SPACING } from '../constants'
 import { BookNowModal } from './BookNowModal/BookNowModal'
 
 export const BookNow = () => {
@@ -31,7 +31,7 @@ export const BookNow = () => {
         }}
         onClick={() => setIsOpen(true)}
       >
-        Book Now!
+        Book Now
       </button>
       <BookNowModal isOpen={isOpen} onDismiss={() => setIsOpen(false)} />
     </div>
