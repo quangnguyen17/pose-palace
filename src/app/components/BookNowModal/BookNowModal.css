@@ -1,6 +1,6 @@
 .BookNowModal {
-  padding: var(--spacing) var(--spacing) calc(var(--spacing) * 2) var(--spacing);
   max-width: var(--mobile-breakpoint);
+  padding: var(--spacing);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -11,14 +11,14 @@
   font-size: 1rem;
 }
 
-.selector-container {
+.Stack {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.selector-button {
+button.Pill {
   font-size: 1rem;
   font-weight: 500;
   color: black;
@@ -30,8 +30,30 @@
   transition: all 0.3s ease-in-out;
 }
 
-.selector-button:hover {
+button.Pill:hover {
   background-color: black;
   color: white;
   cursor: pointer;
+}
+
+div.header > p.subheading {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgb(170, 170, 170);
+}
+
+div.footer {
+  max-width: var(--mobile-breakpoint);
+  padding: 0 var(--spacing);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  transition: all 0.1s ease-in-out;
+}
+
+@media screen and (max-width: 430px) {
+  div.footer {
+    padding: 0;
+  }
 }

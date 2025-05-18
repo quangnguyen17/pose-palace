@@ -11,6 +11,20 @@ type BookNowModalProps = {
   onDismiss: () => void
 }
 
+type Duration = 5 | 15 | 30
+type Room = 'white' | 'color'
+
+const DURATION_DISPLAY_MAP: Record<Duration, string> = {
+  5: '5 Minutes',
+  15: '15 Minutes',
+  30: '30 Minutes',
+}
+
+const ROOM_DISPLAY_MAP: Record<Room, string> = {
+  white: 'Full Body White Room',
+  color: 'Standard Color Room',
+}
+
 export const BookNowModal: FC<BookNowModalProps> = ({ isOpen, onDismiss }) => {
   const router = useRouter()
   const [selector, setSelector] = useState<'duration' | 'room'>('duration')
@@ -25,28 +39,62 @@ export const BookNowModal: FC<BookNowModalProps> = ({ isOpen, onDismiss }) => {
     }
   }, [duration, room, router])
 
+  const handleDismiss = () => {
+    setSelector('duration')
+    setDuration(null)
+    setRoom(null)
+    onDismiss()
+  }
+
+  const DURATION_OPTIONS: Duration[] = [5, 15, 30]
+  const ROOM_OPTIONS: Room[] = ['white', 'color']
+
   return (
-    <BottomSheet open={isOpen} onDismiss={onDismiss}>
+    <BottomSheet
+      header={
+        <div className="header">
+          <p className="subheading">
+            {[
+              'MAKE AN APPOINTMENT',
+              ...(duration && duration !== 0 ? [DURATION_DISPLAY_MAP[duration].toUpperCase()] : []),
+              ...(room && room.length > 0 ? [ROOM_DISPLAY_MAP[room].toUpperCase()] : []),
+            ].join(' - ')}
+          </p>
+        </div>
+      }
+      footer={
+        <div className="footer">
+          <button
+            className="Pill"
+            onClick={handleDismiss}
+            style={{
+              backgroundColor: '#e4e4dd',
+              textAlign: 'center',
+            }}
+          >
+            Dismiss
+          </button>
+        </div>
+      }
+      open={isOpen}
+      onDismiss={handleDismiss}
+    >
       <div className="BookNowModal">
         <p className="text">Select {selector}:</p>
-        <div className="selector-container">
+        <div className="Stack">
           {/* Duration Selector */}
           {selector === 'duration' && (
             <Fragment>
-              {[
-                { title: '5 Minutes', value: 5 },
-                { title: '15 Minutes', value: 15 },
-                { title: '30 Minutes', value: 30 },
-              ].map((item, index) => (
+              {DURATION_OPTIONS.map((value) => (
                 <button
-                  key={index}
-                  className="selector-button"
+                  key={value}
+                  className="Pill"
                   onClick={() => {
-                    setDuration(item.value)
+                    setDuration(value)
                     setSelector('room')
                   }}
                 >
-                  {item.title}
+                  {DURATION_DISPLAY_MAP[value]}
                 </button>
               ))}
             </Fragment>
@@ -54,19 +102,16 @@ export const BookNowModal: FC<BookNowModalProps> = ({ isOpen, onDismiss }) => {
           {/* Room Selector */}
           {selector === 'room' && (
             <Fragment>
-              {[
-                { title: 'Full Body White Room', value: 'white' },
-                { title: 'Standard Color Room', value: 'color' },
-              ].map((item, index) => (
+              {ROOM_OPTIONS.map((value) => (
                 <button
-                  key={index}
-                  className="selector-button"
+                  key={value}
+                  className="Pill"
                   onClick={() => {
-                    setRoom(item.value)
+                    setRoom(value)
                     setSelector('room')
                   }}
                 >
-                  {item.title}
+                  {ROOM_DISPLAY_MAP[value]}
                 </button>
               ))}
             </Fragment>

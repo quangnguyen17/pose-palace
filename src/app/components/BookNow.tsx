@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { SPACING } from '../constants'
+import { SPACING, MOBILE_BREAKPOINT } from '../constants'
 import { BookNowModal } from './BookNowModal/BookNowModal'
 
 export const BookNow = () => {
@@ -21,12 +21,14 @@ export const BookNow = () => {
     >
       <button
         style={{
+          width: `${MOBILE_BREAKPOINT - SPACING - SPACING}px`,
           border: 'none',
           color: 'white',
           backgroundColor: 'black',
           padding: `${SPACING}px ${SPACING * 1.5}px`,
           borderRadius: '32px',
-          fontSize: '1rem',
+          fontSize: '17px',
+          fontWeight: 400,
           cursor: 'pointer',
         }}
         onClick={() => setIsOpen(true)}
