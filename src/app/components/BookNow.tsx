@@ -35,8 +35,7 @@ export const BookNow = () => {
           backgroundColor: 'black',
           padding: `${SPACING}px ${SPACING * 1.5}px`,
           borderRadius: '32px',
-          fontSize: '17px',
-          fontWeight: 400,
+          fontSize: '1rem',
           cursor: 'pointer',
         }}
         onClick={() => setIsOpen(true)}
