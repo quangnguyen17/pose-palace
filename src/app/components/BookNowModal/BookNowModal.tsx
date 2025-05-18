@@ -53,13 +53,15 @@ export const BookNowModal: FC<BookNowModalProps> = ({ isOpen, onDismiss }) => {
     <BottomSheet
       header={
         <div className="header">
-          <p className="subheading">
-            {[
-              'MAKE AN APPOINTMENT',
-              ...(duration && duration !== 0 ? [DURATION_DISPLAY_MAP[duration].toUpperCase()] : []),
-              ...(room && room.length > 0 ? [ROOM_DISPLAY_MAP[room].toUpperCase()] : []),
-            ].join(' - ')}
-          </p>
+          {[
+            'Make an appointment',
+            ...(duration && duration !== 0 ? [DURATION_DISPLAY_MAP[duration]] : []),
+            ...(room && room.length > 0 ? [ROOM_DISPLAY_MAP[room]] : []),
+          ].map((text, index) => (
+            <p key={index} className="subheading">
+              {text.toUpperCase()}
+            </p>
+          ))}
         </div>
       }
       footer={

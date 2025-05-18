@@ -1,11 +1,19 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import { SPACING, MOBILE_BREAKPOINT } from '../constants'
 import { BookNowModal } from './BookNowModal/BookNowModal'
 
 export const BookNow = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
+
+  useEffect(() => {
+    if (pathname === '/book-now') {
+      setIsOpen(true)
+    }
+  }, [])
 
   return (
     <div

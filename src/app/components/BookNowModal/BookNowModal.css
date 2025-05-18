@@ -21,19 +21,23 @@
 button.Pill {
   font-size: 1rem;
   font-weight: 500;
-  color: black;
+  color: rgb(0, 0, 0);
   text-align: left;
   background-color: rgb(244, 244, 244);
   border: none;
   border-radius: 24px;
   padding: 16px 22px;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 button.Pill:hover {
-  background-color: black;
-  color: white;
-  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+div.header {
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 div.header > p.subheading {
