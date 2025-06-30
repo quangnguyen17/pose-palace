@@ -1,20 +1,9 @@
-'use client'
+'use server'
 
-import { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 import { SPACING, MOBILE_BREAKPOINT } from '../constants'
-import { BookNowModal } from './BookNowModal/BookNowModal'
 
 export const BookNow = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const pathname = usePathname()
-
-  useEffect(() => {
-    if (pathname === '/book-now') {
-      setIsOpen(true)
-    }
-  }, [])
-
   return (
     <div
       style={{
@@ -27,7 +16,7 @@ export const BookNow = () => {
         justifyContent: 'center',
       }}
     >
-      <button
+      <Link
         style={{
           width: `${MOBILE_BREAKPOINT - SPACING - SPACING}px`,
           border: 'none',
@@ -38,11 +27,11 @@ export const BookNow = () => {
           fontSize: '1rem',
           cursor: 'pointer',
         }}
-        onClick={() => setIsOpen(true)}
+        href='https://app.squareup.com/appointments/book/fyciorqmm5xzjt/LR292GX4G172B/start'
+        target='_blank'
       >
         Book Now
-      </button>
-      <BookNowModal isOpen={isOpen} onDismiss={() => setIsOpen(false)} />
+      </Link>
     </div>
   )
 }
