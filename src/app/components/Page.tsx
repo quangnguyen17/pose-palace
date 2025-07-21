@@ -7,6 +7,7 @@ type PageProps = Pick<
   'gap' | 'padding' | 'alignItems' | 'justifyContent' | 'height'
 > & {
   style?: CSSProperties | undefined
+  renderFooter?: () => JSX.Element | null
 }
 
 export const Page: FC<PropsWithChildren<PageProps>> = ({
@@ -17,23 +18,38 @@ export const Page: FC<PropsWithChildren<PageProps>> = ({
   justifyContent,
   height,
   style,
+  renderFooter,
 }) => {
   return (
     <div
-      className="Page"
-      data-testid="Page"
+      className="Layout"
       style={{
-        gap,
-        padding,
-        alignItems,
-        justifyContent,
-        flexDirection: 'column',
         display: 'flex',
-        height,
-        ...style,
+        flexDirection: 'column',
+        alignItems: 'stretch',
+        justifyContent: 'stretch',
+        width: '100%',
+        height: '100%',
       }}
     >
-      {children}
+      <div
+        className="Page"
+        style={{
+          overflow: 'auto',
+          flex: 1,
+          gap,
+          padding,
+          alignItems,
+          justifyContent,
+          flexDirection: 'column',
+          display: 'flex',
+          height,
+          ...style,
+        }}
+      >
+        {children}
+      </div>
+      {renderFooter?.()}
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import { CSSProperties, FC, PropsWithChildren } from 'react'
+import Link from 'next/link'
 import './Card.css'
 
 export const Card: FC<

@@ -3,9 +3,19 @@ import { Header } from './Header'
 import { Card } from './Card'
 import { BookNow } from './BookNow'
 import { SPACING } from '../constants'
+import { ViewCatalog } from './ViewCatalog'
 
 export const Home = () => (
-  <Page gap={SPACING / 2} padding={SPACING}>
+  <Page
+    gap={SPACING / 2}
+    padding={SPACING}
+    renderFooter={() => (
+      <>
+        <ViewCatalog />
+        <BookNow />
+      </>
+    )}
+  >
     <Header />
     <Card className="bg-alice-blue">
       <p>
@@ -97,6 +107,5 @@ export const Home = () => (
       </p>
       <p>© 2024 Crystal Lighthouse LLC</p>
     </Card>
-    <BookNow />
   </Page>
 )
