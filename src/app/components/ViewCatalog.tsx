@@ -7,7 +7,7 @@ export const ViewCatalog = () => {
         width: '100%',
         border: 'none',
         color: 'black',
-        backgroundColor: '#86bbd8',
+        backgroundColor: '#bc9ec1',
         padding: '1rem',
         fontSize: '1rem',
         fontWeight: 500,
