@@ -77,3 +77,10 @@ p.price-label {
   flex-direction: column;
   gap: 4px;
 }
+
+div.divider {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(230, 230, 230);
+  margin: 12px 0px;
+}
