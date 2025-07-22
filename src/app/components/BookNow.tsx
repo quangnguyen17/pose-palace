@@ -8,7 +8,7 @@ export const BookNow = () => {
         border: 'none',
         color: 'white',
         backgroundColor: 'black',
-        padding: '1rem',
+        padding: '14px',
         fontSize: '1rem',
         fontWeight: 500,
         cursor: 'pointer',

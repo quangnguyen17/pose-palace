@@ -8,7 +8,7 @@ export const ViewCatalog = () => {
         border: 'none',
         color: 'black',
         backgroundColor: '#bc9ec1',
-        padding: '1rem',
+        padding: '14px',
         fontSize: '1rem',
         fontWeight: 500,
         cursor: 'pointer',

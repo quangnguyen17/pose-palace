@@ -33,21 +33,27 @@ export const Page: FC<PropsWithChildren<PageProps>> = ({
       }}
     >
       <div
-        className="Page"
+        className="Layout.Body"
         style={{
           overflow: 'auto',
           flex: 1,
-          gap,
-          padding,
-          alignItems,
-          justifyContent,
-          flexDirection: 'column',
-          display: 'flex',
-          height,
-          ...style,
         }}
       >
-        {children}
+        <div
+          className="Page"
+          style={{
+            gap,
+            padding,
+            alignItems,
+            justifyContent,
+            flexDirection: 'column',
+            display: 'flex',
+            height,
+            ...style,
+          }}
+        >
+          {children}
+        </div>
       </div>
       {renderFooter?.()}
     </div>
