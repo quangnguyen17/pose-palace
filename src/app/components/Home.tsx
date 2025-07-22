@@ -1,23 +1,15 @@
 import { Page } from './Page'
 import { Header } from './Header'
 import { Card } from './Card'
-import { BookNow } from './BookNow'
 import { SPACING } from '../constants'
-import { ViewCatalog } from './ViewCatalog'
+import { BookNowPill, ViewCatalogPill } from './Pills'
 
 export const Home = () => (
-  <Page
-    gap={SPACING / 2}
-    padding={SPACING}
-    renderFooter={() => (
-      <>
-        <ViewCatalog />
-        <BookNow />
-      </>
-    )}
-  >
+  <Page gap={SPACING / 2} padding={SPACING}>
     <Header />
-    <Card className="bg-alice-blue">
+    <BookNowPill />
+    <ViewCatalogPill />
+    <Card style={{ background: '#f2f5de' }}>
       <p>
         <b>Unlimited Photos</b> – Capture every moment effortlessly
       </p>
@@ -31,7 +23,7 @@ export const Home = () => (
         <b>Includes 2 People</b> – Just $5 per extra person
       </p>
     </Card>
-    <Card className="bg-azure plan-card">
+    <Card style={{ background: '#dee7e7' }}>
       <p className="price-label">$27</p>
       <p>5-minute session</p>
       <p>
@@ -41,7 +33,7 @@ export const Home = () => (
         <b>2 x 2</b> passport photos x 2
       </p>
     </Card>
-    <Card className="bg-ghost-white">
+    <Card style={{ background: '#d9e5d6' }}>
       <p className="price-label">$67</p>
       <p>15-minute session</p>
       <p>
@@ -51,7 +43,7 @@ export const Home = () => (
         <b>2 x 2</b> passport photos x 2
       </p>
     </Card>
-    <Card className="bg-lavender">
+    <Card style={{ background: '#d0e3c4' }}>
       <p className="price-label">$100</p>
       <p>30-minute session</p>
       <p>
@@ -61,7 +53,7 @@ export const Home = () => (
         <b>2 x 2</b> passport photos x 2
       </p>
     </Card>
-    <Card className="bg-light-gray">
+    <Card style={{ background: '#dee7e7' }}>
       <p className="price-label">10% OFF</p>
       <p>{`🎂 Birthday Promotion`}</p>
       <p>{`🩷 Wedding / Couple Anniversary Promotion`}</p>
@@ -70,7 +62,7 @@ export const Home = () => (
       <p>{`🪖 Military Personnel`}</p>
       <p>{`🏥 Healthcare Workers`}</p>
     </Card>
-    <Card className="bg-light-gray">
+    <Card style={{ background: '#dee7e7' }}>
       <h3>How it works</h3>
       <p>
         Our studio consists of two rooms: one features a cyclorama white wall, ideal for wide,
@@ -81,20 +73,20 @@ export const Home = () => (
         booked session.
       </p>
     </Card>
-    <Card className="bg-light-gray">
+    <Card style={{ background: '#dee7e7' }}>
       <h3>Our equipments</h3>
       <p>1 Sony Full-Frame camera</p>
       <p>1 32-inch monitor displaying the camera's live view/feed</p>
       <p>1 27-inch monitor displaying the last photo taken</p>
       <p>1-2 photography strobe lights depending on the room.</p>
     </Card>
-    <Card className="bg-light-gray">
+    <Card style={{ background: '#dee7e7' }}>
       <h3>Props available for use:</h3>
       <p>
         Benches, cubes, chairs, stools, seasonal and party props like glasses, headbands, hats, etc.
       </p>
     </Card>
-    <Card className="bg-light-gray">
+    <Card style={{ background: '#dee7e7' }}>
       <p>
         We are a proud Vietnamese-American-owned self-portrait photo studio conveniently located in
         Koreatown, Garden Grove. Our mission is to provide professional photos at affordable prices.

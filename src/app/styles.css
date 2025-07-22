@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
 
 :root {
   --mobile-breakpoint: 430px;
@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', serif;
+  font-family: 'TikTok Sans', sans-serif;
 }
 
 html,
@@ -48,26 +48,6 @@ img.social-media-icon {
   width: 30px;
   height: 30px;
   object-fit: contain;
-}
-
-.bg-alice-blue {
-  background-color: #dcedff;
-}
-
-.bg-azure {
-  background-color: #e4e4dd;
-}
-
-.bg-ghost-white {
-  background-color: #d1e9e2;
-}
-
-.bg-lavender {
-  background-color: #e4e2f4;
-}
-
-.bg-light-gray {
-  background-color: rgb(241, 241, 241);
 }
 
 a,
