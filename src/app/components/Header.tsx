@@ -52,8 +52,8 @@ export const Header: FC = () => {
         <Link href="tel:714-467-7036" style={{ color: 'black' }}>
           (714) 467-7036
         </Link>
-        <Link href="mailto:posepalacestudio@gmail.com" style={{ color: 'black' }}>
-          posepalacestudio@gmail.com
+        <Link href="mailto:hainguyen.whiteroom@posepalacestudio.com" style={{ color: 'black' }}>
+          hainguyen.whiteroom@posepalacestudio.com
         </Link>
       </p>
       <div

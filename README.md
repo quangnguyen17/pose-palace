@@ -1,2 +1,1 @@
-https://www.posepalace.com/
-test
+https://www.posepalacestudio.com
