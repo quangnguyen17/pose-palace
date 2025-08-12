@@ -1,12 +1,13 @@
 import { Page } from './Page'
 import { Header } from './Header'
 import { Card } from './Card'
-import { SPACING } from '../constants'
 import { BookNowPill, ViewCatalogPill } from './Pills'
+import { Hero } from './Hero'
 
 export const Home = () => (
-  <Page gap={SPACING / 2} padding={SPACING}>
+  <Page gap="0.8rem" padding="1rem">
     <Header />
+    <Hero />
     <BookNowPill />
     <ViewCatalogPill />
     <Card style={{ background: '#f2f5de' }}>
@@ -63,7 +64,7 @@ export const Home = () => (
       <p>{`🏥 Healthcare Workers`}</p>
     </Card>
     <div className="divider"></div>
-    <h4>How It Works</h4>
+    <h3>How It Works</h3>
     <p>
       Our studio consists of two rooms: one features a cyclorama white wall, ideal for wide,
       full-body shots, while the other offers multiple colored backdrops, perfect for more personal
@@ -71,7 +72,7 @@ export const Home = () => (
       you with a remote clicker to trigger the camera shutter, assist you in taking your first shot
       to familiarize you with the equipment, and finally start the timer for your booked session.
     </p>
-    <h4>Our Equipment:</h4>
+    <h3>Our Equipment:</h3>
     <p>
       1 Sony full-frame camera
       <br />1 32-inch monitor displaying the camera's live view/feed
@@ -79,12 +80,12 @@ export const Home = () => (
       <br />
       1-2 photography strobe lights, depending on the room
     </p>
-    <h4>Props Available for Use:</h4>
+    <h3>Props Available for Use:</h3>
     <p>
       Benches, cubes, chairs, stools, and seasonal or party props such as glasses, headbands, hats,
       etc.
     </p>
-    <h4>About Us</h4>
+    <h3>About Us</h3>
     <p>
       We are a proud Vietnamese-American-owned self-portrait photo studio conveniently located in
       Koreatown, Garden Grove. Our mission is to provide professional photos at affordable prices.
