@@ -20,7 +20,7 @@ A modern, self-service photo studio website built with Next.js 14 and TypeScript
   - Optimized robots.txt
   - Rich metadata implementation
 
-## 🚀 Live Demo
+## 🚀 Live Website
 
 Visit our live website: [Pose Palace Studio](https://www.posepalacestudio.com)
 
