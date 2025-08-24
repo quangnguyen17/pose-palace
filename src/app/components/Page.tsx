@@ -1,5 +1,5 @@
 import { CSSProperties, FC, PropsWithChildren } from 'react'
-import '../config/firebase'
+import '../firebase'
 import './Page.css'
 
 type PageProps = Pick<
