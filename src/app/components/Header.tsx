@@ -18,8 +18,8 @@ export const Header: FC = () => {
       <Image
         src="/logo-long.png"
         alt="Pose Palace Logo Long"
-        width={100}
-        height={100}
+        width={0}
+        height={0}
         unoptimized
         style={{
           objectFit: 'contain',

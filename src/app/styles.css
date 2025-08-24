@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
 :root {
   --mobile-breakpoint: 430px;
   --spacing: 16px;
@@ -10,7 +8,17 @@
   padding: 0;
   box-sizing: border-box;
   font-optical-sizing: auto;
-  font-family: 'Roboto', sans-serif;
+  font-family:
+    var(--font-roboto),
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
 }
 
 html,
