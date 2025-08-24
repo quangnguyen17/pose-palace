@@ -63,8 +63,7 @@ export const Home = () => (
       <p>{`🪖 Military Personnel`}</p>
       <p>{`🏥 Healthcare Workers`}</p>
     </Card>
-    <div className="divider"></div>
-    <h3>How It Works</h3>
+    <h3 className="headline">How It Works</h3>
     <p>
       Our studio consists of two rooms: one features a cyclorama white wall, ideal for wide,
       full-body shots, while the other offers multiple colored backdrops, perfect for more personal
@@ -72,7 +71,7 @@ export const Home = () => (
       you with a remote clicker to trigger the camera shutter, assist you in taking your first shot
       to familiarize you with the equipment, and finally start the timer for your booked session.
     </p>
-    <h3>Our Equipment:</h3>
+    <h3 className="headline">Our Equipment:</h3>
     <p>
       1 Sony full-frame camera
       <br />1 32-inch monitor displaying the camera's live view/feed
@@ -80,12 +79,12 @@ export const Home = () => (
       <br />
       1-2 photography strobe lights, depending on the room
     </p>
-    <h3>Props Available for Use:</h3>
+    <h3 className="headline">Props Available for Use:</h3>
     <p>
       Benches, cubes, chairs, stools, and seasonal or party props such as glasses, headbands, hats,
       etc.
     </p>
-    <h3>About Us</h3>
+    <h3 className="headline">About Us</h3>
     <p>
       We are a proud Vietnamese-American-owned self-portrait photo studio conveniently located in
       Koreatown, Garden Grove. Our mission is to provide professional photos at affordable prices.
