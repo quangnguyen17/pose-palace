@@ -91,3 +91,17 @@ h3.headline {
   margin-top: 4px;
   color: rgb(110, 120, 130);
 }
+
+.Pill {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  font-weight: 400;
+}
+
+.Pill:hover {
+  transform: scale(1.03);
+  font-weight: 500;
+}
