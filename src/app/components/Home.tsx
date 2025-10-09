@@ -1,15 +1,26 @@
+import Image from 'next/image'
 import { Page } from './Page'
-import { Header } from './Header'
+import { BusinessDetails } from './BusinessDetails'
 import { Card } from './Card'
 import { BookNowPill, ViewCatalogPill } from './Pills'
 import { Hero } from './Hero'
 
 export const Home = () => (
-  <Page gap="0.8rem" padding="1rem">
-    <Header />
+  <Page gap="1rem" padding="1rem">
+    <Image
+      src="/logo-short.png"
+      alt="Pose Palace Logo Short"
+      width={0}
+      height={0}
+      unoptimized
+      style={{
+        objectFit: 'contain',
+        width: 'auto',
+        height: '60px',
+        margin: '0px auto 0px 0px',
+      }}
+    />
     <Hero />
-    <BookNowPill />
-    <ViewCatalogPill />
     <Card style={{ background: '#f2f5de' }}>
       <p>
         <b>Unlimited Photos</b> – Capture every moment effortlessly
@@ -23,6 +34,7 @@ export const Home = () => (
       <p>
         <b>Includes 2 People</b> – Just $5 per extra person
       </p>
+      <ViewCatalogPill />
     </Card>
     <Card style={{ background: '#dee7e7' }}>
       <p className="price-label">$27</p>
@@ -33,6 +45,7 @@ export const Home = () => (
       <p>
         <b>2 x 2</b> passport photos x 2
       </p>
+      <BookNowPill />
     </Card>
     <Card style={{ background: '#d9e5d6' }}>
       <p className="price-label">$67</p>
@@ -43,6 +56,7 @@ export const Home = () => (
       <p>
         <b>2 x 2</b> passport photos x 2
       </p>
+      <BookNowPill />
     </Card>
     <Card style={{ background: '#d0e3c4' }}>
       <p className="price-label">$100</p>
@@ -53,6 +67,7 @@ export const Home = () => (
       <p>
         <b>2 x 2</b> passport photos x 2
       </p>
+      <BookNowPill />
     </Card>
     <Card style={{ background: '#dee7e7' }}>
       <p className="price-label">10% OFF</p>
@@ -95,6 +110,7 @@ export const Home = () => (
       memorable moments is invaluable. What better way to preserve these moments than by capturing
       them yourself, with your own authentic expressions and feelings?
     </p>
+    <BusinessDetails />
     <p>© 2024 Crystal Lighthouse LLC</p>
   </Page>
 )

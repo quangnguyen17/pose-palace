@@ -1,11 +1,5 @@
 export const Hero = () => (
-  <div
-    style={{
-      textAlign: 'center',
-      marginTop: '0.5rem',
-      marginBottom: '0.5rem',
-    }}
-  >
+  <div>
     <h2
       style={{
         marginBottom: '0.5rem',

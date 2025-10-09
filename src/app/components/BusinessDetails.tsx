@@ -1,69 +1,25 @@
 import { FC } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { SPACING } from '../constants'
+import { SPACING, SPACING_PX } from '../constants'
 
-export const Header: FC = () => {
+export const BusinessDetails: FC = () => {
   return (
     <div
       style={{
         width: '100%',
-        textAlign: 'center',
         display: 'flex',
+        alignItems: 'flex-start',
         flexDirection: 'column',
         gap: '16px',
-        marginBottom: SPACING / 2,
       }}
     >
-      <Image
-        src="/logo-long.png"
-        alt="Pose Palace Logo Long"
-        width={0}
-        height={0}
-        unoptimized
-        style={{
-          objectFit: 'contain',
-          width: 'auto',
-          height: '100px',
-          margin: '0px auto',
-        }}
-      />
-      <p>
-        <Link
-          href="http://maps.google.com/maps?q=9618+Garden+Grove+Blvd%2C+Garden+Grove%2C+CA+92844"
-          target="_blank"
-          style={{ color: 'black' }}
-        >
-          9618 Garden Grove Blvd # 106
-          <br />
-          Garden Grove, CA 92844
-        </Link>
-        <span>
-          <b>Open</b> 9:00 AM - 9:00 PM
-        </span>
-        <br />
-        <span>
-          <b>Appointment</b> 9:00 AM - 9:00 PM
-        </span>
-        <br />
-        <span>
-          <b>Walk-in</b> 11:30 AM - 7:30 PM
-        </span>
-        <Link href="tel:714-467-7036" style={{ color: 'black' }}>
-          (714) 467-7036
-        </Link>
-        <Link href="mailto:hainguyen.whiteroom@posepalacestudio.com" style={{ color: 'black' }}>
-          hainguyen.whiteroom@posepalacestudio.com
-        </Link>
-      </p>
       <div
         style={{
           width: '100%',
           display: 'flex',
           flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          gap: '12px',
+          gap: SPACING / 2,
         }}
       >
         <Link
@@ -143,6 +99,37 @@ export const Header: FC = () => {
           />
         </Link>
       </div>
+      <p>
+        <Link
+          href="http://maps.google.com/maps?q=9618+Garden+Grove+Blvd%2C+Garden+Grove%2C+CA+92844"
+          target="_blank"
+          style={{ color: 'black', textAlign: 'left' }}
+        >
+          9618 Garden Grove Blvd # 106
+          <br />
+          Garden Grove, CA 92844
+        </Link>
+        <span>
+          <b>Open</b> 9:00 AM - 9:00 PM
+        </span>
+        <br />
+        <span>
+          <b>Appointment</b> 9:00 AM - 9:00 PM
+        </span>
+        <br />
+        <span>
+          <b>Walk-in</b> 11:30 AM - 7:30 PM
+        </span>
+        <Link href="tel:714-467-7036" style={{ color: 'black', textAlign: 'left' }}>
+          (714) 467-7036
+        </Link>
+        <Link
+          href="mailto:hainguyen.whiteroom@posepalacestudio.com"
+          style={{ color: 'black', textAlign: 'left' }}
+        >
+          hainguyen.whiteroom@posepalacestudio.com
+        </Link>
+      </p>
     </div>
   )
 }

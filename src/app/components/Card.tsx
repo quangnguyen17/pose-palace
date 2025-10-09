@@ -9,7 +9,11 @@ export const Card: FC<
   }>
 > = ({ children, className, style, ...props }) => {
   return (
-    <div className={`card ${className}`} style={style} {...props}>
+    <div
+      className={[`card`, className].filter((cName) => !!cName).join(' ')}
+      style={style}
+      {...props}
+    >
       {children}
     </div>
   )
