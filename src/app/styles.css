@@ -87,10 +87,29 @@ p.price-label {
   gap: 4px;
 }
 
-h3.headline {
-  font-size: 19px;
-  margin-top: 4px;
-  color: rgb(110, 120, 130);
+.Footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.LinkButton {
+  width: 100%;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.75);
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  padding: 12px 18px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease-in-out;
+}
+
+.LinkButton:hover {
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .Pill {
@@ -103,7 +122,7 @@ h3.headline {
   color: rgb(0, 0, 0);
   border: 2px solid rgb(0, 0, 0);
   border-radius: 18px;
-  padding: 12px;
+  padding: 10px;
   margin-top: 14px;
   text-align: center;
   transition: all 0.2s ease-in-out;
@@ -112,4 +131,9 @@ h3.headline {
 .Pill:hover {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 6px;
 }

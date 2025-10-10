@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Page } from './Page'
-import { BusinessDetails } from './BusinessDetails'
+import { Footer } from './Footer'
 import { Card } from './Card'
 import { BookNowPill, ViewCatalogPill } from './Pills'
 import { Hero } from './Hero'
@@ -21,7 +21,7 @@ export const Home = () => (
       }}
     />
     <Hero />
-    <Card style={{ background: '#f2f5de' }}>
+    <Card background="#f2f5de">
       <p>
         <b>Unlimited Photos</b> – Capture every moment effortlessly
       </p>
@@ -36,7 +36,7 @@ export const Home = () => (
       </p>
       <ViewCatalogPill />
     </Card>
-    <Card style={{ background: '#dee7e7' }}>
+    <Card background="#dee7e7">
       <p className="price-label">$27</p>
       <p>5-minute session</p>
       <p>
@@ -47,7 +47,7 @@ export const Home = () => (
       </p>
       <BookNowPill />
     </Card>
-    <Card style={{ background: '#d9e5d6' }}>
+    <Card background="#d9e5d6">
       <p className="price-label">$67</p>
       <p>15-minute session</p>
       <p>
@@ -58,7 +58,7 @@ export const Home = () => (
       </p>
       <BookNowPill />
     </Card>
-    <Card style={{ background: '#d0e3c4' }}>
+    <Card background="#d0e3c4">
       <p className="price-label">$100</p>
       <p>30-minute session</p>
       <p>
@@ -69,7 +69,7 @@ export const Home = () => (
       </p>
       <BookNowPill />
     </Card>
-    <Card style={{ background: '#dee7e7' }}>
+    <Card background="#dee7e7">
       <p className="price-label">10% OFF</p>
       <p>{`🎂 Birthday Promotion`}</p>
       <p>{`🩷 Wedding / Couple Anniversary Promotion`}</p>
@@ -78,39 +78,49 @@ export const Home = () => (
       <p>{`🪖 Military Personnel`}</p>
       <p>{`🏥 Healthcare Workers`}</p>
     </Card>
-    <h3 className="headline">How It Works</h3>
-    <p>
-      Our studio consists of two rooms: one features a cyclorama white wall, ideal for wide,
-      full-body shots, while the other offers multiple colored backdrops, perfect for more personal
-      waist-up or headshot portraits. An on-site attendant will guide you into either room, provide
-      you with a remote clicker to trigger the camera shutter, assist you in taking your first shot
-      to familiarize you with the equipment, and finally start the timer for your booked session.
-    </p>
-    <h3 className="headline">Our Equipment:</h3>
-    <p>
-      1 Sony full-frame camera
-      <br />1 32-inch monitor displaying the camera's live view/feed
-      <br />1 27-inch monitor displaying the last photo taken
-      <br />
-      1-2 photography strobe lights, depending on the room
-    </p>
-    <h3 className="headline">Props Available for Use:</h3>
-    <p>
-      Benches, cubes, chairs, stools, and seasonal or party props such as glasses, headbands, hats,
-      etc.
-    </p>
-    <h3 className="headline">About Us</h3>
-    <p>
-      We are a proud Vietnamese-American-owned self-portrait photo studio conveniently located in
-      Koreatown, Garden Grove. Our mission is to provide professional photos at affordable prices.
-      You might wonder what a self-portrait studio is—essentially, it's a photography studio where
-      customers take photos of themselves rather than being photographed by a professional. Equipped
-      with a 32-inch monitor displaying the camera's live feed, you can see yourself exactly as you
-      appear in the camera, much like looking into a mirror. We firmly believe that capturing
-      memorable moments is invaluable. What better way to preserve these moments than by capturing
-      them yourself, with your own authentic expressions and feelings?
-    </p>
-    <BusinessDetails />
-    <p>© 2024 Crystal Lighthouse LLC</p>
+    <Card>
+      <h4>How It Works</h4>
+      <p>
+        Our studio consists of two rooms: one features a cyclorama white wall, ideal for wide,
+        full-body shots, while the other offers multiple colored backdrops, perfect for more
+        personal waist-up or headshot portraits. An on-site attendant will guide you into either
+        room, provide you with a remote clicker to trigger the camera shutter, assist you in taking
+        your first shot to familiarize you with the equipment, and finally start the timer for your
+        booked session.
+      </p>
+    </Card>
+    <Card>
+      <h4>Our Equipments</h4>
+      <p>
+        1 Sony full-frame camera
+        <br />1 32-inch monitor displaying the camera's live view/feed
+        <br />1 27-inch monitor displaying the last photo taken
+        <br />
+        1-2 photography strobe lights, depending on the room
+      </p>
+    </Card>
+    <Card>
+      <h4>Props Available for Use</h4>
+      <p>
+        Benches, cubes, chairs, stools, and seasonal or party props such as glasses, headbands,
+        hats, etc.
+      </p>
+    </Card>
+    <Card>
+      <h4>About Us</h4>
+      <p>
+        We are a proud Vietnamese-American-owned self-portrait photo studio conveniently located in
+        Koreatown, Garden Grove. Our mission is to provide professional photos at affordable prices.
+        You might wonder what a self-portrait studio is—essentially, it's a photography studio where
+        customers take photos of themselves rather than being photographed by a professional.
+        Equipped with a 32-inch monitor displaying the camera's live feed, you can see yourself
+        exactly as you appear in the camera, much like looking into a mirror. We firmly believe that
+        capturing memorable moments is invaluable. What better way to preserve these moments than by
+        capturing them yourself, with your own authentic expressions and feelings?
+      </p>
+    </Card>
+    <Card>
+      <Footer />
+    </Card>
   </Page>
 )

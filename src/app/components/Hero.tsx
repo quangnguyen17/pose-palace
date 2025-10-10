@@ -2,7 +2,7 @@ export const Hero = () => (
   <div>
     <h2
       style={{
-        marginBottom: '0.5rem',
+        marginBottom: '0.4rem',
         background: 'linear-gradient(135deg, #FF6B6B, #4ECDC4)',
         backgroundClip: 'text',
         WebkitBackgroundClip: 'text',
