@@ -9,3 +9,15 @@ div.card {
   padding: 20px;
   border-radius: 30px;
 }
+
+div.card > h1.title {
+  display: inline;
+  font-size: 62px;
+  line-height: 72px;
+  font-weight: 900;
+}
+
+div.card > h4.headline {
+  font-size: 17px;
+  font-weight: 600;
+}

@@ -2,7 +2,6 @@ import Image from 'next/image'
 import { Page } from './Page'
 import { Footer } from './Footer'
 import { Card } from './Card'
-import { BookNowPill, ViewCatalogPill } from './Pills'
 import { Hero } from './Hero'
 
 export const Home = () => (
@@ -21,7 +20,11 @@ export const Home = () => (
       }}
     />
     <Hero />
-    <Card background="#f2f5de">
+    <Card
+      background="#f2f5de"
+      linkUrl="https://docs.google.com/presentation/d/e/2PACX-1vTL91hO5l_EXIvQtarOilrB6LKNLhBeffkMgG4RA7AF5xPpveRUiclTQ57AZ4h9LEiRzMcwDutdtbKu/pub?start=false&loop=false&delayms=3000&slide=id.p"
+      linkText="View Catalog"
+    >
       <p>
         <b>Unlimited Photos</b> – Capture every moment effortlessly
       </p>
@@ -34,10 +37,41 @@ export const Home = () => (
       <p>
         <b>Includes 2 People</b> – Just $5 per extra person
       </p>
-      <ViewCatalogPill />
     </Card>
-    <Card background="#dee7e7">
-      <p className="price-label">$27</p>
+    <Card
+      background="#e1e2ef"
+      headline="FLEX sessions"
+      linkUrl="https://koalendar.com/u/whitecyclorama?fbclid=PAZXh0bgNhZW0CMTEAAafiuxEs7vg4tuuSe8jvIlEOJE_x8GV7esXx4AwAt1sOs9o24BA0s26gJ0b-Ww_aem_T7d6JpghIZLMrmdD96Xh2A"
+      linkText="Reserve your spot today!"
+    >
+      <p>
+        <b>$50</b> – 15-minute session
+      </p>
+      <p>
+        <b>$75</b> – 30-minute session
+      </p>
+      <p>Full body white room</p>
+    </Card>
+    <Card
+      background="#d1e5f9ff"
+      headline="FLEX sessions"
+      linkUrl="https://koalendar.com/u/standardcolorroom?fbclid=PAZXh0bgNhZW0CMTEAAaem_7uc9i3Z29sGWqY7OZoY37oS1g3JmvoxkxdFk7rdfpr8nYQqR7znoYvXBw_aem_aquGQFX9zi2greq93Uj89g"
+      linkText="Reserve your spot today!"
+    >
+      <p>
+        <b>$50</b> – 15-minute session
+      </p>
+      <p>
+        <b>$75</b> – 30-minute session
+      </p>
+      <p>Standard color room</p>
+    </Card>
+    <Card
+      background="#dee7e7"
+      title="$27"
+      linkUrl="https://app.squareup.com/appointments/book/fyciorqmm5xzjt/LR292GX4G172B/start"
+      linkText="Book Now"
+    >
       <p>5-minute session</p>
       <p>
         <b>4 x 6</b> photo prints x 1
@@ -45,10 +79,13 @@ export const Home = () => (
       <p>
         <b>2 x 2</b> passport photos x 2
       </p>
-      <BookNowPill />
     </Card>
-    <Card background="#d9e5d6">
-      <p className="price-label">$67</p>
+    <Card
+      background="#d9e5d6"
+      title="$67"
+      linkUrl="https://app.squareup.com/appointments/book/fyciorqmm5xzjt/LR292GX4G172B/start"
+      linkText="Book Now"
+    >
       <p>15-minute session</p>
       <p>
         <b>4 x 6</b> photo prints x 3
@@ -56,10 +93,13 @@ export const Home = () => (
       <p>
         <b>2 x 2</b> passport photos x 2
       </p>
-      <BookNowPill />
     </Card>
-    <Card background="#d0e3c4">
-      <p className="price-label">$100</p>
+    <Card
+      background="#d0e3c4"
+      title="$100"
+      linkUrl="https://app.squareup.com/appointments/book/fyciorqmm5xzjt/LR292GX4G172B/start"
+      linkText="Book Now"
+    >
       <p>30-minute session</p>
       <p>
         <b>4 x 6</b> photo prints x 6
@@ -67,10 +107,8 @@ export const Home = () => (
       <p>
         <b>2 x 2</b> passport photos x 2
       </p>
-      <BookNowPill />
     </Card>
-    <Card background="#dee7e7">
-      <p className="price-label">10% OFF</p>
+    <Card background="#dee7e7" title="10% OFF">
       <p>{`🎂 Birthday Promotion`}</p>
       <p>{`🩷 Wedding / Couple Anniversary Promotion`}</p>
       <p>{`🎓 Graduation Promotion`}</p>
@@ -78,8 +116,7 @@ export const Home = () => (
       <p>{`🪖 Military Personnel`}</p>
       <p>{`🏥 Healthcare Workers`}</p>
     </Card>
-    <Card>
-      <h4>How It Works</h4>
+    <Card headline="How It Works">
       <p>
         Our studio consists of two rooms: one features a cyclorama white wall, ideal for wide,
         full-body shots, while the other offers multiple colored backdrops, perfect for more
@@ -89,25 +126,19 @@ export const Home = () => (
         booked session.
       </p>
     </Card>
-    <Card>
-      <h4>Our Equipments</h4>
-      <p>
-        1 Sony full-frame camera
-        <br />1 32-inch monitor displaying the camera's live view/feed
-        <br />1 27-inch monitor displaying the last photo taken
-        <br />
-        1-2 photography strobe lights, depending on the room
-      </p>
+    <Card headline="Our Equipments">
+      <p>A Sony full-frame camera</p>
+      <p>32-inch monitor displaying the camera's live view/feed</p>
+      <p>27-inch monitor displaying the last photo taken</p>
+      <p>1-2 photography strobe lights, depending on the room</p>
     </Card>
-    <Card>
-      <h4>Props Available for Use</h4>
+    <Card headline="Props Available for Use">
       <p>
         Benches, cubes, chairs, stools, and seasonal or party props such as glasses, headbands,
         hats, etc.
       </p>
     </Card>
-    <Card>
-      <h4>About Us</h4>
+    <Card headline="About Us">
       <p>
         We are a proud Vietnamese-American-owned self-portrait photo studio conveniently located in
         Koreatown, Garden Grove. Our mission is to provide professional photos at affordable prices.

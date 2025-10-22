@@ -1,5 +1,9 @@
 export const Hero = () => (
-  <div>
+  <div
+    style={{
+      marginTop: '0.2rem',
+    }}
+  >
     <h2
       style={{
         marginBottom: '0.4rem',

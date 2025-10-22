@@ -1,4 +1,5 @@
 import { CSSProperties, FC, PropsWithChildren } from 'react'
+import Link from 'next/link'
 import './Card.css'
 
 export const Card: FC<
@@ -7,8 +8,12 @@ export const Card: FC<
     className?: string | undefined
     borderless?: boolean
     style?: CSSProperties | undefined
+    title?: string | undefined
+    headline?: string | undefined
+    linkUrl?: string | undefined
+    linkText?: string | undefined
   }>
-> = ({ children, className, style, ...props }) => {
+> = ({ children, className, style, title, headline, linkUrl, linkText, ...props }) => {
   return (
     <div
       className={[`card`, className].filter((cName) => !!cName).join(' ')}
@@ -18,7 +23,14 @@ export const Card: FC<
       }}
       {...props}
     >
+      {title && <h1 className="title">{title}</h1>}
+      {headline && <h4 className="headline">{headline}</h4>}
       {children}
+      {linkUrl && linkText && (
+        <Link className="Pill" href={linkUrl} target="_blank">
+          {linkText}
+        </Link>
+      )}
     </div>
   )
 }
