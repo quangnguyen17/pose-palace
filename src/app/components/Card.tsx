@@ -1,4 +1,7 @@
-import { CSSProperties, FC, PropsWithChildren } from 'react'
+'use client'
+
+import { CSSProperties, FC, PropsWithChildren, useState } from 'react'
+import { BottomSheet } from 'react-spring-bottom-sheet'
 import Link from 'next/link'
 import './Card.css'
 
@@ -12,8 +15,22 @@ export const Card: FC<
     headline?: string | undefined
     linkUrl?: string | undefined
     linkText?: string | undefined
+    bottomSheetButtonText?: string | undefined
+    bottomSheetOptions?: { text: string; url: string }[] | undefined
   }>
-> = ({ children, className, style, title, headline, linkUrl, linkText, ...props }) => {
+> = ({
+  children,
+  className,
+  style,
+  title,
+  headline,
+  linkUrl,
+  linkText,
+  bottomSheetButtonText,
+  bottomSheetOptions,
+  ...props
+}) => {
+  const [open, setOpen] = useState(false)
   return (
     <div
       className={[`card`, className].filter((cName) => !!cName).join(' ')}
@@ -31,6 +48,18 @@ export const Card: FC<
           {linkText}
         </Link>
       )}
+      {bottomSheetButtonText && (
+        <button className="Button" onClick={() => setOpen(true)}>
+          {bottomSheetButtonText}
+        </button>
+      )}
+      <BottomSheet open={open} onDismiss={() => setOpen(false)}>
+        {bottomSheetOptions?.map((option) => (
+          <Link key={option.text} className="Option" href={option.url} target="_blank">
+            {option.text}
+          </Link>
+        ))}
+      </BottomSheet>
     </div>
   )
 }

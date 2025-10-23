@@ -1,4 +1,5 @@
 import './styles.css'
+import 'react-spring-bottom-sheet/dist/style.css'
 import { Suspense } from 'react'
 import { Roboto } from 'next/font/google'
 import type { Metadata } from 'next'

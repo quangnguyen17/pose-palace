@@ -40,9 +40,19 @@ export const Home = () => (
     </Card>
     <Card
       background="#e1e2ef"
-      headline="FLEX sessions"
+      headline="FLEX sessions at special rates"
+      bottomSheetButtonText="Book Now"
+      bottomSheetOptions={[
+        {
+          text: 'Full body white room',
+          url: 'https://koalendar.com/u/whitecyclorama?fbclid=PAZXh0bgNhZW0CMTEAAafiuxEs7vg4tuuSe8jvIlEOJE_x8GV7esXx4AwAt1sOs9o24BA0s26gJ0b-Ww_aem_T7d6JpghIZLMrmdD96Xh2A',
+        },
+        {
+          text: 'Standard color room',
+          url: 'https://koalendar.com/u/standardcolorroom?fbclid=PAZXh0bgNhZW0CMTEAAaem_7uc9i3Z29sGWqY7OZoY37oS1g3JmvoxkxdFk7rdfpr8nYQqR7znoYvXBw_aem_aquGQFX9zi2greq93Uj89g',
+        },
+      ]}
       linkUrl="https://koalendar.com/u/whitecyclorama?fbclid=PAZXh0bgNhZW0CMTEAAafiuxEs7vg4tuuSe8jvIlEOJE_x8GV7esXx4AwAt1sOs9o24BA0s26gJ0b-Ww_aem_T7d6JpghIZLMrmdD96Xh2A"
-      linkText="Reserve your spot today!"
     >
       <p>
         <b>$50</b> – 15-minute session
@@ -50,21 +60,6 @@ export const Home = () => (
       <p>
         <b>$75</b> – 30-minute session
       </p>
-      <p>Full body white room</p>
-    </Card>
-    <Card
-      background="#d1e5f9ff"
-      headline="FLEX sessions"
-      linkUrl="https://koalendar.com/u/standardcolorroom?fbclid=PAZXh0bgNhZW0CMTEAAaem_7uc9i3Z29sGWqY7OZoY37oS1g3JmvoxkxdFk7rdfpr8nYQqR7znoYvXBw_aem_aquGQFX9zi2greq93Uj89g"
-      linkText="Reserve your spot today!"
-    >
-      <p>
-        <b>$50</b> – 15-minute session
-      </p>
-      <p>
-        <b>$75</b> – 30-minute session
-      </p>
-      <p>Standard color room</p>
     </Card>
     <Card
       background="#dee7e7"
