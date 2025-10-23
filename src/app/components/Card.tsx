@@ -53,7 +53,16 @@ export const Card: FC<
           {bottomSheetButtonText}
         </button>
       )}
-      <BottomSheet open={open} onDismiss={() => setOpen(false)}>
+      <BottomSheet
+        open={open}
+        onDismiss={() => setOpen(false)}
+        header={
+          <div className="header">
+            {headline && <h4 className="headline">{headline}</h4>}
+            {children}
+          </div>
+        }
+      >
         {bottomSheetOptions?.map((option) => (
           <Link key={option.text} className="Option" href={option.url} target="_blank">
             {option.text}

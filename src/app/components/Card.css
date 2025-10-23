@@ -68,13 +68,10 @@ div.card > h4.headline {
   font-size: 1rem;
   font-weight: 500;
   color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(240, 240, 240);
   transition: all 0.2s ease-in-out;
 }
 
 .Option:hover {
   background-color: rgb(240, 240, 240);
-}
-
-.header {
-  color: rgba(0, 0, 0, 0.9);
 }

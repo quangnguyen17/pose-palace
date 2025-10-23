@@ -40,7 +40,7 @@ export const Home = () => (
     </Card>
     <Card
       background="#e1e2ef"
-      headline="FLEX sessions at special rates"
+      headline="Weekend Flex sessions - 25% off"
       bottomSheetButtonText="Book Now"
       bottomSheetOptions={[
         {
@@ -54,12 +54,7 @@ export const Home = () => (
       ]}
       linkUrl="https://koalendar.com/u/whitecyclorama?fbclid=PAZXh0bgNhZW0CMTEAAafiuxEs7vg4tuuSe8jvIlEOJE_x8GV7esXx4AwAt1sOs9o24BA0s26gJ0b-Ww_aem_T7d6JpghIZLMrmdD96Xh2A"
     >
-      <p>
-        <b>$50</b> – 15-minute session
-      </p>
-      <p>
-        <b>$75</b> – 30-minute session
-      </p>
+      <p>Only available to book every week on Wednesday & Thursday</p>
     </Card>
     <Card
       background="#dee7e7"
