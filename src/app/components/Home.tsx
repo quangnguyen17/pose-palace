@@ -3,23 +3,22 @@ import { Page } from './Page'
 import { Footer } from './Footer'
 import { Card } from './Card'
 import { Hero } from './Hero'
+// import { DirectionCard } from './DirectionCard'
+import { SocialCard } from './SocialCard'
 
 export const Home = () => (
   <Page gap="1rem" padding="1rem">
     <Image
+      className="PageHeaderLogo"
       src="/logo-short.png"
       alt="Pose Palace Logo Short"
       width={0}
       height={0}
       unoptimized
-      style={{
-        objectFit: 'contain',
-        width: 'auto',
-        height: '60px',
-        margin: '0px auto 0px 0px',
-      }}
     />
     <Hero />
+    {/* <DirectionCard /> */}
+    <SocialCard />
     <Card
       background="#f2f5de"
       linkUrl="https://docs.google.com/presentation/d/e/2PACX-1vTL91hO5l_EXIvQtarOilrB6LKNLhBeffkMgG4RA7AF5xPpveRUiclTQ57AZ4h9LEiRzMcwDutdtbKu/pub?start=false&loop=false&delayms=3000&slide=id.p"

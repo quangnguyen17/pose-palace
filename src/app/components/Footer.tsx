@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import Link from 'next/link'
-import { RightArrow, UpRight } from './Icons'
-import { Social } from './Social'
+import { RightArrow } from './Icons'
 
 export const Footer: FC = () => {
   return (
@@ -41,7 +40,6 @@ export const Footer: FC = () => {
         </Link>
         <span>© 2024 Crystal Lighthouse LLC</span>
       </p>
-      <Social />
     </div>
   )
 }

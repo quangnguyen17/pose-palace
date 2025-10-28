@@ -2,11 +2,13 @@ export const Hero = () => (
   <div
     style={{
       marginTop: '0.2rem',
+      textAlign: 'center',
     }}
   >
     <h2
       style={{
         marginBottom: '0.4rem',
+        fontWeight: '600',
         background: 'linear-gradient(135deg, #FF6B6B, #4ECDC4)',
         backgroundClip: 'text',
         WebkitBackgroundClip: 'text',
@@ -17,7 +19,8 @@ export const Hero = () => (
     </h2>
     <p
       style={{
-        fontSize: '1rem',
+        fontSize: '16px',
+        fontWeight: '400',
         color: '#666',
       }}
     >

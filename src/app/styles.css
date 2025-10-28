@@ -25,6 +25,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  background-color: rgb(253, 253, 253);
 }
 
 .TabBar {
@@ -108,4 +109,57 @@ p {
 h4 {
   font-size: 18px;
   margin-bottom: 6px;
+}
+
+.SocialCard {
+  overflow: hidden;
+  border-radius: 32px;
+  background-color: rgb(233, 233, 233);
+  box-shadow: 0px 0px 2px 1px rgb(233, 233, 233);
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+  gap: 1px;
+}
+
+.SocialLink {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+.PageHeaderLogo {
+  object-fit: contain;
+  width: auto;
+  height: 66px;
+  margin: 0 auto;
+}
+
+.DirectionCard {
+  width: 100%;
+  border-radius: 64px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 2px 1px rgb(233, 233, 233);
+  padding: 1rem 2rem;
+  text-align: left;
+  color: rgb(59, 59, 59);
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: rgb(233, 233, 233);
+  }
 }
