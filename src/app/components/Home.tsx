@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import { Page } from './Page'
-import { Footer } from './Footer'
 import { Card } from './Card'
 import { Hero } from './Hero'
-// import { DirectionCard } from './DirectionCard'
 import { SocialCard } from './SocialCard'
 
 export const Home = () => (
@@ -17,7 +15,6 @@ export const Home = () => (
       unoptimized
     />
     <Hero />
-    {/* <DirectionCard /> */}
     <SocialCard />
     <Card
       background="#f2f5de"
@@ -138,9 +135,6 @@ export const Home = () => (
         capturing memorable moments is invaluable. What better way to preserve these moments than by
         capturing them yourself, with your own authentic expressions and feelings?
       </p>
-    </Card>
-    <Card>
-      <Footer />
     </Card>
   </Page>
 )
