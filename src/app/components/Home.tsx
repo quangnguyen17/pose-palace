@@ -17,7 +17,34 @@ export const Home = () => (
     <Hero />
     <SocialCard />
     <Card
-      background="#f2f5de"
+      background="#e1e2ef"
+      headline="Weekend Flex Sessions @ 25% OFF"
+      bottomSheetButtonText="Book Now"
+      bottomSheetOptions={[
+        {
+          text: 'Full body white room',
+          url: 'https://koalendar.com/u/whitecyclorama?fbclid=PAZXh0bgNhZW0CMTEAAafiuxEs7vg4tuuSe8jvIlEOJE_x8GV7esXx4AwAt1sOs9o24BA0s26gJ0b-Ww_aem_T7d6JpghIZLMrmdD96Xh2A',
+        },
+        {
+          text: 'Standard color room',
+          url: 'https://koalendar.com/u/standardcolorroom?fbclid=PAZXh0bgNhZW0CMTEAAaem_7uc9i3Z29sGWqY7OZoY37oS1g3JmvoxkxdFk7rdfpr8nYQqR7znoYvXBw_aem_aquGQFX9zi2greq93Uj89g',
+        },
+      ]}
+      linkUrl="https://koalendar.com/u/whitecyclorama?fbclid=PAZXh0bgNhZW0CMTEAAafiuxEs7vg4tuuSe8jvIlEOJE_x8GV7esXx4AwAt1sOs9o24BA0s26gJ0b-Ww_aem_T7d6JpghIZLMrmdD96Xh2A"
+    >
+      <p>{`🗓️ available to book every week on Wednesday and Thursday`}</p>
+    </Card>
+    <Card
+      background="#d0e4eaff"
+      headline="Give the perfect gift! Gift Cards Available"
+      linkText="Buy Now"
+      linkUrl="https://app.squareup.com/gift/MLMSZ9AMTGFPJ/order"
+    >
+      <p>{`get a voucher for yourself 🧧`}</p>
+      <p>{`or gift one to a friend 🎁`}</p>
+    </Card>
+    <Card
+      background="#d5f0eaff"
       linkUrl="https://docs.google.com/presentation/d/e/2PACX-1vTL91hO5l_EXIvQtarOilrB6LKNLhBeffkMgG4RA7AF5xPpveRUiclTQ57AZ4h9LEiRzMcwDutdtbKu/pub?start=false&loop=false&delayms=3000&slide=id.p"
       linkText="View Catalog"
     >
@@ -33,24 +60,6 @@ export const Home = () => (
       <p>
         <b>Includes 2 People</b> – Just $5 per extra person
       </p>
-    </Card>
-    <Card
-      background="#e1e2ef"
-      headline="Weekend Flex sessions - 25% off"
-      bottomSheetButtonText="Book Now"
-      bottomSheetOptions={[
-        {
-          text: 'Full body white room',
-          url: 'https://koalendar.com/u/whitecyclorama?fbclid=PAZXh0bgNhZW0CMTEAAafiuxEs7vg4tuuSe8jvIlEOJE_x8GV7esXx4AwAt1sOs9o24BA0s26gJ0b-Ww_aem_T7d6JpghIZLMrmdD96Xh2A',
-        },
-        {
-          text: 'Standard color room',
-          url: 'https://koalendar.com/u/standardcolorroom?fbclid=PAZXh0bgNhZW0CMTEAAaem_7uc9i3Z29sGWqY7OZoY37oS1g3JmvoxkxdFk7rdfpr8nYQqR7znoYvXBw_aem_aquGQFX9zi2greq93Uj89g',
-        },
-      ]}
-      linkUrl="https://koalendar.com/u/whitecyclorama?fbclid=PAZXh0bgNhZW0CMTEAAafiuxEs7vg4tuuSe8jvIlEOJE_x8GV7esXx4AwAt1sOs9o24BA0s26gJ0b-Ww_aem_T7d6JpghIZLMrmdD96Xh2A"
-    >
-      <p>Only available to book every week on Wednesday & Thursday</p>
     </Card>
     <Card
       background="#dee7e7"

@@ -33,10 +33,10 @@ div.card > h4.headline {
   width: 100%;
   color: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.1);
-  border-radius: 16px;
+  border-radius: 32px;
   border: none;
   padding: 12px;
-  margin-top: 14px;
+  margin-top: 16px;
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
