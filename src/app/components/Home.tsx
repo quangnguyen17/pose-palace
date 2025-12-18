@@ -17,6 +17,31 @@ export const Home = () => (
     <Hero />
     <SocialCard />
     <Card
+      background="#d0e4eaff"
+      headline="Give the perfect gift! Gift Cards Available"
+      linkText="Buy Now"
+      linkUrl="https://app.squareup.com/gift/MLMSZ9AMTGFPJ/order"
+    >
+      <p>{`get a voucher for yourself 🧧`}</p>
+      <p>{`or gift one to a friend 🎁`}</p>
+    </Card>
+    <Card
+      headline="Session Rates"
+      background="#dee7e7"
+      linkUrl="https://app.squareup.com/appointments/book/fyciorqmm5xzjt/LR292GX4G172B/start"
+      linkText="Book Now"
+    >
+      <p>
+        <b>$27</b> / 5 minutes
+      </p>
+      <p>
+        <b>$67</b> / 15 minutes
+      </p>
+      <p>
+        <b>$100</b> / 30 minutes
+      </p>
+    </Card>
+    <Card
       background="#e1e2ef"
       headline="Weekend Flex Sessions @ 25% OFF"
       bottomSheetButtonText="Book Now"
@@ -35,72 +60,21 @@ export const Home = () => (
       <p>{`🗓️ available to book every week on Wednesday and Thursday`}</p>
     </Card>
     <Card
-      background="#d0e4eaff"
-      headline="Give the perfect gift! Gift Cards Available"
-      linkText="Buy Now"
-      linkUrl="https://app.squareup.com/gift/MLMSZ9AMTGFPJ/order"
-    >
-      <p>{`get a voucher for yourself 🧧`}</p>
-      <p>{`or gift one to a friend 🎁`}</p>
-    </Card>
-    <Card
       background="#d5f0eaff"
       linkUrl="https://docs.google.com/presentation/d/e/2PACX-1vTL91hO5l_EXIvQtarOilrB6LKNLhBeffkMgG4RA7AF5xPpveRUiclTQ57AZ4h9LEiRzMcwDutdtbKu/pub?start=false&loop=false&delayms=3000&slide=id.p"
       linkText="View Catalog"
     >
       <p>
-        <b>Unlimited Photos</b> – Capture every moment effortlessly
+        <b>Unlimited Photos</b> • Capture every moment effortlessly
       </p>
       <p>
-        <b>Same-Day Prints</b> – Take your memories home instantly
+        <b>Same-Day Prints</b> • Take your memories home instantly
       </p>
       <p>
-        <b>Instant Online Access</b> – Download & share for 7 days
+        <b>Instant Online Access</b> • Download & share for 7 days
       </p>
       <p>
-        <b>Includes 2 People</b> – Just $5 per extra person
-      </p>
-    </Card>
-    <Card
-      background="#dee7e7"
-      title="$27"
-      linkUrl="https://app.squareup.com/appointments/book/fyciorqmm5xzjt/LR292GX4G172B/start"
-      linkText="Book Now"
-    >
-      <p>5-minute session</p>
-      <p>
-        <b>4 x 6</b> photo prints x 1
-      </p>
-      <p>
-        <b>2 x 2</b> passport photos x 2
-      </p>
-    </Card>
-    <Card
-      background="#d9e5d6"
-      title="$67"
-      linkUrl="https://app.squareup.com/appointments/book/fyciorqmm5xzjt/LR292GX4G172B/start"
-      linkText="Book Now"
-    >
-      <p>15-minute session</p>
-      <p>
-        <b>4 x 6</b> photo prints x 3
-      </p>
-      <p>
-        <b>2 x 2</b> passport photos x 2
-      </p>
-    </Card>
-    <Card
-      background="#d0e3c4"
-      title="$100"
-      linkUrl="https://app.squareup.com/appointments/book/fyciorqmm5xzjt/LR292GX4G172B/start"
-      linkText="Book Now"
-    >
-      <p>30-minute session</p>
-      <p>
-        <b>4 x 6</b> photo prints x 6
-      </p>
-      <p>
-        <b>2 x 2</b> passport photos x 2
+        <b>Includes 2 People</b> • Just $5 per extra person
       </p>
     </Card>
     <Card background="#dee7e7" title="10% OFF">
