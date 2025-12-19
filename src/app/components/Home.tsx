@@ -17,15 +17,6 @@ export const Home = () => (
     <Hero />
     <SocialCard />
     <Card
-      background="#d0e4eaff"
-      headline="Give the perfect gift! Gift Cards Available"
-      linkText="Buy Now"
-      linkUrl="https://app.squareup.com/gift/MLMSZ9AMTGFPJ/order"
-    >
-      <p>{`get a voucher for yourself 🧧`}</p>
-      <p>{`or gift one to a friend 🎁`}</p>
-    </Card>
-    <Card
       headline="Session Rates"
       background="#dee7e7"
       linkUrl="https://app.squareup.com/appointments/book/fyciorqmm5xzjt/LR292GX4G172B/start"
@@ -40,6 +31,15 @@ export const Home = () => (
       <p>
         <b>$100</b> / 30 minutes
       </p>
+    </Card>
+    <Card
+      background="#d0e4eaff"
+      headline="Give the perfect gift! Gift Cards Available"
+      linkText="Buy Now"
+      linkUrl="https://app.squareup.com/gift/MLMSZ9AMTGFPJ/order"
+    >
+      <p>{`get a voucher for yourself 🧧`}</p>
+      <p>{`or gift one to a friend 🎁`}</p>
     </Card>
     <Card
       background="#e1e2ef"
