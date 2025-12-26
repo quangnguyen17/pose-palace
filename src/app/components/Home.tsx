@@ -23,13 +23,7 @@ export const Home = () => (
       linkText="Book Now"
     >
       <p>
-        <b>$27</b> • 5 minutes
-      </p>
-      <p>
-        <b>$67</b> • 15 minutes
-      </p>
-      <p>
-        <b>$100</b> • 30 minutes
+        <b>$27</b> for 5 minutes, <b>$67</b> for 15 minutes and <b>$100</b> for 30 minutes
       </p>
     </Card>
     <Card
@@ -38,8 +32,7 @@ export const Home = () => (
       linkText="Buy Now"
       linkUrl="https://app.squareup.com/gift/MLMSZ9AMTGFPJ/order"
     >
-      <p>{`get a voucher for yourself 🧧`}</p>
-      <p>{`or gift one to a friend 🎁`}</p>
+      <p>{`🎁 get a voucher for yourself or gift one to a friend`}</p>
     </Card>
     <Card
       background="#e1e2ef"
