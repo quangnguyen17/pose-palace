@@ -23,7 +23,13 @@ export const Home = () => (
       linkText="Book Now"
     >
       <p>
-        <b>$27</b> for 5 minutes, <b>$67</b> for 15 minutes and <b>$100</b> for 30 minutes
+        <b>$27</b> for 5 minutes
+      </p>
+      <p>
+        <b>$67</b> for 15 minutes
+      </p>
+      <p>
+        <b>$100</b> for 30 minutes
       </p>
     </Card>
     <Card
