@@ -1,15 +1,46 @@
+.Layout {
+  position: relative;
+  z-index: 1;
+  min-height: 100dvh;
+}
+
+.Layout.Body {
+  display: flex;
+  justify-content: center;
+  padding: 44px 20px 56px;
+}
+
 .Page {
   margin: 0 auto;
+  width: min(100%, var(--page-max-width));
+  min-height: calc(100dvh - 48px);
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+  border-radius: 36px;
 }
 
 @media screen and (max-width: 430px) {
+  .Layout.Body {
+    padding: 0;
+  }
+
   .Page {
     max-width: 100%;
+    width: 100%;
+    min-height: 100dvh;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    background: transparent;
   }
 }
 
 @media screen and (min-width: 430px) {
   .Page {
-    max-width: var(--mobile-breakpoint);
+    margin: 1rem auto;
+    max-width: var(--page-max-width);
   }
 }

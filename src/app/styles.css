@@ -1,6 +1,16 @@
 :root {
   --mobile-breakpoint: 430px;
   --spacing: 16px;
+  --page-max-width: 430px;
+  --bg: #f6f0ea;
+  --bg-accent: #ead8ca;
+  --panel: rgba(255, 250, 246, 0.72);
+  --panel-strong: rgba(255, 250, 246, 0.92);
+  --ink: #261a17;
+  --muted: #6e5a54;
+  --line: rgba(70, 39, 28, 0.1);
+  --shadow: 0 24px 80px rgba(55, 27, 17, 0.14);
+  --hero-gradient: linear-gradient(145deg, #fff4ec 0%, #f4d7c9 55%, #dbc7ea 100%);
 }
 
 * {
@@ -8,24 +18,48 @@
   padding: 0;
   box-sizing: border-box;
   font-optical-sizing: auto;
-  font-family:
-    var(--font-roboto),
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    sans-serif;
+  font-family: var(--font-sans), 'Segoe UI', sans-serif;
 }
 
 html,
 body {
   width: 100%;
-  height: 100%;
-  background-color: rgb(250, 250, 250);
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), transparent 34%),
+    radial-gradient(circle at top right, rgba(226, 196, 172, 0.8), transparent 28%),
+    linear-gradient(180deg, #f9f3ef 0%, var(--bg) 54%, #efe6df 100%);
+  color: var(--ink);
+}
+
+body {
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 999px;
+  filter: blur(20px);
+}
+
+body::before {
+  width: 240px;
+  height: 240px;
+  top: 56px;
+  left: max(18px, calc(50% - 420px));
+  background: rgba(223, 184, 153, 0.32);
+}
+
+body::after {
+  width: 280px;
+  height: 280px;
+  right: max(18px, calc(50% - 470px));
+  bottom: 60px;
+  background: rgba(201, 192, 235, 0.22);
 }
 
 .TabBar {
@@ -39,10 +73,10 @@ body {
 }
 
 a {
-  text-align: left;
   display: block;
   text-decoration: none;
   text-align: center;
+  color: inherit;
 }
 
 .invert-color {
@@ -65,6 +99,10 @@ a,
 p {
   font-size: 16px;
   line-height: 24px;
+}
+
+p {
+  color: var(--muted);
 }
 
 .row {
@@ -92,7 +130,7 @@ p {
   width: 100%;
   text-align: left;
   background-color: rgba(255, 255, 255, 0.75);
-  color: rgb(0, 0, 0);
+  color: var(--ink);
   font-weight: 500;
   padding: 12px 18px;
   border-radius: 24px;
@@ -111,16 +149,24 @@ h4 {
   margin-bottom: 6px;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  color: var(--ink);
+}
+
 .SocialCard {
   overflow: hidden;
-  border: none;
-  border-radius: 32px;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 0px 8px 1px rgb(235, 235, 235);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: rgba(255, 250, 246, 0.74);
+  box-shadow: 0 12px 30px rgba(73, 42, 31, 0.08);
   display: flex;
   flex-direction: row;
   justify-content: stretch;
   align-items: center;
+  backdrop-filter: blur(12px);
 }
 
 .SocialLink {
@@ -128,22 +174,23 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
   padding: 1rem;
   border: none;
-  border-radius: 32px;
+  border-radius: 28px;
   transition: all 0.3s;
+}
 
-  &:hover {
-    background-color: rgb(235, 235, 235);
-  }
+.SocialLink:hover {
+  background-color: rgba(38, 26, 23, 0.06);
 }
 
 .PageHeaderLogo {
   object-fit: contain;
   width: auto;
-  height: 66px;
+  height: 64px;
   margin: 0 auto;
+  filter: drop-shadow(0 10px 24px rgba(85, 48, 35, 0.12));
 }
 
 .DirectionCard {
@@ -160,8 +207,200 @@ h4 {
   justify-content: space-between;
   align-items: center;
   transition: all 0.2s;
+}
 
-  &:hover {
-    background-color: rgb(233, 233, 233);
+.DirectionCard:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+.SectionLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(38, 26, 23, 0.5);
+}
+
+.HeroCard {
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+  border-radius: 34px;
+  background: var(--hero-gradient);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.HeroCard::after {
+  content: '';
+  position: absolute;
+  inset: auto -50px -80px auto;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.HeroContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.HeroTitle {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(2.7rem, 7vw, 3.4rem);
+  line-height: 0.95;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+.HeroCopy {
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 28ch;
+  color: rgba(38, 26, 23, 0.8);
+}
+
+.HeroStats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.HeroStat {
+  padding: 12px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid rgba(255, 255, 255, 0.44);
+}
+
+.HeroStat strong {
+  display: block;
+  font-size: 16px;
+  line-height: 1.1;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+}
+
+.HeroStat span {
+  display: block;
+  margin-top: 5px;
+  font-size: 11px;
+  line-height: 1.25;
+  color: rgba(38, 26, 23, 0.68);
+}
+
+.HeroMeta {
+  display: grid;
+  gap: 8px;
+}
+
+.HeroMetaRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 18px;
+  background: rgba(255, 251, 248, 0.56);
+  border: 1px solid rgba(255, 255, 255, 0.44);
+}
+
+.HeroMetaRow span {
+  font-size: 13px;
+  color: rgba(38, 26, 23, 0.66);
+}
+
+.HeroMetaRow strong {
+  font-size: 14px;
+}
+
+.HeroContactGroup {
+  display: grid;
+  gap: 8px;
+}
+
+.HeroContactLink {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 14px;
+  text-align: left;
+  border-radius: 20px;
+  background: rgba(255, 251, 248, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.HeroContactLink:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.HeroContactLabel {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(38, 26, 23, 0.48);
+}
+
+.HeroContactValue {
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  font-size: 14px;
+}
+
+.fade-up {
+  animation: fadeUp 0.6s ease both;
+}
+
+.fade-up-delay-1 {
+  animation-delay: 0.08s;
+}
+
+.fade-up-delay-2 {
+  animation-delay: 0.16s;
+}
+
+.fade-up-delay-3 {
+  animation-delay: 0.24s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 430px) {
+  body::before,
+  body::after {
+    display: none;
+  }
+
+  html,
+  body {
+    background: linear-gradient(180deg, #faf4ef 0%, #f6f0ea 100%);
+  }
+
+  .HeroCard {
+    /* border-radius: 30px; */
   }
 }

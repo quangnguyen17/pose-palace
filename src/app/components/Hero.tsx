@@ -1,33 +1,50 @@
 import Link from 'next/link'
 
 export const Hero = () => (
-  <div
-    style={{
-      marginTop: '0.2rem',
-      textAlign: 'center',
-    }}
-  >
-    <p>
-      <span>
-        <b>Open</b> 9:00 AM - 9:00 PM
-      </span>
-      <br />
-      <span>
-        <b>Appointment</b> 9:00 AM - 9:00 PM
-      </span>
-      <br />
-      <span>
-        <b>Walk-in</b> 11:30 AM - 7:30 PM
-      </span>
-      <Link href="tel:714-467-7036" style={{ color: 'black', textAlign: 'center' }}>
-        (714) 467-7036
-      </Link>
-      <Link
-        href="mailto:hainguyen.whiteroom@posepalacestudio.com"
-        style={{ color: 'black', textAlign: 'center' }}
-      >
-        hainguyen.whiteroom@posepalacestudio.com
-      </Link>
-    </p>
-  </div>
+  <section className="HeroCard fade-up">
+    <div className="HeroContent">
+      <span className="SectionLabel">Garden Grove Self-Portrait Studio</span>
+      <div>
+        <h1 className="HeroTitle">Strike your pose. Keep the whole frame.</h1>
+        <p className="HeroCopy" style={{ marginTop: '12px' }}>
+          A polished self-portrait studio made for birthdays, couples, graduation photos, and quick
+          confidence-boosting sessions with instant prints.
+        </p>
+      </div>
+      <div className="HeroStats">
+        <div className="HeroStat">
+          <strong>2</strong>
+          <span>studio rooms</span>
+        </div>
+        <div className="HeroStat">
+          <strong>Same-day</strong>
+          <span>prints + gallery</span>
+        </div>
+        <div className="HeroStat">
+          <strong>From $27</strong>
+          <span>quick sessions</span>
+        </div>
+      </div>
+      <div className="HeroMeta">
+        <div className="HeroMetaRow">
+          <span>Appointments</span>
+          <strong>9:00 AM - 9:00 PM</strong>
+        </div>
+        <div className="HeroMetaRow">
+          <span>Walk-ins</span>
+          <strong>11:30 AM - 7:30 PM</strong>
+        </div>
+      </div>
+      <div className="HeroContactGroup">
+        <Link className="HeroContactLink" href="tel:714-467-7036">
+          <span className="HeroContactLabel">Call</span>
+          <span className="HeroContactValue">(714) 467-7036</span>
+        </Link>
+        <Link className="HeroContactLink" href="mailto:hainguyen.whiteroom@posepalacestudio.com">
+          <span className="HeroContactLabel">Email</span>
+          <span className="HeroContactValue">hainguyen.whiteroom@posepalacestudio.com</span>
+        </Link>
+      </div>
+    </div>
+  </section>
 )
