@@ -21,7 +21,7 @@ export const Home = () => (
       headline="Session Rates"
       background="linear-gradient(145deg, #eff4f2 0%, #dbe8e2 100%)"
       linkUrl="https://app.squareup.com/appointments/book/fyciorqmm5xzjt/LR292GX4G172B/start"
-      linkText="Book Now"
+      linkText="Book Your Appointment"
     >
       <p>
         <b>$27</b> for 5 minutes

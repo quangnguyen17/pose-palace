@@ -11,6 +11,25 @@ export const Hero = () => (
           confidence-boosting sessions with instant prints.
         </p>
       </div>
+      <div className="HeroBookingPanel">
+        <div className="HeroBookingCopy">
+          <span className="HeroBookingEyebrow">Most visitors book online</span>
+          <strong>Reserve your session in under a minute.</strong>
+          <p>Choose your time, show up, and start shooting with instant prints and digital access.</p>
+        </div>
+        <div className="HeroActions">
+          <Link
+            className="HeroPrimaryAction"
+            href="https://app.squareup.com/appointments/book/fyciorqmm5xzjt/LR292GX4G172B/start"
+            target="_blank"
+          >
+            Book Your Session
+          </Link>
+          <Link className="HeroSecondaryAction" href="tel:714-467-7036">
+            Call to Book
+          </Link>
+        </div>
+      </div>
       <div className="HeroStats">
         <div className="HeroStat">
           <strong>2</strong>

@@ -8,16 +8,15 @@ div.card {
   gap: 8px;
   padding: 22px 20px;
   border-radius: 28px;
-  border: 1px solid rgba(70, 39, 28, 0.09);
-  box-shadow: 0 18px 36px rgba(70, 39, 28, 0.08);
+  border: 1px solid rgba(70, 39, 28, 0.14);
   transition:
     transform 0.24s ease,
-    box-shadow 0.24s ease;
+    border-color 0.24s ease;
 }
 
 div.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 24px 44px rgba(70, 39, 28, 0.1);
+  transform: translateY(-1px);
+  border-color: rgba(70, 39, 28, 0.22);
 }
 
 div.card > h1.title {

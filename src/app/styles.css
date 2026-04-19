@@ -9,7 +9,7 @@
   --ink: #261a17;
   --muted: #6e5a54;
   --line: rgba(70, 39, 28, 0.1);
-  --shadow: 0 24px 80px rgba(55, 27, 17, 0.14);
+  --shadow: none;
   --hero-gradient: linear-gradient(145deg, #fff4ec 0%, #f4d7c9 55%, #dbc7ea 100%);
 }
 
@@ -21,19 +21,26 @@
   font-family: var(--font-sans), 'Segoe UI', sans-serif;
 }
 
-html,
-body {
+html {
   width: 100%;
   min-height: 100%;
   background:
     radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), transparent 34%),
     radial-gradient(circle at top right, rgba(226, 196, 172, 0.8), transparent 28%),
     linear-gradient(180deg, #f9f3ef 0%, var(--bg) 54%, #efe6df 100%);
+  background-attachment: fixed;
+  background-color: var(--bg);
   color: var(--ink);
+  overscroll-behavior-y: none;
 }
 
 body {
   position: relative;
+  width: 100%;
+  min-height: 100%;
+  background: transparent;
+  color: inherit;
+  overscroll-behavior-y: none;
 }
 
 body::before,
@@ -158,10 +165,9 @@ h4 {
 
 .SocialCard {
   overflow: hidden;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(70, 39, 28, 0.14);
   border-radius: 28px;
   background: rgba(255, 250, 246, 0.74);
-  box-shadow: 0 12px 30px rgba(73, 42, 31, 0.08);
   display: flex;
   flex-direction: row;
   justify-content: stretch;
@@ -190,7 +196,6 @@ h4 {
   width: auto;
   height: 64px;
   margin: 0 auto;
-  filter: drop-shadow(0 10px 24px rgba(85, 48, 35, 0.12));
 }
 
 .DirectionCard {
@@ -227,8 +232,7 @@ h4 {
   padding: 24px;
   border-radius: 34px;
   background: var(--hero-gradient);
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(70, 39, 28, 0.14);
 }
 
 .HeroCard::after {
@@ -262,6 +266,86 @@ h4 {
   line-height: 1.6;
   max-width: 28ch;
   color: rgba(38, 26, 23, 0.8);
+}
+
+.HeroBookingPanel {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 26px;
+  background: rgba(255, 251, 248, 0.66);
+  border: 1px solid rgba(70, 39, 28, 0.14);
+}
+
+.HeroBookingCopy {
+  display: grid;
+  gap: 6px;
+}
+
+.HeroBookingEyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(38, 26, 23, 0.52);
+}
+
+.HeroBookingCopy strong {
+  font-size: 18px;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.HeroBookingCopy p {
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(38, 26, 23, 0.72);
+}
+
+.HeroActions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.HeroPrimaryAction,
+.HeroSecondaryAction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 18px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 14px;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.HeroPrimaryAction {
+  color: #fffaf7;
+  background: linear-gradient(135deg, #2d1c17 0%, #5d3023 100%);
+  border: 1px solid rgba(45, 28, 23, 0.55);
+}
+
+.HeroPrimaryAction:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #281813 0%, #542b20 100%);
+}
+
+.HeroSecondaryAction {
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(70, 39, 28, 0.14);
+}
+
+.HeroSecondaryAction:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.92);
 }
 
 .HeroStats {
