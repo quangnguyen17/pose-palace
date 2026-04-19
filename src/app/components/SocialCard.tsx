@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export const SocialCard: FC = () => {
   return (
-    <div className="SocialCard">
+    <div className="SocialCard fade-up fade-up-delay-1">
       <Link
         className="SocialLink"
         href="https://www.instagram.com/posepalacestudio/"

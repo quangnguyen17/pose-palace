@@ -1,7 +1,7 @@
 import './styles.css'
 import 'react-spring-bottom-sheet/dist/style.css'
 import { Suspense } from 'react'
-import { Roboto } from 'next/font/google'
+import { Cormorant_Garamond, Plus_Jakarta_Sans } from 'next/font/google'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -93,18 +93,24 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
 }
 
-const roboto = Roboto({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
-  weight: ['100', '300', '400', '500', '700', '900'],
-  style: ['normal', 'italic'],
+  weight: ['400', '500', '600', '700', '800'],
   display: 'swap',
-  variable: '--font-roboto',
+  variable: '--font-sans',
+})
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  display: 'swap',
+  variable: '--font-display',
 })
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={roboto.variable}>
-      <body className={roboto.className}>
+    <html lang="en" className={`${plusJakartaSans.variable} ${cormorantGaramond.variable}`}>
+      <body className={plusJakartaSans.className}>
         <Suspense>{children}</Suspense>
       </body>
     </html>

@@ -17,8 +17,9 @@ export const Home = () => (
     <Hero />
     <SocialCard />
     <Card
+      className="fade-up fade-up-delay-2"
       headline="Session Rates"
-      background="#dee7e7"
+      background="linear-gradient(145deg, #eff4f2 0%, #dbe8e2 100%)"
       linkUrl="https://app.squareup.com/appointments/book/fyciorqmm5xzjt/LR292GX4G172B/start"
       linkText="Book Now"
     >
@@ -33,15 +34,17 @@ export const Home = () => (
       </p>
     </Card>
     <Card
-      background="#d0e4eaff"
-      headline="Give the perfect gift! Gift Cards Available"
+      className="fade-up fade-up-delay-2"
+      background="linear-gradient(145deg, #eef5fb 0%, #d9e9f5 100%)"
+      headline="Give the perfect gift. Gift cards available."
       linkText="Buy Now"
       linkUrl="https://app.squareup.com/gift/MLMSZ9AMTGFPJ/order"
     >
       <p>{`🎁 get a voucher for yourself or gift one to a friend`}</p>
     </Card>
     <Card
-      background="#e1e2ef"
+      className="fade-up fade-up-delay-3"
+      background="linear-gradient(145deg, #f1edf8 0%, #e2e0f2 100%)"
       headline="Weekend Flex Sessions @ 25% OFF"
       bottomSheetButtonText="Book Now"
       bottomSheetOptions={[
@@ -59,7 +62,8 @@ export const Home = () => (
       <p>{`🗓️ available to book every week on Wednesday and Thursday`}</p>
     </Card>
     <Card
-      background="#d5f0eaff"
+      className="fade-up fade-up-delay-3"
+      background="linear-gradient(145deg, #ecfaf4 0%, #d8efe8 100%)"
       linkUrl="https://docs.google.com/presentation/d/e/2PACX-1vTL91hO5l_EXIvQtarOilrB6LKNLhBeffkMgG4RA7AF5xPpveRUiclTQ57AZ4h9LEiRzMcwDutdtbKu/pub?start=false&loop=false&delayms=3000&slide=id.p"
       linkText="View Catalog"
     >
@@ -76,7 +80,11 @@ export const Home = () => (
         <b>Includes 2 People</b> • Just $5 per extra person
       </p>
     </Card>
-    <Card background="#dee7e7" title="10% OFF">
+    <Card
+      className="fade-up fade-up-delay-3"
+      background="linear-gradient(145deg, #fff4ec 0%, #f3dfd1 100%)"
+      title="10% OFF"
+    >
       <p>{`🎂 Birthday Promotion`}</p>
       <p>{`🩷 Wedding / Couple Anniversary Promotion`}</p>
       <p>{`🎓 Graduation Promotion`}</p>
@@ -84,7 +92,7 @@ export const Home = () => (
       <p>{`🪖 Military Personnel`}</p>
       <p>{`🏥 Healthcare Workers`}</p>
     </Card>
-    <Card headline="How It Works">
+    <Card className="fade-up" headline="How It Works" background={undefined}>
       <p>
         Our studio consists of two rooms: one features a cyclorama white wall, ideal for wide,
         full-body shots, while the other offers multiple colored backdrops, perfect for more
@@ -94,19 +102,19 @@ export const Home = () => (
         booked session.
       </p>
     </Card>
-    <Card headline="Our Equipments">
+    <Card className="fade-up" headline="Our Equipments" background={undefined}>
       <p>A Sony full-frame camera</p>
       <p>32-inch monitor displaying the camera's live view/feed</p>
       <p>27-inch monitor displaying the last photo taken</p>
       <p>1-2 photography strobe lights, depending on the room</p>
     </Card>
-    <Card headline="Props Available for Use">
+    <Card className="fade-up" headline="Props Available for Use" background={undefined}>
       <p>
         Benches, cubes, chairs, stools, and seasonal or party props such as glasses, headbands,
         hats, etc.
       </p>
     </Card>
-    <Card headline="About Us">
+    <Card className="fade-up" headline="About Us" background={undefined}>
       <p>
         We are a proud Vietnamese-American-owned self-portrait photo studio conveniently located in
         Koreatown, Garden Grove. Our mission is to provide professional photos at affordable prices.
