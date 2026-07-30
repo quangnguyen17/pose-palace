@@ -1,35 +1,72 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Page } from './Page'
+import { RentalRequestLink } from './RentalRequestForm'
 
 const sessionUrl = 'https://app.squareup.com/appointments/book/fyciorqmm5xzjt/LR292GX4G172B/start'
-const rentalEmail =
-  'mailto:hainguyen.whiteroom@posepalacestudio.com?subject=Digital%20camera%20rental%20request'
-
 const cameras = [
   {
+    name: 'Panasonic Lumix DMC-LX2',
+    year: 2006,
+    color: '#151515',
+    image: '/cameras/lx2.jpg',
+    detail: '10.2 MP · 4x Leica',
+    extra: 'Li-ion pack · 28–112mm equiv · f/2.8',
+    note: 'The enthusiast one. Leica glass, 16:9 sensor, shoots RAW. Slowest to learn, best files.',
+  },
+  {
+    name: 'HP Photosmart E427',
+    year: 2007,
+    color: '#b9bcbd',
+    image: '/cameras/e427.jpg',
+    detail: '6.0 MP · 5x digital',
+    extra: '2×AA · fixed focus · 2" LCD',
+    note: 'Six megapixels, no optical zoom, one job. The most 2007-looking photos we can give you.',
+  },
+  {
     name: 'Canon PowerShot A480',
-    color: '#14367d',
+    year: 2009,
+    color: '#1b3a8f',
+    image: '/cameras/a480.jpg',
     detail: '10.0 MP · 3.3x optical',
-    note: 'Blue body, bright flash, easy to carry.',
+    extra: '2×AA · 6.6–21.6mm · f/3.0',
+    note: 'Cobalt blue, chunky, forgiving. If you have never used a digicam, start here.',
   },
   {
     name: 'Canon PowerShot A495',
-    color: '#c2202b',
+    year: 2010,
+    color: '#c0202b',
+    image: '/cameras/a495.jpg',
     detail: '10.0 MP · 3.3x optical',
-    note: 'Red body, party-ready flash, slightly newer.',
+    extra: '2×AA · 6.6–21.6mm · f/3.0',
+    note: 'The A480 in red, a year newer. Flash is punchy — this is the party camera.',
   },
   {
     name: 'Sony Cyber-shot DSC-S2100',
-    color: '#606366',
+    year: 2010,
+    color: '#4a4e52',
+    image: '/cameras/s2100.jpg',
     detail: '12.1 MP · 3x optical',
-    note: 'A clean, straightforward point-and-shoot.',
+    extra: '2×AA · 3" LCD · Memory Stick / SD',
+    note: 'Big 3-inch screen, runs on AAs you can buy anywhere. The dependable pick for a long day.',
+  },
+  {
+    name: 'Panasonic Lumix DMC-FP2',
+    year: 2010,
+    color: '#6e7378',
+    image: '/cameras/fp2.jpg',
+    detail: '14.1 MP · 4x optical',
+    extra: 'Li-ion pack · 35–140mm equiv',
+    note: 'Flat as a deck of cards with a sliding lens cover. Disappears in a pocket.',
   },
   {
     name: 'Fujifilm FinePix AX655',
-    color: '#121212',
+    year: 2012,
+    color: '#0d0d0d',
+    image: '/cameras/ax655.jpg',
     detail: '16.0 MP · 5x optical',
-    note: 'A little more reach for the day out.',
+    extra: '2×AA · 5.9–29.5mm · 720p video',
+    note: 'Newest and highest resolution of the seven, and it shoots HD video with sound.',
   },
 ]
 
@@ -177,9 +214,7 @@ export const Home = () => (
               A small fleet of early-digital cameras, charged and ready for your day out. Each one
               has its own look; every rental comes with the essentials.
             </p>
-            <Link href={rentalEmail} className="ActionButton ActionButtonLight">
-              Request a camera <Arrow />
-            </Link>
+            <RentalRequestLink className="ActionButton ActionButtonLight" />
           </div>
         </div>
         <div className="RentalStats">
@@ -208,9 +243,9 @@ export const Home = () => (
             <div>
               <p className="Eyebrow">the rental shelf</p>
               <h2>
-                small cameras,
+                seven cameras,
                 <br />
-                big personality.
+                no two alike.
               </h2>
             </div>
             <p>
@@ -225,20 +260,22 @@ export const Home = () => (
                   className="CameraArt"
                   style={{ '--camera-color': camera.color } as React.CSSProperties}
                 >
+                  <Image
+                    src={camera.image}
+                    alt={`${camera.name} rental camera`}
+                    fill
+                    sizes="(max-width: 460px) 100vw, (max-width: 800px) 50vw, 25vw"
+                  />
                   <span className="CameraNumber">0{index + 1}</span>
-                  <div className="CameraBody">
-                    <i />
-                    <b />
-                    <em />
-                  </div>
                 </div>
                 <div className="CameraCardBody">
                   <h3>{camera.name}</h3>
-                  <p className="Mono">{camera.detail}</p>
+                  <p className="Mono">
+                    {camera.year} · {camera.detail}
+                  </p>
+                  <p className="Mono">{camera.extra}</p>
                   <p>{camera.note}</p>
-                  <Link href={rentalEmail}>
-                    Request this camera <Arrow />
-                  </Link>
+                  <RentalRequestLink cameraName={camera.name} />
                 </div>
               </article>
             ))}
@@ -416,9 +453,7 @@ export const Home = () => (
           <Link href={sessionUrl} target="_blank" className="ActionButton">
             Book a session <Arrow />
           </Link>
-          <Link href={rentalEmail} className="FooterRental">
-            Request a rental <Arrow />
-          </Link>
+          <RentalRequestLink className="FooterRental" />
         </div>
       </div>
     </footer>
