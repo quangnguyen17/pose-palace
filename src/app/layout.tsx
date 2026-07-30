@@ -1,7 +1,7 @@
 import './styles.css'
 import 'react-spring-bottom-sheet/dist/style.css'
 import { Suspense } from 'react'
-import { Cormorant_Garamond, Plus_Jakarta_Sans } from 'next/font/google'
+import { Archivo, DM_Mono, Newsreader } from 'next/font/google'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -93,24 +93,31 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
 }
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const archivo = Archivo({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
   display: 'swap',
-  variable: '--font-sans',
+  variable: '--font-archivo',
 })
 
-const cormorantGaramond = Cormorant_Garamond({
+const newsreader = Newsreader({
   subsets: ['latin'],
-  weight: ['500', '600', '700'],
+  weight: ['300', '400'],
   display: 'swap',
-  variable: '--font-display',
+  variable: '--font-newsreader',
+})
+
+const mono = DM_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  display: 'swap',
+  variable: '--font-mono',
 })
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${plusJakartaSans.variable} ${cormorantGaramond.variable}`}>
-      <body className={plusJakartaSans.className}>
+    <html lang="en" className={`${archivo.variable} ${newsreader.variable} ${mono.variable}`}>
+      <body className={archivo.className}>
         <Suspense>{children}</Suspense>
       </body>
     </html>
