@@ -848,6 +848,817 @@ input {
   border-bottom: 1px solid var(--ink);
   padding-bottom: 3px;
 }
+.RentalSite,
+.ManagerSite {
+  min-height: 100dvh;
+  background: var(--paper);
+  color: var(--ink);
+}
+.RentalHeader {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  border-bottom: 1px solid var(--ink);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+}
+.RentalHeaderInner {
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.RentalBrand {
+  display: flex;
+  align-items: center;
+}
+.RentalBrand img {
+  width: 132px;
+  height: auto;
+}
+.RentalNav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+}
+.RentalNav a,
+.RentalBackLink {
+  font-size: 13px;
+  font-weight: 700;
+}
+.RentalNav a:hover,
+.RentalBackLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.RentalHero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--ink);
+}
+.RentalHeroMotif {
+  position: absolute;
+  inset: 14% -8% auto;
+  color: #eeece6;
+  font-size: clamp(50px, 11vw, 150px);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 0.8;
+  white-space: nowrap;
+  transform: rotate(-28deg);
+  pointer-events: none;
+}
+.RentalHeroGrid {
+  position: relative;
+  z-index: 1;
+  min-height: 390px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: end;
+  padding: 70px 0 56px;
+}
+.RentalHero h1,
+.RentalSectionHeading h2,
+.RentalPolicyGrid h2,
+.ManagerGate h1,
+.ManagerTop h1 {
+  margin: 0;
+  font-size: clamp(48px, 7vw, 94px);
+  font-weight: 900;
+  font-style: italic;
+  line-height: 0.88;
+  text-transform: lowercase;
+}
+.RentalHero h1 span,
+.RentalSectionHeading h2 span,
+.RentalPolicyGrid h2 span,
+.ManagerGate h1 span {
+  font-family: var(--serif);
+  font-weight: 300;
+}
+.RentalHeroLead {
+  max-width: 38ch;
+  margin: 0 0 8px;
+  color: #30302d;
+  font-size: 18px;
+  line-height: 1.55;
+}
+.RentalStrip,
+.ManagerStats {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid var(--ink);
+  background: var(--paper);
+}
+.RentalStrip div,
+.ManagerStats div {
+  min-height: 90px;
+  padding: 18px;
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.RentalStrip div:last-child,
+.ManagerStats div:last-child {
+  border-right: 0;
+}
+.RentalStrip b,
+.ManagerStats b {
+  font-size: 24px;
+  font-style: italic;
+  line-height: 1;
+}
+.RentalStrip span,
+.ManagerStats span {
+  margin-top: 7px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.RentalSection {
+  padding: 92px 0;
+}
+.RentalSectionHeading {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 42px;
+  align-items: end;
+  margin-bottom: 38px;
+}
+.RentalSectionHeading h2,
+.RentalPolicyGrid h2 {
+  font-size: clamp(38px, 5.5vw, 68px);
+}
+.RentalSectionHeading > p {
+  max-width: 38ch;
+  margin: 0;
+  color: #33332f;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.RentalFleetGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.RentalCameraCard {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+}
+.RentalCameraImage {
+  position: relative;
+  height: 235px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--ink);
+  background: var(--soft);
+}
+.RentalCameraImage::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 1;
+  height: 6px;
+  background: var(--camera-color);
+}
+.RentalCameraImage img {
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+.RentalCameraCard:hover .RentalCameraImage img {
+  transform: scale(1.035);
+}
+.RentalCameraImage span {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  left: 16px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+.RentalCameraBody {
+  min-height: 265px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.RentalCameraBody h3 {
+  margin: 0 0 12px;
+  font-size: 19px;
+  line-height: 1.05;
+}
+.RentalCameraBody h3 em {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 300;
+}
+.RentalSpecs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 13px;
+}
+.RentalSpecs span {
+  padding: 4px 6px;
+  border: 1px solid var(--line);
+  color: #30302d;
+  font-family: var(--mono);
+  font-size: 10px;
+}
+.RentalCameraBody p {
+  margin: 0;
+  color: #3d3d39;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.RentalCardFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.RentalCardFoot strong {
+  font-size: 24px;
+  font-style: italic;
+}
+.RentalCardFoot small {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.RentalCardFoot button,
+.RentalSubmit,
+.ManagerActions button {
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 11px 14px;
+}
+.RentalCardFoot button:hover,
+.RentalSubmit:hover,
+.ManagerActions button:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.RentalReserveSection {
+  background: var(--soft);
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+.RentalBookingPanel {
+  border: 1px solid var(--ink);
+  background: var(--paper);
+}
+.RentalBookingSteps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--ink);
+}
+.RentalBookingSteps span {
+  padding: 13px 15px;
+  border-right: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.RentalBookingSteps span:last-child {
+  border-right: 0;
+}
+.RentalBookingSteps .active {
+  background: var(--ink);
+  color: var(--paper);
+}
+.RentalBookingBody {
+  padding: 28px;
+}
+.RentalPicker {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 34px;
+}
+.RentalPicker button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  text-align: left;
+  cursor: pointer;
+}
+.RentalPicker button:hover,
+.RentalPicker button.selected {
+  border-color: var(--ink);
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+.RentalPicker img {
+  width: 64px;
+  height: 48px;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+.RentalPicker b,
+.RentalPicker small {
+  display: block;
+}
+.RentalPicker b {
+  font-size: 11px;
+  line-height: 1.1;
+}
+.RentalPicker small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 9px;
+}
+.RentalBookingColumns {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 32px;
+  align-items: start;
+}
+.RentalFields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.RentalFields label {
+  display: block;
+}
+.RentalFields label.full {
+  grid-column: 1 / -1;
+}
+.RentalFields label > span,
+.ManagerSettings label > span,
+.ManagerGate label > span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.RentalFields label i {
+  color: #92928b;
+  font-style: normal;
+  text-transform: none;
+}
+.RentalFields input,
+.RentalFields select,
+.RentalFields textarea,
+.ManagerSettings input,
+.ManagerGate input,
+.ManagerPanelHead select {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+}
+.RentalFields textarea {
+  resize: vertical;
+}
+.RentalRuleNote {
+  margin: 16px 0;
+  padding: 12px 14px;
+  background: var(--soft);
+  color: #383834;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.RentalCheckbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+.RentalCheckbox input {
+  width: 16px;
+  height: 16px;
+  margin: 2px 0 0;
+  accent-color: var(--ink);
+  flex: 0 0 auto;
+}
+.RentalCheckbox b,
+.RentalCheckbox small {
+  display: block;
+}
+.RentalCheckbox b {
+  font-size: 13px;
+}
+.RentalCheckbox small {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.RentalQuote {
+  padding: 18px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+.RentalQuote .Eyebrow {
+  color: #aaa;
+}
+.RentalQuoteCamera {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 800;
+}
+.RentalQuote > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 9px 0;
+  border-bottom: 1px solid #4d4d4d;
+  font-size: 13px;
+}
+.RentalQuote > div.total {
+  margin-top: 7px;
+  padding-top: 14px;
+  border-top: 1px solid var(--paper);
+  border-bottom: 0;
+  font-size: 19px;
+  font-style: italic;
+}
+.RentalQuote > small {
+  display: block;
+  margin-top: 12px;
+  color: #c8c8c3;
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.5;
+}
+.RentalQuoteEmpty {
+  margin: 16px 0 0;
+  color: #c8c8c3;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.RentalDetailsColumns {
+  margin-top: 34px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.RentalSubmit {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 10px;
+  font-size: 13px;
+}
+.RentalError {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border: 1px solid var(--ink);
+  background: #ffe8e8;
+  font-size: 13px;
+  font-weight: 700;
+}
+.RentalPolicyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: start;
+}
+.RentalPolicyPanel {
+  padding: 26px;
+  border: 1px solid var(--ink);
+}
+.RentalPolicyPanel > div {
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+.RentalPolicyPanel > div:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+.RentalPolicyPanel h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+.RentalPolicyPanel p {
+  margin: 0;
+  color: #3d3d39;
+  font-size: 13px;
+  line-height: 1.55;
+}
+.RentalConfirmation {
+  max-width: 720px;
+  padding: 30px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+.RentalConfirmation .Eyebrow {
+  color: #aaa;
+}
+.RentalConfirmation h3 {
+  margin: 0 0 10px;
+  font-size: 42px;
+  font-style: italic;
+  line-height: 0.95;
+}
+.RentalConfirmation > p:not(.Eyebrow) {
+  max-width: 42ch;
+  color: #d0d0cb;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.RentalConfirmation dl {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 7px 18px;
+  margin: 24px 0;
+}
+.RentalConfirmation dt {
+  color: #aaa;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.RentalConfirmation dd {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+.RentalConfirmation dd small {
+  color: #aaa;
+  font-weight: 400;
+}
+.RentalConfirmationActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.RentalGhostButton {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 11px 14px;
+  border: 1px solid var(--paper);
+  color: var(--paper);
+  font-size: 13px;
+  font-weight: 800;
+}
+.RentalFooter {
+  padding: 22px 0;
+  border-top: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+}
+.RentalFooter .PageWrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+.RentalFooter a {
+  color: var(--ink);
+}
+.ManagerTitle {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.ManagerGate {
+  min-height: calc(100dvh - 68px);
+  display: grid;
+  place-items: center;
+  padding: 60px 24px;
+  background: var(--soft);
+}
+.ManagerGate form {
+  width: min(100%, 520px);
+  padding: 32px;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+}
+.ManagerGate h1 {
+  font-size: clamp(48px, 8vw, 78px);
+}
+.ManagerGate form > p:not(.Eyebrow) {
+  max-width: 34ch;
+  margin: 22px 0;
+  color: #3d3d39;
+  line-height: 1.55;
+}
+.ManagerGate label {
+  display: block;
+  margin-bottom: 12px;
+}
+.ManagerMain {
+  padding: 60px 0 100px;
+  background: var(--soft);
+}
+.ManagerTop {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.ManagerTop h1 {
+  font-size: clamp(48px, 6vw, 76px);
+}
+.ManagerNotice {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+}
+.ManagerStats {
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 28px;
+  border: 1px solid var(--ink);
+}
+.ManagerStats div {
+  min-height: 88px;
+  background: var(--paper);
+}
+.ManagerPanel {
+  margin-bottom: 28px;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+}
+.ManagerPanelHead {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 22px;
+  border-bottom: 1px solid var(--ink);
+}
+.ManagerPanelHead h2 {
+  margin: 0;
+  font-size: 28px;
+  font-style: italic;
+  line-height: 1;
+  text-transform: lowercase;
+}
+.ManagerPanelHead .Eyebrow {
+  margin-bottom: 8px;
+}
+.ManagerPanelHead select {
+  width: auto;
+  min-width: 150px;
+}
+.ManagerTableWrap {
+  overflow-x: auto;
+}
+.ManagerTable {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.ManagerTable th,
+.ManagerTable td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+.ManagerTable th {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.ManagerTable td small {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+.Status {
+  display: inline-block;
+  padding: 4px 7px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.Status-reserved {
+  background: #e8edf8;
+}
+.Status-out {
+  background: #fff2ba;
+}
+.Status-returned {
+  background: #dbf0de;
+}
+.Status-canceled {
+  background: #f0dedb;
+}
+.ManagerActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 7px;
+}
+.ManagerActions button {
+  padding: 6px 8px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 10px;
+}
+.ManagerEmpty {
+  padding: 30px !important;
+  color: var(--muted);
+  text-align: center !important;
+}
+.ManagerTwoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.ManagerCameraList > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--line);
+}
+.ManagerCameraList img {
+  width: 76px;
+  height: 55px;
+  object-fit: cover;
+}
+.ManagerCameraList span {
+  min-width: 0;
+  flex: 1;
+}
+.ManagerCameraList b,
+.ManagerCameraList small {
+  display: block;
+}
+.ManagerCameraList b {
+  font-size: 12px;
+}
+.ManagerCameraList small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.ManagerCameraList button {
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.ManagerSettings {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  padding: 22px;
+}
+.ManagerSettings p {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.5;
+}
 @media (max-width: 800px) {
   .PageWrap,
   .SiteHeaderInner {
@@ -980,6 +1791,85 @@ input {
   .RentalRequestPageFooter .PageWrap {
     flex-direction: column;
   }
+  .RentalHeaderInner {
+    min-height: 60px;
+    gap: 12px;
+  }
+  .RentalNav {
+    display: none;
+  }
+  .RentalBackLink {
+    margin-left: auto;
+    font-size: 11px;
+  }
+  .RentalHeroGrid,
+  .RentalSectionHeading,
+  .RentalBookingColumns,
+  .RentalPolicyGrid,
+  .ManagerTwoCol {
+    grid-template-columns: 1fr;
+  }
+  .RentalHeroGrid {
+    min-height: 0;
+    gap: 28px;
+    padding: 52px 0 42px;
+  }
+  .RentalHeroLead {
+    margin-bottom: 0;
+  }
+  .RentalStrip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .RentalStrip div:nth-child(2n) {
+    border-right: 0;
+  }
+  .RentalStrip div {
+    min-height: 72px;
+    padding: 13px 15px;
+    border-bottom: 1px solid var(--line);
+  }
+  .RentalSection {
+    padding: 58px 0;
+  }
+  .RentalSectionHeading {
+    gap: 16px;
+    margin-bottom: 26px;
+  }
+  .RentalFleetGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .RentalCameraImage {
+    height: 180px;
+  }
+  .RentalCameraBody {
+    min-height: 275px;
+    padding: 14px;
+  }
+  .RentalBookingBody {
+    padding: 20px;
+  }
+  .RentalPicker {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .RentalBookingColumns {
+    gap: 24px;
+  }
+  .RentalPolicyGrid {
+    gap: 28px;
+  }
+  .ManagerMain {
+    padding: 44px 0 70px;
+  }
+  .ManagerStats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ManagerTop {
+    align-items: start;
+    flex-direction: column;
+  }
+  .ManagerSettings {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 @media (max-width: 460px) {
   .Brand img {
@@ -1026,5 +1916,54 @@ input {
   }
   .FooterGrid {
     grid-template-columns: 1fr;
+  }
+  .RentalBrand img {
+    width: 112px;
+  }
+  .RentalHero h1 {
+    font-size: clamp(48px, 15vw, 72px);
+  }
+  .RentalStrip b {
+    font-size: 21px;
+  }
+  .RentalFleetGrid {
+    grid-template-columns: 1fr;
+  }
+  .RentalCameraImage {
+    height: 220px;
+  }
+  .RentalBookingSteps span {
+    padding: 10px 8px;
+    font-size: 8px;
+  }
+  .RentalBookingBody {
+    padding: 16px;
+  }
+  .RentalPicker {
+    grid-template-columns: 1fr;
+  }
+  .RentalFields,
+  .ManagerSettings {
+    grid-template-columns: 1fr;
+  }
+  .RentalFields label.full,
+  .ManagerSettings p {
+    grid-column: auto;
+  }
+  .RentalConfirmation {
+    padding: 20px;
+  }
+  .RentalConfirmation h3 {
+    font-size: 36px;
+  }
+  .RentalConfirmation dl {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .RentalConfirmation dd {
+    margin-bottom: 8px;
+  }
+  .RentalFooter .PageWrap {
+    flex-direction: column;
   }
 }
